@@ -3,17 +3,69 @@
     "id": "pasta-gemuesesosse",
     "title": "Pasta mit cremiger Gemüsesoße",
     "category": "Hauptgericht",
-    "time": 40, "wait": 0, "portions": 4, "kcal": 236, "veg": "vegan",
+    "time": 40,
+    "wait": 0,
+    "portions": 4,
+    "kcal": 236,
+    "veg": "vegan",
     "source": "REWE Magazin",
     "ingredients": [
-      { "a": "2", "n": "Zucchini" }, { "a": "1", "n": "Aubergine (klein)" },
-      { "a": "2", "n": "Möhren" }, { "a": "1", "n": "Zwiebel (rot)" },
-      { "a": "250 g", "n": "Cherrytomaten" }, { "a": "2 EL", "n": "Olivenöl" },
-      { "a": "", "n": "Salz, Pfeffer" }, { "a": "20 g", "n": "Petersilie (frisch)" },
-      { "a": "2 EL", "n": "Sesam" }, { "a": "2 EL", "n": "Sonnenblumenkerne" },
-      { "a": "240 g", "n": "weiße Riesenbohnen (Dose)" },
-      { "a": "500 g", "n": "Vollkorn-Spaghetti" },
-      { "a": "2 TL", "n": "italienische Kräuter" }, { "a": "2 EL", "n": "Tomatenmark" }
+      {
+        "a": "2",
+        "n": "Zucchini"
+      },
+      {
+        "a": "1",
+        "n": "Aubergine (klein)"
+      },
+      {
+        "a": "2",
+        "n": "Möhren"
+      },
+      {
+        "a": "1",
+        "n": "Zwiebel (rot)"
+      },
+      {
+        "a": "250 g",
+        "n": "Cherrytomaten"
+      },
+      {
+        "a": "2 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "",
+        "n": "Salz, Pfeffer"
+      },
+      {
+        "a": "20 g",
+        "n": "Petersilie (frisch)"
+      },
+      {
+        "a": "2 EL",
+        "n": "Sesam"
+      },
+      {
+        "a": "2 EL",
+        "n": "Sonnenblumenkerne"
+      },
+      {
+        "a": "240 g",
+        "n": "weiße Riesenbohnen (Dose)"
+      },
+      {
+        "a": "500 g",
+        "n": "Vollkorn-Spaghetti"
+      },
+      {
+        "a": "2 TL",
+        "n": "italienische Kräuter"
+      },
+      {
+        "a": "2 EL",
+        "n": "Tomatenmark"
+      }
     ],
     "steps": [
       "Zucchini, Aubergine und Möhren würfeln, Zwiebel in Spalten schneiden, Tomaten waschen. Gemüse mit Öl, Salz und Pfeffer mischen und bei 180 °C ca. 25 Min. backen, bis es weich ist.",
@@ -27,15 +79,61 @@
     "id": "zwiebelkuchen-burrata",
     "title": "Zwiebelkuchen mit Burrata",
     "category": "Hauptgericht",
-    "time": 40, "wait": 10, "portions": 4, "kcal": 873, "veg": "vegetarisch",
+    "time": 40,
+    "wait": 10,
+    "portions": 4,
+    "kcal": 873,
+    "veg": "vegetarisch",
     "source": "REWE Rezeptkarte",
     "ingredients": [
-      { "a": "1", "n": "Pizzateig (frisch)" }, { "a": "150 g", "n": "Schmand" },
-      { "a": "", "n": "Salz, Pfeffer" }, { "a": "5", "n": "rote Zwiebeln" },
-      { "a": "4 EL", "n": "Rapsöl" }, { "a": "1 TL", "n": "Honig" },
-      { "a": "1 Zweig", "n": "Rosmarin" }, { "a": "1 Zweig", "n": "Thymian" },
-      { "a": "50 g", "n": "Feldsalat" }, { "a": "1 EL", "n": "Olivenöl" },
-      { "a": "2", "n": "Burrata" }, { "a": "3 EL", "n": "Balsamicocreme" }
+      {
+        "a": "1",
+        "n": "Pizzateig (frisch)"
+      },
+      {
+        "a": "150 g",
+        "n": "Schmand"
+      },
+      {
+        "a": "",
+        "n": "Salz, Pfeffer"
+      },
+      {
+        "a": "5",
+        "n": "rote Zwiebeln"
+      },
+      {
+        "a": "4 EL",
+        "n": "Rapsöl"
+      },
+      {
+        "a": "1 TL",
+        "n": "Honig"
+      },
+      {
+        "a": "1 Zweig",
+        "n": "Rosmarin"
+      },
+      {
+        "a": "1 Zweig",
+        "n": "Thymian"
+      },
+      {
+        "a": "50 g",
+        "n": "Feldsalat"
+      },
+      {
+        "a": "1 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "2",
+        "n": "Burrata"
+      },
+      {
+        "a": "3 EL",
+        "n": "Balsamicocreme"
+      }
     ],
     "steps": [
       "Ofen auf 200 °C vorheizen. Pizzateig aufs Blech legen, mit Schmand bestreichen, salzen und pfeffern.",
@@ -49,17 +147,66 @@
     "id": "kuerbis-schupfnudeln",
     "title": "Kürbis-Schupfnudel-Auflauf",
     "category": "Hauptgericht",
-    "time": 50, "wait": 25, "portions": 4, "kcal": 574, "veg": null,
+    "time": 50,
+    "wait": 25,
+    "portions": 4,
+    "kcal": 574,
+    "veg": null,
     "source": "REWE Magazin",
     "notes": "Vegetarische Variante: Kasseler weglassen oder durch gewürfelten Räuchertofu ersetzen.",
     "ingredients": [
-      { "a": "800 g", "n": "Butternut-Kürbis" }, { "a": "½ Kopf", "n": "Spitzkohl (ca. 400 g)" },
-      { "a": "1", "n": "Zwiebel" }, { "a": "500 g", "n": "Schupfnudeln" },
-      { "a": "1 EL", "n": "Butter" }, { "a": "", "n": "Salz, Pfeffer" },
-      { "a": "3 EL", "n": "Rapsöl" }, { "a": "200 ml", "n": "Gemüsebrühe" },
-      { "a": "150 g", "n": "Schmand" }, { "a": "", "n": "Cayennepfeffer" },
-      { "a": "140 g", "n": "Kasseler (in Scheiben)" },
-      { "a": "100 g", "n": "Gouda (gerieben)" }, { "a": "15 g", "n": "Schnittlauch" }
+      {
+        "a": "800 g",
+        "n": "Butternut-Kürbis"
+      },
+      {
+        "a": "½ Kopf",
+        "n": "Spitzkohl (ca. 400 g)"
+      },
+      {
+        "a": "1",
+        "n": "Zwiebel"
+      },
+      {
+        "a": "500 g",
+        "n": "Schupfnudeln"
+      },
+      {
+        "a": "1 EL",
+        "n": "Butter"
+      },
+      {
+        "a": "",
+        "n": "Salz, Pfeffer"
+      },
+      {
+        "a": "3 EL",
+        "n": "Rapsöl"
+      },
+      {
+        "a": "200 ml",
+        "n": "Gemüsebrühe"
+      },
+      {
+        "a": "150 g",
+        "n": "Schmand"
+      },
+      {
+        "a": "",
+        "n": "Cayennepfeffer"
+      },
+      {
+        "a": "140 g",
+        "n": "Kasseler (in Scheiben)"
+      },
+      {
+        "a": "100 g",
+        "n": "Gouda (gerieben)"
+      },
+      {
+        "a": "15 g",
+        "n": "Schnittlauch"
+      }
     ],
     "steps": [
       "Kürbis würfeln (ca. 2,5 cm), Spitzkohl in 2 cm Streifen schneiden, Zwiebel in halbe Ringe.",
@@ -72,22 +219,93 @@
     "id": "kichererbsen-gnocchi",
     "title": "Kichererbsen-Gnocchi One Pot",
     "category": "Hauptgericht",
-    "tags": ["One-Pot"],
-    "time": 35, "wait": 0, "portions": 4, "kcal": null, "veg": "vegetarisch",
+    "tags": [
+      "One-Pot"
+    ],
+    "time": 35,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
     "source": "philippsteuer.de, eigene Anpassungen",
     "notes": "Eigene Version: Tomaten statt Paprika, Rahmspinat statt Babyspinat, Sahne statt Sojasahne, ohne Tomatenmark und Basilikum, plus 1 EL Sojasauce und 1 Mozzarella.",
     "ingredients": [
-      { "a": "1 EL", "n": "Öl" }, { "a": "2", "n": "Zwiebeln, fein gewürfelt" },
-      { "a": "2", "n": "Möhren, gewürfelt" }, { "a": "1", "n": "Tomate, gewürfelt" },
-      { "a": "85 g", "n": "getrocknete Tomaten, in Streifen" },
-      { "a": "6", "n": "Knoblauchzehen, gehackt" },
-      { "a": "500 g", "n": "Kichererbsen (Dose)" }, { "a": "1200 ml", "n": "Gemüsebrühe" },
-      { "a": "250 g", "n": "Gnocchi" }, { "a": "15 g", "n": "Petersilie" },
-      { "a": "1 Pck.", "n": "Rahmspinat" }, { "a": "15 ml", "n": "Zitronensaft" },
-      { "a": "200 ml", "n": "Sahne" }, { "a": "1 EL", "n": "Sojasauce" },
-      { "a": "1", "n": "Mozzarella" }, { "a": "1 TL", "n": "Paprikapulver" },
-      { "a": "1 TL", "n": "Knoblauchpulver" }, { "a": "1 Prise", "n": "Oregano" },
-      { "a": "", "n": "Salz, Pfeffer" }
+      {
+        "a": "1 EL",
+        "n": "Öl"
+      },
+      {
+        "a": "2",
+        "n": "Zwiebeln, fein gewürfelt"
+      },
+      {
+        "a": "2",
+        "n": "Möhren, gewürfelt"
+      },
+      {
+        "a": "1",
+        "n": "Tomate, gewürfelt"
+      },
+      {
+        "a": "85 g",
+        "n": "getrocknete Tomaten, in Streifen"
+      },
+      {
+        "a": "6",
+        "n": "Knoblauchzehen, gehackt"
+      },
+      {
+        "a": "500 g",
+        "n": "Kichererbsen (Dose)"
+      },
+      {
+        "a": "1200 ml",
+        "n": "Gemüsebrühe"
+      },
+      {
+        "a": "250 g",
+        "n": "Gnocchi"
+      },
+      {
+        "a": "15 g",
+        "n": "Petersilie"
+      },
+      {
+        "a": "1 Pck.",
+        "n": "Rahmspinat"
+      },
+      {
+        "a": "15 ml",
+        "n": "Zitronensaft"
+      },
+      {
+        "a": "200 ml",
+        "n": "Sahne"
+      },
+      {
+        "a": "1 EL",
+        "n": "Sojasauce"
+      },
+      {
+        "a": "1",
+        "n": "Mozzarella"
+      },
+      {
+        "a": "1 TL",
+        "n": "Paprikapulver"
+      },
+      {
+        "a": "1 TL",
+        "n": "Knoblauchpulver"
+      },
+      {
+        "a": "1 Prise",
+        "n": "Oregano"
+      },
+      {
+        "a": "",
+        "n": "Salz, Pfeffer"
+      }
     ],
     "steps": [
       "Öl in einem großen Topf erhitzen, Zwiebeln 5 Min. weich anbraten.",
@@ -102,13 +320,45 @@
     "id": "lotus-nachtisch",
     "title": "Lotus-Nachtisch mit Mascarpone und Quark",
     "category": "Dessert",
-    "time": 15, "wait": 0, "portions": 8, "kcal": 374, "veg": "vegetarisch",
+    "time": 15,
+    "wait": 0,
+    "portions": 8,
+    "kcal": 374,
+    "veg": "vegetarisch",
     "source": "frag-mutti.de",
     "ingredients": [
-      { "a": "250 g", "n": "Mascarpone" }, { "a": "250 g", "n": "Quark" },
-      { "a": "400 ml", "n": "Sahne" }, { "a": "2 Pck.", "n": "Vanillezucker" },
-      { "a": "60 g", "n": "Puderzucker" }, { "a": "1½ Pck.", "n": "Lotus-Biscoff-Kekse" },
-      { "a": "etwas", "n": "Lotus-Biscoff-Creme" }, { "a": "etwas", "n": "Milch" }
+      {
+        "a": "250 g",
+        "n": "Mascarpone"
+      },
+      {
+        "a": "250 g",
+        "n": "Quark"
+      },
+      {
+        "a": "400 ml",
+        "n": "Sahne"
+      },
+      {
+        "a": "2 Pck.",
+        "n": "Vanillezucker"
+      },
+      {
+        "a": "60 g",
+        "n": "Puderzucker"
+      },
+      {
+        "a": "1½ Pck.",
+        "n": "Lotus-Biscoff-Kekse"
+      },
+      {
+        "a": "etwas",
+        "n": "Lotus-Biscoff-Creme"
+      },
+      {
+        "a": "etwas",
+        "n": "Milch"
+      }
     ],
     "steps": [
       "Mascarpone mit Quark und Puderzucker verrühren.",
@@ -123,12 +373,37 @@
     "id": "lotus-dessert-glas",
     "title": "Lotus-Dessert im Glas",
     "category": "Dessert",
-    "time": 10, "wait": 0, "portions": 4, "kcal": 945, "veg": "vegetarisch",
+    "time": 10,
+    "wait": 0,
+    "portions": 4,
+    "kcal": 945,
+    "veg": "vegetarisch",
     "source": "sheepysbakery.de",
     "ingredients": [
-      { "a": "250 g", "n": "Mascarpone" }, { "a": "250 g", "n": "Quark" },
-      { "a": "200 ml", "n": "Sahne" }, { "a": "35 g", "n": "Puderzucker" },
-      { "a": "100 g", "n": "Lotus-Kekse" }, { "a": "200 g", "n": "Lotus-Biscoff-Aufstrich" }
+      {
+        "a": "250 g",
+        "n": "Mascarpone"
+      },
+      {
+        "a": "250 g",
+        "n": "Quark"
+      },
+      {
+        "a": "200 ml",
+        "n": "Sahne"
+      },
+      {
+        "a": "35 g",
+        "n": "Puderzucker"
+      },
+      {
+        "a": "100 g",
+        "n": "Lotus-Kekse"
+      },
+      {
+        "a": "200 g",
+        "n": "Lotus-Biscoff-Aufstrich"
+      }
     ],
     "steps": [
       "Mascarpone, Quark und Puderzucker verrühren. Sahne steif schlagen und unterheben. Kekse zerbröseln.",
@@ -139,15 +414,53 @@
     "id": "brokkoli-kokos-suppe",
     "title": "Brokkoli-Kokos-Suppe mit Garnelen",
     "category": "Suppe",
-    "time": 40, "wait": 0, "portions": 4, "kcal": 342, "veg": null,
+    "time": 40,
+    "wait": 0,
+    "portions": 4,
+    "kcal": 342,
+    "veg": null,
     "source": "REWE Magazin",
     "ingredients": [
-      { "a": "500 g", "n": "Brokkoli" }, { "a": "1", "n": "Zwiebel" },
-      { "a": "2 Zehen", "n": "Knoblauch" }, { "a": "2 EL", "n": "Rapsöl" },
-      { "a": "1–2 TL", "n": "gelbe Curry-Paste" },
-      { "a": "800 ml", "n": "Gemüsebrühe (ggf. glutenfrei)" },
-      { "a": "400 ml", "n": "Kokosmilch" }, { "a": "225 g", "n": "Garnelen (TK)" },
-      { "a": "", "n": "Salz, Pfeffer" }, { "a": "2–3 TL", "n": "Limettensaft" }
+      {
+        "a": "500 g",
+        "n": "Brokkoli"
+      },
+      {
+        "a": "1",
+        "n": "Zwiebel"
+      },
+      {
+        "a": "2 Zehen",
+        "n": "Knoblauch"
+      },
+      {
+        "a": "2 EL",
+        "n": "Rapsöl"
+      },
+      {
+        "a": "1–2 TL",
+        "n": "gelbe Curry-Paste"
+      },
+      {
+        "a": "800 ml",
+        "n": "Gemüsebrühe (ggf. glutenfrei)"
+      },
+      {
+        "a": "400 ml",
+        "n": "Kokosmilch"
+      },
+      {
+        "a": "225 g",
+        "n": "Garnelen (TK)"
+      },
+      {
+        "a": "",
+        "n": "Salz, Pfeffer"
+      },
+      {
+        "a": "2–3 TL",
+        "n": "Limettensaft"
+      }
     ],
     "steps": [
       "Brokkoli in Röschen teilen, Zwiebel und Knoblauch fein hacken.",
@@ -160,20 +473,543 @@
     "id": "pesto-kartoffelsalat",
     "title": "Pesto-Kartoffelsalat",
     "category": "Salat",
-    "time": 25, "wait": 10, "portions": 4, "kcal": 489, "veg": "vegan",
+    "time": 25,
+    "wait": 10,
+    "portions": 4,
+    "kcal": 489,
+    "veg": "vegan",
     "source": "REWE Magazin",
     "ingredients": [
-      { "a": "1 kg", "n": "Drillinge (Kartoffeln)" }, { "a": "4 EL", "n": "Olivenöl" },
-      { "a": "", "n": "Salz, Pfeffer" }, { "a": "125 g", "n": "getrocknete Tomaten" },
-      { "a": "60 g", "n": "Cashewkerne" }, { "a": "1 Zehe", "n": "Knoblauch" },
-      { "a": "1", "n": "Zucchini" }, { "a": "80 g", "n": "Rucola" },
-      { "a": "3 EL", "n": "Kürbiskerne" }
+      {
+        "a": "1 kg",
+        "n": "Drillinge (Kartoffeln)"
+      },
+      {
+        "a": "4 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "",
+        "n": "Salz, Pfeffer"
+      },
+      {
+        "a": "125 g",
+        "n": "getrocknete Tomaten"
+      },
+      {
+        "a": "60 g",
+        "n": "Cashewkerne"
+      },
+      {
+        "a": "1 Zehe",
+        "n": "Knoblauch"
+      },
+      {
+        "a": "1",
+        "n": "Zucchini"
+      },
+      {
+        "a": "80 g",
+        "n": "Rucola"
+      },
+      {
+        "a": "3 EL",
+        "n": "Kürbiskerne"
+      }
     ],
     "steps": [
       "Drillinge halbieren, mit 1 EL Öl, Salz und Pfeffer mischen und bei 200 °C ca. 20 Min. backen.",
       "Für das Pesto getrocknete Tomaten, Cashews und Knoblauch mit dem übrigen Öl und 6 EL Wasser fein pürieren, abschmecken.",
       "Zucchini grob raspeln, Rucola zupfen, Kürbiskerne ohne Fett anrösten.",
       "Kartoffeln kurz abkühlen lassen und mit Zucchini, Kürbiskernen und Pesto vermengen. Rucola erst kurz vor dem Servieren zugeben."
+    ]
+  },
+  {
+    "id": "brokkoli-orzo",
+    "title": "Brokkoli Orzo",
+    "category": "Hauptgericht",
+    "tags": [
+      "One-Pot",
+      "vegan",
+      "schnell"
+    ],
+    "time": 25,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "philippsteuer.de/immerknusprig",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "200 g",
+        "n": "Orzo"
+      },
+      {
+        "a": "500 ml",
+        "n": "Gemüsebrühe"
+      },
+      {
+        "a": "120 g",
+        "n": "Brokkoli, fein gehackt"
+      },
+      {
+        "a": "1 Zehe",
+        "n": "Knoblauch, fein gehackt"
+      },
+      {
+        "a": "100 ml",
+        "n": "Sojasahne"
+      },
+      {
+        "a": "2 EL",
+        "n": "Hefeflocken"
+      },
+      {
+        "a": "1 EL",
+        "n": "Öl"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Salz und Pfeffer"
+      }
+    ],
+    "steps": [
+      "Erhitze etwas Öl in einem Topf und gib Knoblauch und Brokkoli hinein.",
+      "Röste alles leicht an, bis der Knoblauch weich, aber nicht dunkel wird.",
+      "Gib den Orzo dazu und gieße 500 ml Gemüsebrühe dazu. Lass alles bei mittlerer Hitze 10–12 Minuten köcheln, bis der Orzo gar ist.",
+      "Rühre die Sahne und Hefeflocken ein und schmecke mit Salz und Pfeffer ab.",
+      "Vermengen und servieren."
+    ]
+  },
+  {
+    "id": "pizza-broetchen",
+    "title": "Pizza-Brötchen",
+    "category": "Sonstiges",
+    "tags": [
+      "Party Snack"
+    ],
+    "time": 20,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch (eingeklebt)",
+    "notes": "Pilze nur aus dem Glas verwenden! (frische wässern zu sehr)",
+    "ingredients": [
+      {
+        "a": "200 g",
+        "n": "Schinken"
+      },
+      {
+        "a": "200 g",
+        "n": "Salami"
+      },
+      {
+        "a": "200 g",
+        "n": "Paprika (im Glas)"
+      },
+      {
+        "a": "200 g",
+        "n": "Pilze (nur aus dem Glas)"
+      },
+      {
+        "a": "200 g",
+        "n": "geriebener Käse"
+      },
+      {
+        "a": "200 g",
+        "n": "Sahne"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Paprikagewürz"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Pizzagewürz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Brötchen oder Baguettes"
+      }
+    ],
+    "steps": [
+      "Schinken, Salami, Paprika und Pilze kleinschneiden.",
+      "Käse und Sahne untermischen.",
+      "Mit Pfeffer, Paprika und Pizzagewürz abschmecken.",
+      "Brötchen oder Baguettes damit bestreichen.",
+      "10 Minuten im vorgeheizten Backofen bei 175–200 Grad überbacken."
+    ]
+  },
+  {
+    "id": "karotten-bananen-kuchen",
+    "title": "Karotten-Bananen-Kuchen",
+    "category": "Sonstiges",
+    "tags": [
+      "Frühstück",
+      "Meal Prep"
+    ],
+    "time": 10,
+    "wait": 30,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Der Spiegel – Kochen ohne Kohle",
+    "notes": "Im Kühlschrank in einer verschließbaren Dose mindestens 5 Tage haltbar. Joghurt erst direkt vor dem Essen daraufgeben, sonst wird der Kuchen matschig. Datteln können zugegeben werden, Karotten können durch Äpfel ersetzt werden. Bananen dienen als Bindemittel und können nicht ersetzt werden.",
+    "ingredients": [
+      {
+        "a": "1",
+        "n": "große Karotte"
+      },
+      {
+        "a": "2",
+        "n": "Bananen"
+      },
+      {
+        "a": "180g",
+        "n": "feine Haferflocken"
+      },
+      {
+        "a": "50g",
+        "n": "Nüsse"
+      },
+      {
+        "a": "1/2 TL",
+        "n": "Backpulver, Zimt, Kardamon"
+      },
+      {
+        "a": "150ml",
+        "n": "Milch"
+      },
+      {
+        "a": "1",
+        "n": "Vanillezucker"
+      },
+      {
+        "a": "1",
+        "n": "Handvoll TK Beeren"
+      },
+      {
+        "a": "1",
+        "n": "Joghurt (optional)"
+      },
+      {
+        "a": "1",
+        "n": "Honig (optional)"
+      }
+    ],
+    "steps": [
+      "Karotten reiben und Bananen zerdrücken.",
+      "Alle Zutaten miteinander vermengen.",
+      "Den Kuchen backen. (180 Grad ober/unter, 30-40 Minuten)",
+      "Abkühlen lassen und in gleich große Stücke portionieren.",
+      "Den Joghurt erst direkt vor dem Essen auf den Kuchen geben."
+    ]
+  },
+  {
+    "id": "bowl",
+    "title": "Bowl",
+    "category": "Hauptgericht",
+    "tags": [
+      "Bowl",
+      "Asiatisch"
+    ],
+    "time": 30,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": null,
+    "source": "Handgeschriebenes Rezept",
+    "notes": "Teriyaki-Sauce kann fertig gekauft werden. Edamame aus der Dose verwenden.",
+    "ingredients": [
+      {
+        "a": "nach Bedarf",
+        "n": "Orzo"
+      },
+      {
+        "a": "1",
+        "n": "Avocado"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salat"
+      },
+      {
+        "a": "1",
+        "n": "Mango"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Möhre geraspelt"
+      },
+      {
+        "a": "1/2",
+        "n": "Gurke"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Rotkohl"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Sesam"
+      },
+      {
+        "a": "1 Dose",
+        "n": "Edamame"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Crispies / Nuggets"
+      },
+      {
+        "a": "1 Flasche",
+        "n": "Teriyaki-Sauce (fertig)"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Reisessig"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Sahne"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Sojasoße"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Ingwer flüssig"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Knoblauchpulver"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Mayo"
+      }
+    ],
+    "steps": [
+      "Orzo nach Packungsanweisung kochen und abkühlen lassen.",
+      "Avocado, Mango und Gurke in Scheiben oder Würfel schneiden.",
+      "Möhre raspeln, Rotkohl fein schneiden, Salat zupfen.",
+      "Edamame aus der Dose abtropfen lassen.",
+      "Für die Sauce Reisessig, Sahne, Sojasoße, flüssigen Ingwer, Knoblauchpulver, Salz, Pfeffer und Mayo nach Geschmack vermischen.",
+      "Alle Zutaten in einer Bowl anrichten: Orzo als Basis, dann Gemüse, Avocado, Mango und Edamame darauf verteilen.",
+      "Mit Sesam und Crispies/Nuggets bestreuen.",
+      "Mit der selbst gemachten Sauce und/oder der fertigen Teriyaki-Sauce nach Geschmack beträufeln."
+    ]
+  },
+  {
+    "id": "selbstgemachte-remoulade-klassisch",
+    "title": "Selbstgemachte Remoulade klassisch",
+    "category": "Sonstiges",
+    "time": 30,
+    "wait": 0,
+    "portions": 4,
+    "kcal": 300,
+    "veg": null,
+    "source": "selbstgemachte-remoulade-klassisch",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "250 g",
+        "n": "Mayonnaise, hausgemacht oder aus dem Glas"
+      },
+      {
+        "a": "2",
+        "n": "Eier, hartgekocht"
+      },
+      {
+        "a": "2",
+        "n": "Gewürzgurken oder Cornichon"
+      },
+      {
+        "a": "4 EL",
+        "n": "Kräuter, gehackt, z. B. Petersilie, Schnittlauch oder Kerbel"
+      },
+      {
+        "a": "2 TL",
+        "n": "Apfelessig oder Kräuteressig"
+      },
+      {
+        "a": "1 TL",
+        "n": "Zucker"
+      },
+      {
+        "a": "½ kleine",
+        "n": "Zwiebel oder Schalotten"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "1 EL",
+        "n": "Kapern, optional"
+      },
+      {
+        "a": "½ TL",
+        "n": "Senf, optional"
+      },
+      {
+        "a": "2",
+        "n": "Sardellenfilets, klein, eingelegt, optional"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "id": "honig-senf-sauce",
+    "title": "Honig-Senf-Sauce",
+    "category": "Sonstiges",
+    "tags": [
+      "Sauce",
+      "Dip",
+      "Grill"
+    ],
+    "time": 5,
+    "wait": 0,
+    "portions": 2,
+    "kcal": 580,
+    "veg": "vegetarisch",
+    "source": "burnhard.com/de/rezepte/saucen-dips/honig-senf-sauce",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "130 ml",
+        "n": "Mayonnaise"
+      },
+      {
+        "a": "1 EL",
+        "n": "Körniger Senf"
+      },
+      {
+        "a": "1 EL",
+        "n": "Dijon Senf"
+      },
+      {
+        "a": "3 EL",
+        "n": "Honig"
+      },
+      {
+        "a": "1 TL",
+        "n": "Apfelessig"
+      },
+      {
+        "a": "1 Prise",
+        "n": "Paprikapulver"
+      },
+      {
+        "a": "1 Prise",
+        "n": "Knoblauchpulver"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Pfeffer"
+      }
+    ],
+    "steps": [
+      "Alle Zutaten in einer Schüssel miteinander vermischen und mit Salz und Pfeffer abschmecken."
+    ]
+  },
+  {
+    "id": "maultaschen-aus-dem-ofen",
+    "title": "Maultaschen aus dem Ofen",
+    "category": "Hauptgericht",
+    "tags": [
+      "One-Pot"
+    ],
+    "time": 15,
+    "wait": 40,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "2 Pck",
+        "n": "Maultaschen"
+      },
+      {
+        "a": "1",
+        "n": "Zwiebel"
+      },
+      {
+        "a": "200 g",
+        "n": "Mini-Tomaten"
+      },
+      {
+        "a": "1 kleine",
+        "n": "Zucchini"
+      },
+      {
+        "a": "1",
+        "n": "Knoblauchzehe"
+      },
+      {
+        "a": "1 EL",
+        "n": "Öl"
+      },
+      {
+        "a": "1 TL",
+        "n": "Paprikapulver (edelsüß)"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz & Pfeffer"
+      },
+      {
+        "a": "200 g",
+        "n": "Sahne"
+      },
+      {
+        "a": "100 g",
+        "n": "Wasser"
+      },
+      {
+        "a": "1 TL",
+        "n": "Paprikapulver"
+      },
+      {
+        "a": "1 EL",
+        "n": "Pesto"
+      },
+      {
+        "a": "1 EL",
+        "n": "Tomatenmark"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Streukäse"
+      }
+    ],
+    "steps": [
+      "Heize den Ofen auf 210 °C Ober-/Unterhitze vor.",
+      "Schneide die Maultaschen längs in etwa 5 mm dicke Streifen. Schneide die Zucchini in kleine Würfel. Wasche die Tomaten und halbiere sie. Schäle und würfle die Zwiebel fein, presse den Knoblauch dazu und gib alles zusammen in eine Schüssel mit Deckel, füge Öl und Gewürze hinzu und vermenge alles.",
+      "Verteile die Mischung auf einem Backblech.",
+      "Verrühre die Zutaten für die Soße in einer Schale glatt und gieße sie über das Gemüse und die Maultaschen.",
+      "Bestreue alles mit Streukäse und überbacke das Blech 35–40 Minuten, bis es goldbraun ist."
     ]
   }
 ]
