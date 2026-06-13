@@ -1287,5 +1287,70 @@
       "Form aus dem Ofen nehmen, Frühlingszwiebeln und 1 Kelle Pastawasser hinzu, einmal vermischen.",
       "Pasta und Parmesan nun auch hinein geben und verrühren, bis es richtig schön cremig ist. Ggfs. noch eine Kelle Pastawasser hinzu, damit es noch cremiger wird."
     ]
+  },
+  {
+    "id": "pasta-mit-feldsalat-nuss-pesto",
+    "title": "Pasta mit Feldsalat-Nuss-Pesto",
+    "category": "Hauptgericht",
+    "tags": [
+      "vegetarisch",
+      "Pasta",
+      "Pesto"
+    ],
+    "time": 30,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Rewe Magazin",
+    "notes": "Rote Bete schälen und in feine Streifen schneiden. Mit reichlich Balsamico, Salz und Pfeffer würzen.",
+    "ingredients": [
+      {
+        "a": "500 g",
+        "n": "REWE Bio Vollkorn Spaghetti"
+      },
+      {
+        "a": "Salz",
+        "n": ""
+      },
+      {
+        "a": "300 g",
+        "n": "Feldsalat"
+      },
+      {
+        "a": "100 g",
+        "n": "Haselnüsse"
+      },
+      {
+        "a": "100 g",
+        "n": "Parmesan"
+      },
+      {
+        "a": "40 ml",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "Pfeffer",
+        "n": ""
+      },
+      {
+        "a": "1",
+        "n": "Knoblauchzehe"
+      },
+      {
+        "a": "1",
+        "n": "Rote Bete"
+      },
+      {
+        "a": "1 EL",
+        "n": "Balsamico (hell)"
+      }
+    ],
+    "steps": [
+      "Spaghetti nach Packungsanweisung al dente kochen.",
+      "Mineralstoffreichen Feldsalat waschen, putzen, Haselnüsse ohne Öl rösten, abkühlen lassen, gut 2/3 für das Pesto beiseitestellen. Restliche Haselnüsse, 80 g Parmesan in Stücken mit 20 ml Öl in einer Küchenmaschine mixen, etwas Nudelwasser zugeben, mit Salz und Pfeffer abschmecken.",
+      "Rote Bete schälen und in feine Streifen schneiden. Mit reichlich Balsamico, Salz und Pfeffer würzen.",
+      "Abgetropfte Nudeln mit dem Pesto vermengen, Rote-Bete-Streifen und Parmesanspäne samt restlichen Haselnüssen darüber verteilen und servieren."
+    ]
   }
 ]
