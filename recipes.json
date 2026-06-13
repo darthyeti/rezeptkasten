@@ -1,0 +1,179 @@
+[
+  {
+    "id": "pasta-gemuesesosse",
+    "title": "Pasta mit cremiger Gemüsesoße",
+    "category": "Hauptgericht",
+    "time": 40, "wait": 0, "portions": 4, "kcal": 236, "veg": "vegan",
+    "source": "REWE Magazin",
+    "ingredients": [
+      { "a": "2", "n": "Zucchini" }, { "a": "1", "n": "Aubergine (klein)" },
+      { "a": "2", "n": "Möhren" }, { "a": "1", "n": "Zwiebel (rot)" },
+      { "a": "250 g", "n": "Cherrytomaten" }, { "a": "2 EL", "n": "Olivenöl" },
+      { "a": "", "n": "Salz, Pfeffer" }, { "a": "20 g", "n": "Petersilie (frisch)" },
+      { "a": "2 EL", "n": "Sesam" }, { "a": "2 EL", "n": "Sonnenblumenkerne" },
+      { "a": "240 g", "n": "weiße Riesenbohnen (Dose)" },
+      { "a": "500 g", "n": "Vollkorn-Spaghetti" },
+      { "a": "2 TL", "n": "italienische Kräuter" }, { "a": "2 EL", "n": "Tomatenmark" }
+    ],
+    "steps": [
+      "Zucchini, Aubergine und Möhren würfeln, Zwiebel in Spalten schneiden, Tomaten waschen. Gemüse mit Öl, Salz und Pfeffer mischen und bei 180 °C ca. 25 Min. backen, bis es weich ist.",
+      "Petersilie hacken. Sesam und Sonnenblumenkerne ohne Fett rösten, abkühlen lassen und unter die Petersilie mischen, salzen. Bohnen abgießen.",
+      "Nudeln nach Packungsanweisung in Salzwasser kochen.",
+      "Gemüse, Kräuter, Bohnen, Tomatenmark und ca. 200 ml Nudelwasser ca. 1 Min. cremig pürieren.",
+      "Pasta mit der Soße vermengen und mit dem Petersilien-Topping servieren."
+    ]
+  },
+  {
+    "id": "zwiebelkuchen-burrata",
+    "title": "Zwiebelkuchen mit Burrata",
+    "category": "Hauptgericht",
+    "time": 40, "wait": 10, "portions": 4, "kcal": 873, "veg": "vegetarisch",
+    "source": "REWE Rezeptkarte",
+    "ingredients": [
+      { "a": "1", "n": "Pizzateig (frisch)" }, { "a": "150 g", "n": "Schmand" },
+      { "a": "", "n": "Salz, Pfeffer" }, { "a": "5", "n": "rote Zwiebeln" },
+      { "a": "4 EL", "n": "Rapsöl" }, { "a": "1 TL", "n": "Honig" },
+      { "a": "1 Zweig", "n": "Rosmarin" }, { "a": "1 Zweig", "n": "Thymian" },
+      { "a": "50 g", "n": "Feldsalat" }, { "a": "1 EL", "n": "Olivenöl" },
+      { "a": "2", "n": "Burrata" }, { "a": "3 EL", "n": "Balsamicocreme" }
+    ],
+    "steps": [
+      "Ofen auf 200 °C vorheizen. Pizzateig aufs Blech legen, mit Schmand bestreichen, salzen und pfeffern.",
+      "Zwiebeln in Spalten schneiden, in 2 EL Öl anbraten, mit Salz und Honig würzen und auf dem Teig verteilen.",
+      "Gehackte Kräuter darüberstreuen, 15 bis 20 Min. goldbraun backen.",
+      "Feldsalat putzen, mit Olivenöl mischen und leicht salzen. Burrata abtropfen lassen.",
+      "Burrata zerzupft auf dem Kuchen verteilen, Feldsalat darüber, pfeffern und mit Balsamicocreme beträufeln."
+    ]
+  },
+  {
+    "id": "kuerbis-schupfnudeln",
+    "title": "Kürbis-Schupfnudel-Auflauf",
+    "category": "Hauptgericht",
+    "time": 50, "wait": 25, "portions": 4, "kcal": 574, "veg": null,
+    "source": "REWE Magazin",
+    "notes": "Vegetarische Variante: Kasseler weglassen oder durch gewürfelten Räuchertofu ersetzen.",
+    "ingredients": [
+      { "a": "800 g", "n": "Butternut-Kürbis" }, { "a": "½ Kopf", "n": "Spitzkohl (ca. 400 g)" },
+      { "a": "1", "n": "Zwiebel" }, { "a": "500 g", "n": "Schupfnudeln" },
+      { "a": "1 EL", "n": "Butter" }, { "a": "", "n": "Salz, Pfeffer" },
+      { "a": "3 EL", "n": "Rapsöl" }, { "a": "200 ml", "n": "Gemüsebrühe" },
+      { "a": "150 g", "n": "Schmand" }, { "a": "", "n": "Cayennepfeffer" },
+      { "a": "140 g", "n": "Kasseler (in Scheiben)" },
+      { "a": "100 g", "n": "Gouda (gerieben)" }, { "a": "15 g", "n": "Schnittlauch" }
+    ],
+    "steps": [
+      "Kürbis würfeln (ca. 2,5 cm), Spitzkohl in 2 cm Streifen schneiden, Zwiebel in halbe Ringe.",
+      "Schupfnudeln in Butter goldbraun anbraten und in eine Auflaufform geben.",
+      "Ofen auf 200 °C vorheizen. Kürbis in 2 EL Öl 5 Min. braten, würzen, zu den Schupfnudeln geben. Zwiebel in 1 EL Öl glasig dünsten, Spitzkohl kurz mitdünsten. Brühe und Schmand zugeben, würzen, 5 Min. zugedeckt köcheln.",
+      "Spitzkohl untermischen, Kasseler dazwischensetzen, mit Käse bestreuen und ca. 25 Min. überbacken. Mit Schnittlauchröllchen servieren."
+    ]
+  },
+  {
+    "id": "kichererbsen-gnocchi",
+    "title": "Kichererbsen-Gnocchi One Pot",
+    "category": "Hauptgericht",
+    "tags": ["One-Pot"],
+    "time": 35, "wait": 0, "portions": 4, "kcal": null, "veg": "vegetarisch",
+    "source": "philippsteuer.de, eigene Anpassungen",
+    "notes": "Eigene Version: Tomaten statt Paprika, Rahmspinat statt Babyspinat, Sahne statt Sojasahne, ohne Tomatenmark und Basilikum, plus 1 EL Sojasauce und 1 Mozzarella.",
+    "ingredients": [
+      { "a": "1 EL", "n": "Öl" }, { "a": "2", "n": "Zwiebeln, fein gewürfelt" },
+      { "a": "2", "n": "Möhren, gewürfelt" }, { "a": "1", "n": "Tomate, gewürfelt" },
+      { "a": "85 g", "n": "getrocknete Tomaten, in Streifen" },
+      { "a": "6", "n": "Knoblauchzehen, gehackt" },
+      { "a": "500 g", "n": "Kichererbsen (Dose)" }, { "a": "1200 ml", "n": "Gemüsebrühe" },
+      { "a": "250 g", "n": "Gnocchi" }, { "a": "15 g", "n": "Petersilie" },
+      { "a": "1 Pck.", "n": "Rahmspinat" }, { "a": "15 ml", "n": "Zitronensaft" },
+      { "a": "200 ml", "n": "Sahne" }, { "a": "1 EL", "n": "Sojasauce" },
+      { "a": "1", "n": "Mozzarella" }, { "a": "1 TL", "n": "Paprikapulver" },
+      { "a": "1 TL", "n": "Knoblauchpulver" }, { "a": "1 Prise", "n": "Oregano" },
+      { "a": "", "n": "Salz, Pfeffer" }
+    ],
+    "steps": [
+      "Öl in einem großen Topf erhitzen, Zwiebeln 5 Min. weich anbraten.",
+      "Möhren, Tomate und getrocknete Tomaten zugeben, 10 Min. mitbraten.",
+      "Knoblauch und Gewürze einrühren und 5 Min. anbraten.",
+      "Kichererbsen und Brühe zugeben, abgedeckt 10 Min. köcheln.",
+      "Gnocchi zugeben und ca. 2 Min. garen. Sahne angießen, 2 Min. leicht köcheln.",
+      "Vom Herd nehmen, Petersilie, Rahmspinat, Sojasauce und Zitronensaft einrühren, Mozzarella zerzupft dazugeben, abschmecken."
+    ]
+  },
+  {
+    "id": "lotus-nachtisch",
+    "title": "Lotus-Nachtisch mit Mascarpone und Quark",
+    "category": "Dessert",
+    "time": 15, "wait": 0, "portions": 8, "kcal": 374, "veg": "vegetarisch",
+    "source": "frag-mutti.de",
+    "ingredients": [
+      { "a": "250 g", "n": "Mascarpone" }, { "a": "250 g", "n": "Quark" },
+      { "a": "400 ml", "n": "Sahne" }, { "a": "2 Pck.", "n": "Vanillezucker" },
+      { "a": "60 g", "n": "Puderzucker" }, { "a": "1½ Pck.", "n": "Lotus-Biscoff-Kekse" },
+      { "a": "etwas", "n": "Lotus-Biscoff-Creme" }, { "a": "etwas", "n": "Milch" }
+    ],
+    "steps": [
+      "Mascarpone mit Quark und Puderzucker verrühren.",
+      "Sahne mit Vanillezucker steif schlagen und unterheben.",
+      "Lotus-Creme kurz in der Mikrowelle verflüssigen.",
+      "Kekse kurz in Milch tunken und in eine Auflaufform schichten.",
+      "Mit Creme bedecken, flüssige Lotus-Creme darüber verteilen, schichtweise wiederholen.",
+      "Mit zerkleinerten Keksen dekorieren."
+    ]
+  },
+  {
+    "id": "lotus-dessert-glas",
+    "title": "Lotus-Dessert im Glas",
+    "category": "Dessert",
+    "time": 10, "wait": 0, "portions": 4, "kcal": 945, "veg": "vegetarisch",
+    "source": "sheepysbakery.de",
+    "ingredients": [
+      { "a": "250 g", "n": "Mascarpone" }, { "a": "250 g", "n": "Quark" },
+      { "a": "200 ml", "n": "Sahne" }, { "a": "35 g", "n": "Puderzucker" },
+      { "a": "100 g", "n": "Lotus-Kekse" }, { "a": "200 g", "n": "Lotus-Biscoff-Aufstrich" }
+    ],
+    "steps": [
+      "Mascarpone, Quark und Puderzucker verrühren. Sahne steif schlagen und unterheben. Kekse zerbröseln.",
+      "Brösel in Gläser verteilen, Lotus-Creme darauf verstreichen, Mascarponecreme einfüllen. Schichten wiederholen und mit Cremetupfen und Bröseln dekorieren."
+    ]
+  },
+  {
+    "id": "brokkoli-kokos-suppe",
+    "title": "Brokkoli-Kokos-Suppe mit Garnelen",
+    "category": "Suppe",
+    "time": 40, "wait": 0, "portions": 4, "kcal": 342, "veg": null,
+    "source": "REWE Magazin",
+    "ingredients": [
+      { "a": "500 g", "n": "Brokkoli" }, { "a": "1", "n": "Zwiebel" },
+      { "a": "2 Zehen", "n": "Knoblauch" }, { "a": "2 EL", "n": "Rapsöl" },
+      { "a": "1–2 TL", "n": "gelbe Curry-Paste" },
+      { "a": "800 ml", "n": "Gemüsebrühe (ggf. glutenfrei)" },
+      { "a": "400 ml", "n": "Kokosmilch" }, { "a": "225 g", "n": "Garnelen (TK)" },
+      { "a": "", "n": "Salz, Pfeffer" }, { "a": "2–3 TL", "n": "Limettensaft" }
+    ],
+    "steps": [
+      "Brokkoli in Röschen teilen, Zwiebel und Knoblauch fein hacken.",
+      "1 EL Öl erhitzen, Zwiebel und Knoblauch glasig dünsten. Brokkoli und Currypaste kurz mitrösten, mit Brühe und Kokosmilch aufgießen, 8 bis 10 Min. weich köcheln.",
+      "Garnelen abspülen, trocken tupfen und im restlichen Öl je Seite 2 bis 3 Min. anbraten, würzen.",
+      "Ein Drittel der Röschen herausnehmen, Rest fein pürieren und mit Salz, Pfeffer und Limettensaft abschmecken. Mit Garnelen und Röschen anrichten."
+    ]
+  },
+  {
+    "id": "pesto-kartoffelsalat",
+    "title": "Pesto-Kartoffelsalat",
+    "category": "Salat",
+    "time": 25, "wait": 10, "portions": 4, "kcal": 489, "veg": "vegan",
+    "source": "REWE Magazin",
+    "ingredients": [
+      { "a": "1 kg", "n": "Drillinge (Kartoffeln)" }, { "a": "4 EL", "n": "Olivenöl" },
+      { "a": "", "n": "Salz, Pfeffer" }, { "a": "125 g", "n": "getrocknete Tomaten" },
+      { "a": "60 g", "n": "Cashewkerne" }, { "a": "1 Zehe", "n": "Knoblauch" },
+      { "a": "1", "n": "Zucchini" }, { "a": "80 g", "n": "Rucola" },
+      { "a": "3 EL", "n": "Kürbiskerne" }
+    ],
+    "steps": [
+      "Drillinge halbieren, mit 1 EL Öl, Salz und Pfeffer mischen und bei 200 °C ca. 20 Min. backen.",
+      "Für das Pesto getrocknete Tomaten, Cashews und Knoblauch mit dem übrigen Öl und 6 EL Wasser fein pürieren, abschmecken.",
+      "Zucchini grob raspeln, Rucola zupfen, Kürbiskerne ohne Fett anrösten.",
+      "Kartoffeln kurz abkühlen lassen und mit Zucchini, Kürbiskernen und Pesto vermengen. Rucola erst kurz vor dem Servieren zugeben."
+    ]
+  }
+]

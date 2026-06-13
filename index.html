@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rezeptkasten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#22302a; --paper:#fffdf8; --bg:#e9ece3; --line:#cfd6c8;
+    --accent:#c75b39; --match:#3e7c4f; --gold:#d9a13b; --dim:#6b7a70;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);
+    font-family:'Public Sans',system-ui,sans-serif;padding-bottom:80px}
+  button{font-family:inherit;cursor:pointer}
+  header{background:var(--ink);color:var(--paper);padding:24px 20px 0}
+  .inner{max-width:980px;margin:0 auto}
+  .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(26px,5vw,36px);margin:4px 0 2px}
+  .sub{color:#b8c4ba;font-size:14px;margin:0}
+  .head-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+  .gear{background:transparent;border:1px solid #46584e;color:#b8c4ba;border-radius:10px;
+    padding:8px 12px;font-size:13px}
+  nav.tabs{display:flex;gap:4px;margin-top:18px}
+  nav.tabs button{background:transparent;border:none;color:#b8c4ba;font-size:14px;font-weight:600;
+    padding:12px 16px;border-radius:12px 12px 0 0}
+  nav.tabs button.on{background:var(--bg);color:var(--ink)}
+  main{max-width:980px;margin:0 auto;padding:18px 20px}
+  /* Suche */
+  .searchbox{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 12px;
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .chip{background:var(--match);color:#fff;border:none;border-radius:999px;padding:5px 12px;
+    font-size:13px;font-weight:600}
+  .chip span{opacity:.75;margin-left:6px}
+  .searchbox input{flex:1;min-width:160px;border:none;outline:none;background:transparent;
+    font-size:15px;color:var(--ink);font-family:inherit;padding:6px 2px}
+  .addbtn{background:var(--ink);color:var(--paper);border:none;border-radius:10px;padding:8px 14px;
+    font-weight:600;font-size:13px}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px;align-items:center}
+  .pill{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;
+    padding:6px 14px;font-size:13px;font-weight:500}
+  .pill.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .count{font-size:13px;color:var(--dim);margin-left:auto}
+  /* Karten */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:14px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;
+    text-align:left;transition:transform .12s ease, box-shadow .12s ease}
+  .card:hover,.card:focus-visible{transform:translateY(-2px);box-shadow:0 6px 18px rgba(34,48,42,.12);outline:none}
+  .card:focus-visible{box-shadow:0 0 0 3px var(--gold)}
+  .cat{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  .card h3{font-family:'Fraunces',serif;font-size:19px;font-weight:700;margin:4px 0 8px;line-height:1.25}
+  .meta{font-size:13px;color:var(--dim);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .badge{font-size:11px;font-weight:700;color:var(--match);border:1px solid var(--match);border-radius:999px;padding:2px 8px}
+  .tagbadge{font-size:11px;font-weight:700;color:var(--gold);background:#fbf3df;border:1px solid var(--gold);border-radius:999px;padding:2px 8px}
+  .pill.tag{border-style:dashed}
+  .pill.tag.on{background:var(--gold);color:#3a2c10;border-color:var(--gold);border-style:solid}
+  .matchbar{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--match);font-weight:600}
+  .matchbar em{font-style:normal;color:var(--dim);font-weight:500}
+  .empty{text-align:center;color:var(--dim);padding:48px 16px;font-size:15px;line-height:1.6}
+  .error{background:#f7e3dc;border:1px solid var(--accent);color:#7c3a26;border-radius:10px;
+    padding:10px 14px;font-size:13px;margin:12px 0}
+  .fab{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;border:none;
+    border-radius:999px;padding:14px 20px;font-size:14px;font-weight:700;
+    box-shadow:0 8px 20px rgba(199,91,57,.35);z-index:10}
+  .fab:disabled{opacity:.7;cursor:wait}
+  /* Dialoge */
+  dialog{border:none;border-radius:18px;background:var(--paper);color:var(--ink);
+    max-width:680px;width:calc(100% - 24px);padding:26px 24px 22px;font-family:'Public Sans',system-ui,sans-serif}
+  dialog::backdrop{background:rgba(34,48,42,.55)}
+  .close{position:absolute;top:14px;right:14px;background:var(--bg);border:none;border-radius:999px;
+    width:34px;height:34px;font-size:17px;color:var(--ink)}
+  dialog h2{font-family:'Fraunces',serif;font-size:26px;font-weight:700;margin:2px 36px 6px 0;line-height:1.2}
+  dialog h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:20px 0 8px}
+  .ing{list-style:none;padding:0;margin:0}
+  .ing li{display:flex;gap:10px;padding:5px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+  .ing .a{min-width:72px;color:var(--dim);font-variant-numeric:tabular-nums}
+  .ing li.hit .n{color:var(--match);font-weight:700}
+  .steps{padding-left:20px;margin:0}
+  .steps li{margin-bottom:10px;font-size:14.5px;line-height:1.5}
+  .notes{background:#f3efe2;border-radius:10px;padding:10px 14px;font-size:13.5px;margin-top:14px}
+  .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;align-items:center}
+  .btn{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;
+    padding:9px 14px;font-size:13px;font-weight:600;text-decoration:none;display:inline-block}
+  .btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn.danger:hover{border-color:var(--accent);color:var(--accent)}
+  select,input[type=password],input[type=text]{border:1px solid var(--line);border-radius:10px;
+    padding:9px 12px;font-size:14px;font-family:inherit;background:var(--paper);color:var(--ink)}
+  /* Wochenplan */
+  .day{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px}
+  .day-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .day-name{font-family:'Fraunces',serif;font-weight:700;font-size:17px;min-width:96px}
+  .plan-chip{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 6px 5px 12px;
+    font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px;margin:4px 6px 0 0}
+  .plan-chip button{background:none;border:none;color:var(--dim);font-size:14px;padding:0 4px}
+  /* Einkaufsliste */
+  .shop-group{margin-bottom:6px}
+  .shop-item{display:flex;align-items:flex-start;gap:10px;background:var(--paper);border:1px solid var(--line);
+    border-radius:12px;padding:10px 14px;margin-bottom:6px;font-size:14.5px}
+  .shop-item input{margin-top:3px;accent-color:var(--match);width:17px;height:17px}
+  .shop-item.done .label{text-decoration:line-through;color:var(--dim)}
+  .shop-item .from{font-size:12px;color:var(--dim);display:block}
+  .hint{font-size:13px;color:var(--dim);line-height:1.6;margin-top:14px}
+  label.field{display:block;font-size:13px;font-weight:600;margin:14px 0 6px}
+  .field-note{font-size:12.5px;color:var(--dim);line-height:1.5;margin-top:6px}
+  @media (prefers-reduced-motion: reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <div class="head-row">
+      <div>
+        <div class="eyebrow" id="eyebrow">Dein Katalog</div>
+        <h1>Rezeptkasten</h1>
+        <p class="sub">Zutaten rein, Kochideen raus. Plus Wochenplan und Einkaufsliste.</p>
+      </div>
+      <button class="gear" id="openSettings">⚙ Einstellungen</button>
+    </div>
+    <nav class="tabs">
+      <button data-tab="rezepte" class="on">Rezepte</button>
+      <button data-tab="plan">Wochenplan</button>
+      <button data-tab="einkauf">Einkaufsliste</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main"></main>
+
+<button class="fab" id="fab" hidden>+ Rezept fotografieren</button>
+<input type="file" id="file" accept="image/*" hidden>
+
+<dialog id="detail"></dialog>
+<dialog id="settings"></dialog>
+
+<script>
+/* ================= Daten & Storage ================= */
+const LS = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch{ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch{} },
+};
+const DAYS = ["Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag"];
+const CATS = ["Alle","Hauptgericht","Suppe","Salat","Dessert","Sonstiges"];
+
+let catalog = [];                               // aus recipes.json (im Repo)
+let custom  = LS.get("rk-custom", []);          // per Foto/Hand hinzugefügt (nur lokal)
+let deleted = LS.get("rk-deleted", []);         // ausgeblendete Katalog-Rezepte
+let plan    = LS.get("rk-plan", {});            // { Montag:[ids], ... }
+let checked = LS.get("rk-checked", {});         // abgehakte Einkaufsposten
+let apiKey  = LS.get("rk-key", "");
+
+let tab = "rezepte";
+let tokens = [], cat = "Alle", vegOnly = false, maxTime = 0, tagFilter = "";
+let loadError = "";
+
+const all  = () => [...catalog.filter(r => !deleted.includes(r.id)), ...custom];
+const byId = id => all().find(r => r.id === id);
+const norm = s => (s || "").toLowerCase().trim();
+const esc  = s => String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const allTags = () => [...new Set(all().flatMap(r => r.tags || []))].sort((a, b) => a.localeCompare(b, "de"));
+
+function matchInfo(r, toks){
+  if(!toks.length) return { matched: [], score: 0 };
+  const matched = toks.filter(t => r.ingredients.some(i => norm(i.n).includes(t)));
+  return { matched, score: matched.length };
+}
+
+/* ================= Initialisierung ================= */
+async function init(){
+  try{
+    const res = await fetch("recipes.json", { cache: "no-store" });
+    if(!res.ok) throw new Error(res.status);
+    catalog = await res.json();
+  }catch{
+    loadError = "recipes.json konnte nicht geladen werden. Lokal bitte über einen kleinen Webserver öffnen (z. B. „npx serve“), nicht per Doppelklick.";
+  }
+  bindHeader();
+  render();
+}
+
+function bindHeader(){
+  document.querySelectorAll("nav.tabs button").forEach(b =>
+    b.addEventListener("click", () => {
+      tab = b.dataset.tab;
+      document.querySelectorAll("nav.tabs button").forEach(x => x.classList.toggle("on", x === b));
+      render();
+    }));
+  document.getElementById("openSettings").addEventListener("click", openSettings);
+  document.getElementById("fab").addEventListener("click", () => {
+    if(!apiKey){ openSettings("Für den Foto-Import brauchst du einen eigenen Anthropic-API-Key (wird nur lokal in deinem Browser gespeichert)."); return; }
+    document.getElementById("file").click();
+  });
+  document.getElementById("file").addEventListener("change", handlePhoto);
+}
+
+/* ================= Rendering ================= */
+function render(){
+  document.getElementById("eyebrow").textContent = "Dein Katalog · " + all().length + " Rezepte";
+  document.getElementById("fab").hidden = tab !== "rezepte";
+  const m = document.getElementById("main");
+  if(tab === "rezepte") renderRecipes(m);
+  else if(tab === "plan") renderPlan(m);
+  else renderShopping(m);
+}
+
+/* ---------- Tab: Rezepte ---------- */
+function renderRecipes(m){
+  let list = all().map(r => ({ r, m: matchInfo(r, tokens) }));
+  if(cat !== "Alle") list = list.filter(x => x.r.category === cat);
+  if(tagFilter)      list = list.filter(x => (x.r.tags || []).includes(tagFilter));
+  if(vegOnly)        list = list.filter(x => x.r.veg);
+  if(maxTime)        list = list.filter(x => (x.r.time + (x.r.wait || 0)) <= maxTime);
+  if(tokens.length){
+    list = list.filter(x => x.m.score > 0);
+    list.sort((a,b) => b.m.score - a.m.score || a.r.time - b.r.time);
+  } else {
+    list.sort((a,b) => a.r.title.localeCompare(b.r.title, "de"));
+  }
+
+  m.innerHTML = `
+    ${loadError ? `<div class="error">${esc(loadError)}</div>` : ""}
+    <div class="searchbox" id="sbox">
+      ${tokens.map(t => `<button class="chip" data-tok="${esc(t)}">${esc(t)}<span>×</span></button>`).join("")}
+      <input id="tokin" placeholder="${tokens.length ? "weitere Zutat …" : "Was ist da? z. B. Zucchini, Kartoffeln, Sahne …"}">
+      <button class="addbtn" id="tokadd">Zutat hinzufügen</button>
+    </div>
+    <div class="filters">
+      ${CATS.map(c => `<button class="pill ${cat===c?"on":""}" data-cat="${c}">${c}</button>`).join("")}
+      ${allTags().map(t => `<button class="pill tag ${tagFilter===t?"on":""}" data-tag="${esc(t)}">${esc(t)}</button>`).join("")}
+      <button class="pill ${vegOnly?"on":""}" id="fveg">vegetarisch</button>
+      <button class="pill ${maxTime===30?"on":""}" id="ftime">≤ 30 Min</button>
+      <span class="count">${list.length} Treffer</span>
+    </div>
+    <div id="importError"></div>
+    ${list.length === 0
+      ? `<div class="empty">Nichts gefunden. Entferne eine Zutat oder einen Filter,<br>oder fotografiere ein neues Rezept.</div>`
+      : `<div class="grid">${list.map(({r, m}) => `
+          <button class="card" data-open="${esc(r.id)}">
+            <div class="cat">${esc(r.category)}</div>
+            <h3>${esc(r.title)}</h3>
+            <div class="meta">
+              <span>⏱ ${r.time}${r.wait ? " + " + r.wait : ""} Min</span>
+              <span>${r.portions} Port.</span>
+              ${r.kcal ? `<span>${r.kcal} kcal</span>` : ""}
+              ${r.veg ? `<span class="badge">${esc(r.veg)}</span>` : ""}
+              ${(r.tags || []).map(t => `<span class="tagbadge">${esc(t)}</span>`).join("")}
+            </div>
+            ${tokens.length ? `<div class="matchbar">${m.score} von ${tokens.length} Zutaten passen
+              ${m.matched.length ? `<em> · ${esc(m.matched.join(", "))}</em>` : ""}</div>` : ""}
+          </button>`).join("")}</div>`}
+  `;
+
+  const input = document.getElementById("tokin");
+  const add = () => { const t = norm(input.value); if(t && !tokens.includes(t)) tokens.push(t); input.value = ""; render(); };
+  input.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === ","){ e.preventDefault(); add(); } });
+  document.getElementById("tokadd").addEventListener("click", add);
+  m.querySelectorAll("[data-tok]").forEach(b => b.addEventListener("click", () => { tokens = tokens.filter(t => t !== b.dataset.tok); render(); }));
+  m.querySelectorAll("[data-cat]").forEach(b => b.addEventListener("click", () => { cat = b.dataset.cat; render(); }));
+  m.querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => { tagFilter = tagFilter === b.dataset.tag ? "" : b.dataset.tag; render(); }));
+  document.getElementById("fveg").addEventListener("click", () => { vegOnly = !vegOnly; render(); });
+  document.getElementById("ftime").addEventListener("click", () => { maxTime = maxTime === 30 ? 0 : 30; render(); });
+  m.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => openDetail(b.dataset.open)));
+}
+
+/* ---------- Detailansicht ---------- */
+function openDetail(id){
+  const r = byId(id); if(!r) return;
+  const dlg = document.getElementById("detail");
+  const isCustom = custom.some(c => c.id === id);
+  const isLocal = location.protocol === "file:" ||
+    ["localhost", "127.0.0.1", "0.0.0.0"].includes(location.hostname);
+  const recipePage = new URL("r/" + id + "/", new URL(".", location.href)).href;
+  const bringUrl = (isCustom || isLocal) ? "" :
+    "https://api.getbring.com/rest/bringrecipes/deeplink?url=" +
+    encodeURIComponent(recipePage) + "&source=web";
+
+  dlg.innerHTML = `
+    <button class="close" data-x>×</button>
+    <div class="cat">${esc(r.category)}${r.source ? " · " + esc(r.source) : ""}</div>
+    <h2>${esc(r.title)}</h2>
+    <div class="meta">
+      <span>⏱ ${r.time}${r.wait ? " + " + r.wait + " Min Wartezeit" : " Min"}</span>
+      <span>${r.portions} Portionen</span>
+      ${r.kcal ? `<span>${r.kcal} kcal/Person</span>` : ""}
+      ${r.veg ? `<span class="badge">${esc(r.veg)}</span>` : ""}
+      ${(r.tags || []).map(t => `<span class="tagbadge">${esc(t)}</span>`).join("")}
+    </div>
+    <h4>Zutaten</h4>
+    <ul class="ing">${r.ingredients.map(i => `
+      <li class="${tokens.some(t => norm(i.n).includes(t)) ? "hit" : ""}">
+        <span class="a">${esc(i.a)}</span><span class="n">${esc(i.n)}</span></li>`).join("")}
+    </ul>
+    <h4>Zubereitung</h4>
+    <ol class="steps">${(r.steps || []).map(s => `<li>${esc(s)}</li>`).join("")}</ol>
+    ${r.notes ? `<div class="notes">📝 ${esc(r.notes)}</div>` : ""}
+    <div class="row">
+      <select id="dsel">
+        <option value="">Tag wählen …</option>
+        ${DAYS.map(d => `<option>${d}</option>`).join("")}
+      </select>
+      <button class="btn primary" id="toPlan">Zum Wochenplan</button>
+      ${bringUrl ? `<a class="btn" href="${bringUrl}" target="_blank" rel="noopener">Zutaten an Bring! senden</a>
+      <a class="btn" href="${esc(recipePage)}" target="_blank" rel="noopener" title="Diese Seite liest Bring aus">Rezeptseite prüfen</a>` : ""}
+      <button class="btn danger" id="del">Rezept entfernen</button>
+    </div>
+    ${bringUrl ? `` : isLocal
+      ? `<p class="field-note">Bring-Export funktioniert nur über die öffentliche GitHub-Pages-Adresse, nicht lokal. Bring muss die Rezeptseite aus dem Internet abrufen können.</p>`
+      : `<p class="field-note">Bring-Export gibt es für dieses Rezept, sobald es in der recipes.json im Repo liegt und die Rezeptseiten neu erzeugt wurden (siehe Einstellungen → Katalog exportieren).</p>`}
+  `;
+  dlg.querySelector("[data-x]").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", e => { if(e.target === dlg) dlg.close(); }, { once: true });
+  dlg.querySelector("#toPlan").addEventListener("click", () => {
+    const d = dlg.querySelector("#dsel").value;
+    if(!d) return;
+    plan[d] = plan[d] || [];
+    plan[d].push(id);
+    LS.set("rk-plan", plan);
+    dlg.close();
+    tab = "plan";
+    document.querySelectorAll("nav.tabs button").forEach(x => x.classList.toggle("on", x.dataset.tab === "plan"));
+    render();
+  });
+  dlg.querySelector("#del").addEventListener("click", () => {
+    if(!confirm("Dieses Rezept wirklich aus deinem Katalog entfernen?")) return;
+    if(isCustom) custom = custom.filter(c => c.id !== id);
+    else { deleted.push(id); LS.set("rk-deleted", deleted); }
+    LS.set("rk-custom", custom);
+    dlg.close(); render();
+  });
+  dlg.showModal();
+}
+
+/* ---------- Tab: Wochenplan ---------- */
+function renderPlan(m){
+  const options = all().slice().sort((a,b) => a.title.localeCompare(b.title, "de"))
+    .map(r => `<option value="${esc(r.id)}">${esc(r.title)}</option>`).join("");
+  m.innerHTML = `
+    ${DAYS.map(d => `
+      <div class="day">
+        <div class="day-head">
+          <span class="day-name">${d}</span>
+          <select data-day="${d}"><option value="">+ Gericht wählen …</option>${options}</select>
+        </div>
+        <div>${(plan[d] || []).map((id, i) => {
+          const r = byId(id);
+          return r ? `<span class="plan-chip">${esc(r.title)}
+            <button data-rm="${d}|${i}" title="Entfernen">×</button></span>` : "";
+        }).join("")}</div>
+      </div>`).join("")}
+    <div class="row">
+      <button class="btn danger" id="clearPlan">Plan leeren</button>
+    </div>
+    <p class="hint">Tipp: Plane die Woche und wechsle dann zur Einkaufsliste, dort werden alle Zutaten automatisch zusammengeführt.</p>
+  `;
+  m.querySelectorAll("select[data-day]").forEach(s => s.addEventListener("change", () => {
+    if(!s.value) return;
+    const d = s.dataset.day;
+    plan[d] = plan[d] || [];
+    plan[d].push(s.value);
+    LS.set("rk-plan", plan);
+    render();
+  }));
+  m.querySelectorAll("[data-rm]").forEach(b => b.addEventListener("click", () => {
+    const [d, i] = b.dataset.rm.split("|");
+    plan[d].splice(Number(i), 1);
+    LS.set("rk-plan", plan);
+    render();
+  }));
+  document.getElementById("clearPlan").addEventListener("click", () => {
+    if(confirm("Den kompletten Wochenplan leeren?")){ plan = {}; LS.set("rk-plan", plan); render(); }
+  });
+}
+
+/* ---------- Tab: Einkaufsliste ---------- */
+function parseAmount(a){
+  const m = /^(\d+(?:[.,]\d+)?)\s*(g|kg|ml|l|EL|TL)$/.exec((a || "").trim());
+  return m ? { num: parseFloat(m[1].replace(",", ".")), unit: m[2] } : null;
+}
+function buildShopping(){
+  const map = new Map();
+  for(const d of DAYS) for(const id of (plan[d] || [])){
+    const r = byId(id); if(!r) continue;
+    for(const ing of r.ingredients){
+      const key = norm(ing.n);
+      if(!map.has(key)) map.set(key, { name: ing.n, parts: [], from: new Set() });
+      const it = map.get(key);
+      it.parts.push(ing.a || "");
+      it.from.add(r.title);
+    }
+  }
+  return [...map.entries()].map(([key, it]) => {
+    const parsed = it.parts.map(parseAmount);
+    let amount;
+    if(it.parts.every(p => !p)) amount = "";
+    else if(parsed.every(Boolean) && new Set(parsed.map(p => p.unit)).size === 1){
+      const sum = parsed.reduce((s,p) => s + p.num, 0);
+      amount = (Math.round(sum * 100) / 100) + " " + parsed[0].unit;
+    } else amount = it.parts.filter(Boolean).join(" + ");
+    return { key, name: it.name, amount, from: [...it.from] };
+  }).sort((a,b) => a.name.localeCompare(b.name, "de"));
+}
+function shoppingText(items){
+  return "Einkaufsliste Rezeptkasten\n" + items
+    .filter(i => !checked[i.key])
+    .map(i => "- " + (i.amount ? i.amount + " " : "") + i.name).join("\n");
+}
+function renderShopping(m){
+  const items = buildShopping();
+  m.innerHTML = items.length === 0
+    ? `<div class="empty">Die Einkaufsliste füllt sich automatisch aus deinem Wochenplan.<br>Plane zuerst ein paar Gerichte.</div>`
+    : `
+    <div class="row" style="margin:0 0 14px">
+      <button class="btn primary" id="copy">Liste kopieren</button>
+      ${navigator.share ? `<button class="btn" id="share">Teilen</button>` : ""}
+      <button class="btn" id="reset">Häkchen zurücksetzen</button>
+      <span class="count">${items.filter(i => !checked[i.key]).length} offen</span>
+    </div>
+    <div class="shop-group">
+      ${items.map(i => `
+        <label class="shop-item ${checked[i.key] ? "done" : ""}">
+          <input type="checkbox" data-check="${esc(i.key)}" ${checked[i.key] ? "checked" : ""}>
+          <span class="label"><strong>${i.amount ? esc(i.amount) + " " : ""}</strong>${esc(i.name)}
+            <span class="from">für: ${esc(i.from.join(", "))}</span></span>
+        </label>`).join("")}
+    </div>
+    <p class="hint">Hinweis zu Bring!: Bring importiert keine geteilten Textlisten, nur Rezeptseiten. Zutaten einzelner Rezepte schickst du deshalb über den Knopf „Zutaten an Bring! senden“ in der Rezeptansicht. Die gesammelte Wochenliste kopierst du hier und fügst sie in Bring über die Mehrfacheingabe ein (mehrere Artikel mit Komma getrennt einfügen).</p>
+  `;
+  if(items.length === 0) return;
+  m.querySelectorAll("[data-check]").forEach(c => c.addEventListener("change", () => {
+    checked[c.dataset.check] = c.checked;
+    if(!c.checked) delete checked[c.dataset.check];
+    LS.set("rk-checked", checked);
+    render();
+  }));
+  document.getElementById("copy").addEventListener("click", async () => {
+    try{ await navigator.clipboard.writeText(shoppingText(items)); alert("Liste kopiert."); }
+    catch{ alert("Kopieren nicht möglich, bitte manuell markieren."); }
+  });
+  const sh = document.getElementById("share");
+  if(sh) sh.addEventListener("click", () => navigator.share({ title: "Einkaufsliste", text: shoppingText(items) }).catch(() => {}));
+  document.getElementById("reset").addEventListener("click", () => { checked = {}; LS.set("rk-checked", checked); render(); });
+}
+
+/* ================= Foto-Import (Claude) ================= */
+async function handlePhoto(e){
+  const file = e.target.files && e.target.files[0];
+  e.target.value = "";
+  if(!file) return;
+  const fab = document.getElementById("fab");
+  fab.disabled = true; fab.textContent = "Lese Rezept …";
+  const errBox = () => document.getElementById("importError");
+  if(errBox()) errBox().innerHTML = "";
+  try{
+    const base64 = await new Promise((res, rej) => {
+      const r = new FileReader();
+      r.onload = () => res(r.result.split(",")[1]);
+      r.onerror = () => rej(new Error("Datei konnte nicht gelesen werden"));
+      r.readAsDataURL(file);
+    });
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "anthropic-dangerous-direct-browser-access": "true"
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-6",
+        max_tokens: 1500,
+        messages: [{
+          role: "user",
+          content: [
+            { type: "image", source: { type: "base64", media_type: file.type || "image/jpeg", data: base64 } },
+            { type: "text", text: 'Extrahiere das Kochrezept aus diesem Foto. Berücksichtige handschriftliche Änderungen (durchgestrichene Zutaten ersetzen). Antworte AUSSCHLIESSLICH mit einem JSON-Objekt, ohne Markdown, exakt in diesem Schema: {"title":string,"category":"Hauptgericht"|"Suppe"|"Salat"|"Dessert"|"Sonstiges","time":number,"wait":number,"portions":number,"kcal":number|null,"veg":"vegan"|"vegetarisch"|null,"source":string,"notes":string,"ingredients":[{"a":string,"n":string}],"steps":[string]}' }
+          ]
+        }]
+      })
+    });
+    const data = await response.json();
+    if(data.error) throw new Error(data.error.message || "API-Fehler");
+    const text = (data.content || []).map(b => b.text || "").join("\n");
+    const parsed = JSON.parse(text.replace(/```json|```/g, "").trim());
+    if(!parsed.title || !Array.isArray(parsed.ingredients)) throw new Error("Unvollständiges Rezept erkannt");
+    parsed.id = "r-" + Date.now();
+    custom.push(parsed);
+    LS.set("rk-custom", custom);
+    render();
+    openDetail(parsed.id);
+  }catch(err){
+    render();
+    const box = document.getElementById("importError");
+    if(box) box.innerHTML = `<div class="error">Import fehlgeschlagen: ${esc(err.message || "Bitte noch einmal versuchen.")}</div>`;
+  }
+  fab.disabled = false; fab.textContent = "+ Rezept fotografieren";
+}
+
+/* ================= Einstellungen ================= */
+function openSettings(msg){
+  const dlg = document.getElementById("settings");
+  dlg.innerHTML = `
+    <button class="close" data-x>×</button>
+    <h2>Einstellungen</h2>
+    ${msg ? `<div class="error">${esc(msg)}</div>` : ""}
+    <label class="field" for="key">Anthropic-API-Key (für den Foto-Import)</label>
+    <input type="password" id="key" value="${esc(apiKey)}" placeholder="sk-ant-…" style="width:100%">
+    <p class="field-note">Der Schlüssel wird ausschließlich lokal in deinem Browser gespeichert (localStorage) und nur direkt an api.anthropic.com gesendet. Niemals in das GitHub-Repo eintragen oder committen.</p>
+    <h4>Katalog</h4>
+    <div class="row" style="margin-top:8px">
+      <button class="btn" id="exp">Katalog als recipes.json exportieren</button>
+      <button class="btn" id="imp">recipes.json importieren</button>
+      <input type="file" id="impfile" accept="application/json" hidden>
+    </div>
+    <p class="field-note">Per Foto hinzugefügte Rezepte liegen zunächst nur in diesem Browser. Exportiere die Datei und committe sie ins Repo, damit sie überall verfügbar sind und der Bring-Export funktioniert. Danach das Skript „node scripts/build-bring-pages.mjs“ ausführen (siehe README).</p>
+    <div class="row"><button class="btn primary" id="save">Speichern</button></div>
+  `;
+  dlg.querySelector("[data-x]").addEventListener("click", () => dlg.close());
+  dlg.querySelector("#save").addEventListener("click", () => {
+    apiKey = dlg.querySelector("#key").value.trim();
+    LS.set("rk-key", apiKey);
+    dlg.close();
+  });
+  dlg.querySelector("#exp").addEventListener("click", () => {
+    const merged = [...catalog.filter(r => !deleted.includes(r.id)), ...custom];
+    const blob = new Blob([JSON.stringify(merged, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "recipes.json";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+  dlg.querySelector("#imp").addEventListener("click", () => dlg.querySelector("#impfile").click());
+  dlg.querySelector("#impfile").addEventListener("change", async e => {
+    const f = e.target.files[0]; if(!f) return;
+    try{
+      const data = JSON.parse(await f.text());
+      if(!Array.isArray(data)) throw new Error();
+      catalog = data; custom = []; deleted = [];
+      LS.set("rk-custom", custom); LS.set("rk-deleted", deleted);
+      dlg.close(); render();
+    }catch{ alert("Datei konnte nicht gelesen werden."); }
+  });
+  dlg.showModal();
+}
+
+init();
+</script>
+</body>
+</html>
