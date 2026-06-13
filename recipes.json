@@ -1011,5 +1011,281 @@
       "Verrühre die Zutaten für die Soße in einer Schale glatt und gieße sie über das Gemüse und die Maultaschen.",
       "Bestreue alles mit Streukäse und überbacke das Blech 35–40 Minuten, bis es goldbraun ist."
     ]
+  },
+  {
+    "id": "vegetarisches-sushi",
+    "title": "vegetarisches Sushi",
+    "category": "Salat",
+    "time": 20,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "200 g",
+        "n": "klebriger Reis (z.B. Milchreis oder Sushireis)"
+      },
+      {
+        "a": "400 ml",
+        "n": "Wasser"
+      },
+      {
+        "a": "200 g",
+        "n": "Salatgurke"
+      },
+      {
+        "a": "200 g",
+        "n": "Karotte"
+      },
+      {
+        "a": "2",
+        "n": "Lauchzwiebeln"
+      },
+      {
+        "a": "3-4 EL",
+        "n": "Mayo"
+      },
+      {
+        "a": "3-4 EL",
+        "n": "Frischkäse"
+      },
+      {
+        "a": "je 2 cl",
+        "n": "Reisessig"
+      },
+      {
+        "a": "je 2 cl",
+        "n": "Sesamöl"
+      },
+      {
+        "a": "je 2 cl",
+        "n": "Sojasoße"
+      },
+      {
+        "a": "je 2 cl",
+        "n": "Sriracha-Soße (Chili-Soße mit Knoblauch)"
+      },
+      {
+        "a": "etwas",
+        "n": "Zucker"
+      },
+      {
+        "a": "etwas",
+        "n": "Salz"
+      }
+    ],
+    "steps": [
+      "Reis mit Wasser nach Packungsanleitung kochen und abkühlen lassen.",
+      "Gurke und Karotte in kleine Stücke oder Streifen schneiden. Lauchzwiebeln in Ringe schneiden.",
+      "Mayo, Frischkäse, Reisessig, Sesamöl, Sojasoße und Sriracha-Soße zu einem Dressing verrühren. Mit Zucker und Salz abschmecken.",
+      "Abgekühlten Reis mit dem Gemüse und dem Dressing vermischen und servieren."
+    ]
+  },
+  {
+    "id": "lauwarmer-bratkartoffelsalat",
+    "title": "Lauwarmer Bratkartoffelsalat",
+    "category": "Salat",
+    "time": 40,
+    "wait": 0,
+    "portions": 2,
+    "kcal": 504,
+    "veg": null,
+    "source": "essen & trinken - Für jeden Tag 11/2016",
+    "notes": "Getrocknete Tomaten: Die Tomaten werden gesalzen und durch das Trocknen entsteht das intensive Aroma. Zum Konservieren legt man sie in Öl ein oder verpackt sie in Tüten. Es gibt getrocknete Tomaten von soft bis sehr fest. Die weicheren Sorten müssen nicht eingeweicht werden. Beim Kauf auf ungeschwefelte Produkte achten.",
+    "ingredients": [
+      {
+        "a": "20 g",
+        "n": "Tomaten (getrocknet)"
+      },
+      {
+        "a": "3 EL",
+        "n": "Rotweinessig"
+      },
+      {
+        "a": "6 EL",
+        "n": "Sonnenblumenöl"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Zucker"
+      },
+      {
+        "a": "200 g",
+        "n": "Garnelen (ohne Kopf und Schale)"
+      },
+      {
+        "a": "½ TL",
+        "n": "Chiliflocken"
+      },
+      {
+        "a": "100 g",
+        "n": "Feldsalat"
+      },
+      {
+        "a": "400 g",
+        "n": "Kartoffeln (festkochend)"
+      }
+    ],
+    "steps": [
+      "Tomaten mit 50 ml Wasser in einen Topf geben und 2 Min. kochen. Lauwarm abkühlen lassen und in einem hohen Gefäß mit dem Schneidstab fein pürieren. Essig und 3 EL Öl zugeben und mit Salz, Pfeffer und Zucker würzen.",
+      "Garnelen mit Chiliflocken und 1 EL Öl mischen. Feldsalat putzen, gründlich waschen und trocken schleudern.",
+      "Kartoffeln schälen und würfeln. 2 EL Öl in einer beschichteten Pfanne erhitzen und die Kartoffeln darin 15 Min. goldbraun braten. Kartoffeln in eine Schüssel geben. Garnelen in der heißen beschichteten Pfanne 4 Min. braten, salzen.",
+      "Kartoffeln und Feldsalat anrichten. Garnelen daraufgeben und mit der Vinaigrette beträufelt servieren."
+    ]
+  },
+  {
+    "id": "hokkaido-kuerbis-gefuellt-mit-kaese",
+    "title": "Hokkaido-Kürbis gefüllt mit Käse",
+    "category": "Hauptgericht",
+    "tags": [
+      "Herbst",
+      "Kürbis",
+      "vegetarisch",
+      "Käse",
+      "Backofen"
+    ],
+    "time": 25,
+    "wait": 60,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "biohof_mertens_wiesbrock (Instagram)",
+    "notes": "Dankeschön an @ina_schoengesund für die Fotos.",
+    "ingredients": [
+      {
+        "a": "1 großer (oder 4 kleine)",
+        "n": "Hokkaido-Kürbis"
+      },
+      {
+        "a": "125 g",
+        "n": "Weißbrot"
+      },
+      {
+        "a": "150 g",
+        "n": "Bergkäse"
+      },
+      {
+        "a": "3",
+        "n": "Knoblauchzehen"
+      },
+      {
+        "a": "400 ml",
+        "n": "Sahne"
+      },
+      {
+        "a": "150 ml",
+        "n": "Gemüsebrühe"
+      },
+      {
+        "a": "1 EL",
+        "n": "Thymian"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz & Pfeffer"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Paprikapulver, scharf"
+      }
+    ],
+    "steps": [
+      "Den Backofen auf 190°C vorheizen.",
+      "Vom Kürbis einen Deckel abschneiden und diesen aufheben. Mit einem Löffel alle Kerne aus dem Kürbis entfernen.",
+      "Weißbrot klein würfeln und ohne Fett in einer Pfanne anrösten.",
+      "Käse raspeln.",
+      "Knoblauch schälen, mit Sahne und Gemüsebrühe aufkochen und ca. 5 Minuten bei geringer Hitze köcheln lassen. Dann mit Thymian, Salz und Pfeffer würzen.",
+      "Abwechselnd Weißbrotstücke und Käseraspel in den Kürbis geben. Sahnemischung dazu gießen, mit etwas Paprikapulver würzen und den Deckel auf den Kürbis setzen.",
+      "Kürbis in eine Auflaufform stellen und 45–60 Minuten backen."
+    ]
+  },
+  {
+    "id": "pasta-flammkuchen-style-aus-dem-ofen",
+    "title": "Pasta Flammkuchen Style aus dem Ofen",
+    "category": "Hauptgericht",
+    "tags": [
+      "Pasta",
+      "Ofen",
+      "Flammkuchen",
+      "cremig"
+    ],
+    "time": 40,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": null,
+    "source": "@Fitaliancook",
+    "notes": "Rosmarin Olivenöl ist noch besser als normales Olivenöl. Ggfs. noch eine Kelle Pastawasser hinzu, damit es noch cremiger wird.",
+    "ingredients": [
+      {
+        "a": "250g",
+        "n": "Fusilli"
+      },
+      {
+        "a": "150g",
+        "n": "Frischkäse"
+      },
+      {
+        "a": "300g",
+        "n": "Kartoffel"
+      },
+      {
+        "a": "150g",
+        "n": "Zwiebeln"
+      },
+      {
+        "a": "150g",
+        "n": "Rohschinkenwürfel"
+      },
+      {
+        "a": "1/2 TL",
+        "n": "Salz"
+      },
+      {
+        "a": "1/2 TL",
+        "n": "frisch gemahlener Pfeffer"
+      },
+      {
+        "a": "1/2 TL",
+        "n": "Muskat"
+      },
+      {
+        "a": "1-2 EL",
+        "n": "Olivenöl (noch besser: Rosmarin Olivenöl)"
+      },
+      {
+        "a": "1-2 Kellen",
+        "n": "Pastawasser"
+      },
+      {
+        "a": "20g",
+        "n": "Parmesan"
+      },
+      {
+        "a": "3",
+        "n": "Frühlingszwiebeln"
+      }
+    ],
+    "steps": [
+      "Ofen auf 220 Grad O/U vorheizen, Pastawasser aufsetzen.",
+      "Zwiebeln schälen, halbieren und schneiden. Frühlingszwiebeln waschen und in Ringe schneiden. Kartoffel schälen und in 0,5cm kleine Würfel schneiden.",
+      "Zwiebeln, Kartoffeln und Rohschinken in eine flache Ofenform geben.",
+      "Gewürze und Olivenöl dazugeben und gut vermischen. Frischkäse in der Mitte platzieren.",
+      "Ca. 20-25 Minuten im Ofen backen.",
+      "Währenddessen die Pasta kochen (am besten so, dass sie gleichzeitig mit dem Ofen fertig ist).",
+      "Form aus dem Ofen nehmen, Frühlingszwiebeln und 1 Kelle Pastawasser hinzu, einmal vermischen.",
+      "Pasta und Parmesan nun auch hinein geben und verrühren, bis es richtig schön cremig ist. Ggfs. noch eine Kelle Pastawasser hinzu, damit es noch cremiger wird."
+    ]
   }
 ]
