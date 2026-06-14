@@ -1523,5 +1523,160 @@
       "Den Teig 20 Minuten ruhen lassen.",
       "Vor der Verwendung des Pasta-Rollers den Teig in 4 Stücke teilen und die Zubereitungsanleitung des Pasta-Rollers befolgen."
     ]
+  },
+  {
+    "id": "hummus-bowl-mit-roestrosenkohl",
+    "title": "Hummus-Bowl mit Röstrosenkohl",
+    "category": "Hauptgericht",
+    "tags": [
+      "Bowl"
+    ],
+    "time": 45,
+    "wait": 0,
+    "portions": 4,
+    "kcal": 930,
+    "veg": "vegetarisch",
+    "source": "REWE Magazin",
+    "notes": "Die perfekte Kombi für deine Wintergemüsebowl. Ernährwert: 9/10",
+    "ingredients": [
+      {
+        "a": "300 g",
+        "n": "REWE Bio Junge Erbsen (TK)"
+      },
+      {
+        "a": "500 g",
+        "n": "Rosenkohl"
+      },
+      {
+        "a": "4",
+        "n": "Zwiebeln"
+      },
+      {
+        "a": "2 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "½ TL",
+        "n": "Chiliflocken"
+      },
+      {
+        "a": "1 EL",
+        "n": "Honig"
+      },
+      {
+        "a": "1 EL",
+        "n": "REWE Beste Wahl Aceto Balsamico"
+      },
+      {
+        "a": "1",
+        "n": "Zitrone"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz, Pfeffer"
+      },
+      {
+        "a": "3 Dosen (à 250 g)",
+        "n": "REWE Beste Wahl Weiße Riesenbohnen"
+      },
+      {
+        "a": "2",
+        "n": "Knoblauchzehen"
+      },
+      {
+        "a": "5 g",
+        "n": "Minze"
+      },
+      {
+        "a": "4 EL",
+        "n": "Tahin"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Kreuzkümmel"
+      },
+      {
+        "a": "50 g",
+        "n": "Walnüsse"
+      },
+      {
+        "a": "250 g",
+        "n": "REWE Bio Soja Joghurt"
+      },
+      {
+        "a": "1",
+        "n": "Fladenbrot zum Servieren"
+      }
+    ],
+    "steps": [
+      "Die Erbsen auftauen lassen. Backofen auf 200 °C Umluft vorheizen.",
+      "Rosenkohl waschen, halbieren. Zwiebeln schälen, in Spalten schneiden. Alles in einer Schüssel mit 2 EL Öl, Chiliflocken, Honig und Balsamico vermengen. Die Zitrone auspressen. Gemüse mit Salz, Pfeffer und etwas Zitronensaft würzen und so auf einem Backblech verteilen, dass die Schnittflächen vom Rosenkohl nach unten zeigen. 20–25 Minuten rösten. Zwischendurch einmal durchmischen.",
+      "Währenddessen Bohnen abtropfen, unter fließendem Wasser abwaschen. Knoblauch schälen, grob hacken. Minze waschen. Alles zusammen mit den Erbsen, Tahin, restlichem Zitronensaft sowie 4–6 EL kaltem Wasser fein pürieren. Mit 1 TL Salz, Pfeffer und Kreuzkümmel abschmecken.",
+      "Walnüsse hacken, ohne Fett rösten. Hummus mit Rosenkohl, Walnüssen und einem Klecks Sojajoghurt anrichten und mit Fladenbrot servieren."
+    ]
+  },
+  {
+    "id": "rosenkohl-pasta",
+    "title": "Rosenkohl-Pasta",
+    "category": "Hauptgericht",
+    "time": 25,
+    "wait": 0,
+    "portions": 4,
+    "kcal": 1061,
+    "veg": null,
+    "source": "REWE Magazin",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "500 g",
+        "n": "Fusilli"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "500 g",
+        "n": "Rosenkohl (TK, aufgetaut)"
+      },
+      {
+        "a": "250 g",
+        "n": "Hähnchen-Geschnetzeltes"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "1 EL",
+        "n": "Mehl"
+      },
+      {
+        "a": "3 EL",
+        "n": "Rapsöl"
+      },
+      {
+        "a": "150 ml",
+        "n": "Weißwein"
+      },
+      {
+        "a": "400 ml",
+        "n": "Schlagsahne"
+      },
+      {
+        "a": "50 g",
+        "n": "Parmesan (gerieben)"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Röstzwiebeln"
+      }
+    ],
+    "steps": [
+      "Fusilli nach Packungsanweisung in Salzwasser bissfest garen.",
+      "Die Rosenkohlröschen halbieren und in den letzten 5 Minuten zu den Fusilli geben und mitgaren.",
+      "Hähnchen-Geschnetzeltes mit Salz und Pfeffer würzen, das Mehl untermischen. In einer Pfanne mit Öl hellbraun braten. Mit Wein ablöschen und fast vollständig einkochen lassen. Sahne zugießen, aufkochen und 3 Minuten bei milder Hitze köcheln. Parmesan unterrühren und mit Salz und Pfeffer abschmecken.",
+      "Nudeln und Rosenkohl abgießen, gut abtropfen lassen und unter die Soße mischen. Mit Röstzwiebeln bestreut servieren."
+    ]
   }
 ]
