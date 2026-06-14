@@ -1480,5 +1480,46 @@
       "Die Johannisbeerendarüber verteilen.",
       "Bei 190°C 30 Minuten backen."
     ]
+  },
+  {
+    "id": "einfache-eierpasta",
+    "title": "Einfache Eierpasta",
+    "category": "Sonstiges",
+    "tags": [
+      "Teigrezept"
+    ],
+    "time": 10,
+    "wait": 20,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "KitchenAid Handbuch",
+    "notes": "Ergibt etwa 580 g Teig. Vor der Verwendung des Pasta-Rollers den Teig in 4 Stücke teilen.",
+    "ingredients": [
+      {
+        "a": "4 große",
+        "n": "Eier"
+      },
+      {
+        "a": "415 g",
+        "n": "Mehl, gesiebt"
+      },
+      {
+        "a": "15 ml (1 EL)",
+        "n": "Wasser"
+      },
+      {
+        "a": "1 TL",
+        "n": "Salz"
+      }
+    ],
+    "steps": [
+      "Eier in einen Messbecher aus Glas aufschlagen. Ei-Menge überprüfen; es sollten 200 ml sein. Sind es weniger als 200 ml, jeweils 2 ml (1 TL) Wasser hinzugeben, bis die angegebene Menge erreicht ist.",
+      "Mehl und Salz in die Mengschüssel der Küchenmaschine geben. Schüssel und Flachrührer anbringen.",
+      "Geschwindigkeitsstufe 2 wählen; nach und nach Eier und 15 ml (1 EL) Wasser hinzugeben. Etwa 30 Sekunden lang durchrühren.",
+      "Die Küchenmaschine ausschalten und den Flachrührer durch den Knethaken ersetzen. Auf Geschwindigkeitsstufe 2 einstellen und 2 Minuten lang kneten.",
+      "Den Teig 20 Minuten ruhen lassen.",
+      "Vor der Verwendung des Pasta-Rollers den Teig in 4 Stücke teilen und die Zubereitungsanleitung des Pasta-Rollers befolgen."
+    ]
   }
 ]
