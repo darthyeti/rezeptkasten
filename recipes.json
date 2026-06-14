@@ -1806,5 +1806,726 @@
       "Petersilie waschen, hacken und darüberstreuen.",
       "Mit geriebenem Parmigiano Reggiano bestreut servieren."
     ]
+  },
+  {
+    "id": "flammkuchen-spaetzle-blech",
+    "title": "Flammkuchen Spätzle Blech",
+    "category": "Hauptgericht",
+    "tags": [
+      "Backofen",
+      "einfach",
+      "schnell"
+    ],
+    "time": 35,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "instagram.com/philippsteuer",
+    "notes": "Alles draufkippen, in den Ofen schieben und fertig. In der Zwischenzeit was Bequemes anziehen, aufräumen und dann das Essen genießen.",
+    "ingredients": [
+      {
+        "a": "800 g",
+        "n": "Spätzle"
+      },
+      {
+        "a": "125 g",
+        "n": "vegane Speckwürfel"
+      },
+      {
+        "a": "80 g",
+        "n": "Streukäse"
+      },
+      {
+        "a": "1",
+        "n": "rote Zwiebel"
+      },
+      {
+        "a": "½ Bund",
+        "n": "Frühlingszwiebeln"
+      },
+      {
+        "a": "100 g",
+        "n": "veganer Schmand"
+      },
+      {
+        "a": "150 g",
+        "n": "vegane Sahne"
+      },
+      {
+        "a": "2",
+        "n": "Knoblauchzehen"
+      },
+      {
+        "a": "1 TL",
+        "n": "Gemüsebrühe-Pulver"
+      },
+      {
+        "a": "¼ TL",
+        "n": "Muskat"
+      },
+      {
+        "a": "½ TL",
+        "n": "Salz"
+      },
+      {
+        "a": "3 Prisen",
+        "n": "Pfeffer"
+      }
+    ],
+    "steps": [
+      "Heize den Ofen auf 210 °C Ober-/Unterhitze vor.",
+      "Verteile die Spätzle auf einem Backblech.",
+      "Vermenge alle Zutaten für die Soße (veganer Schmand, vegane Sahne, Knoblauchzehen, Gemüsebrühe-Pulver, Muskat, Salz, Pfeffer) und gieße die Mischung über die Spätzle. Vermische alles leicht.",
+      "Verteile die veganen Speckwürfel darüber.",
+      "Gib den Streukäse darüber.",
+      "Schneide die Zwiebel in feine Streifen und verteile sie ebenfalls auf dem Blech.",
+      "Backe das Blech im untersten Einschub 20–25 Minuten, bis alles leicht gebräunt ist.",
+      "Schneide in der Zwischenzeit die Frühlingszwiebeln in Ringe und streue sie vor dem Servieren darüber."
+    ]
+  },
+  {
+    "id": "pizzaschnecken",
+    "title": "Pizzaschnecken",
+    "category": "Sonstiges",
+    "tags": [
+      "einfach",
+      "Party Snack",
+      "Backofen"
+    ],
+    "time": 30,
+    "wait": 20,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "instagram.com/philippsteuer",
+    "notes": "Sieht am Ende nach viel Aufwand aus, ist aber einfach zuzubereiten.",
+    "ingredients": [
+      {
+        "a": "150g",
+        "n": "Frischkäse (vegan)"
+      },
+      {
+        "a": "3 EL",
+        "n": "Tomatenmark"
+      },
+      {
+        "a": "1 TL",
+        "n": "Italienische Kräuter"
+      },
+      {
+        "a": "1 TL",
+        "n": "Knoblauchpulver"
+      },
+      {
+        "a": "1 TL",
+        "n": "Zwiebelpulver"
+      },
+      {
+        "a": "1 Pck",
+        "n": "Fertiger Pizzateig"
+      },
+      {
+        "a": "1 Handvoll",
+        "n": "Blattspinat"
+      },
+      {
+        "a": "1/2 Dose",
+        "n": "Mais"
+      },
+      {
+        "a": "nach Belieben",
+        "n": "Streukäse (vegan)"
+      }
+    ],
+    "steps": [
+      "Verrühre für den Aufstrich alle Zutaten (Frischkäse, Tomatenmark, italienische Kräuter, Knoblauchpulver, Zwiebelpulver) in einer Schale.",
+      "Rolle den Pizzateig aus, bestreiche ihn mit dem Aufstrich, gib Mais, Spinat und Streukäse dazu, rolle alles von links nach rechts und schneide die Teigrolle in mehrere Scheiben.",
+      "Gib die Schnecken auf ein Backblech mit Backpapier und backe sie für 20 Minuten bei 200 Grad O/U im Ofen fertig."
+    ]
+  },
+  {
+    "id": "gyoza-auflauf",
+    "title": "Gyoza Auflauf",
+    "category": "Hauptgericht",
+    "tags": [
+      "Backofen",
+      "Asiatisch",
+      "einfach"
+    ],
+    "time": 30,
+    "wait": 15,
+    "portions": 3,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "instagram.com/philippsteuer",
+    "notes": "Alle Zutaten in eine große Auflaufform geben. Heiß servieren und garnieren.",
+    "ingredients": [
+      {
+        "a": "2 TL",
+        "n": "Knoblauchpulver"
+      },
+      {
+        "a": "1 TL",
+        "n": "Ingwerpulver"
+      },
+      {
+        "a": "6",
+        "n": "Frühlingszwiebeln"
+      },
+      {
+        "a": "2 EL",
+        "n": "helle Misopaste"
+      },
+      {
+        "a": "2 EL",
+        "n": "Ahornsirup"
+      },
+      {
+        "a": "1 EL",
+        "n": "Reisessig"
+      },
+      {
+        "a": "1 EL",
+        "n": "rote Currypaste"
+      },
+      {
+        "a": "2 EL",
+        "n": "Sojasoße"
+      },
+      {
+        "a": "400 ml",
+        "n": "Kokosmilch"
+      },
+      {
+        "a": "800 ml",
+        "n": "Gemüsebrühe"
+      },
+      {
+        "a": "4 Päckchen",
+        "n": "Instant-Ramen (je 100g, ohne Würzpäckchen)"
+      },
+      {
+        "a": "4 Portionen",
+        "n": "tiefgekühlte vegane Gyoza"
+      },
+      {
+        "a": "nach Belieben",
+        "n": "Sesam"
+      },
+      {
+        "a": "nach Belieben",
+        "n": "frische Petersilie"
+      },
+      {
+        "a": "nach Belieben",
+        "n": "grüne Frühlingszwiebelringe"
+      }
+    ],
+    "steps": [
+      "Alle Zutaten (Knoblauchpulver, Ingwerpulver, Frühlingszwiebeln, Misopaste, Ahornsirup, Reisessig, Currypaste, Sojasoße) in eine große Auflaufform geben und gut vermischen.",
+      "Kokosmilch und Gemüsebrühe hinzufügen und nochmals umrühren.",
+      "Ramen-Nudeln in die Soße legen, sodass sie gut bedeckt sind, und Dumplings obenauf verteilen.",
+      "Bei 180°C Umluft ca. 12–15 Minuten im Ofen backen, bis die Nudeln al dente und die Gyoza gar sind.",
+      "Heiß servieren und mit Sesam, frischer Petersilie und den grünen Frühlingszwiebeln garnieren."
+    ]
+  },
+  {
+    "id": "pfannenlasagne",
+    "title": "Pfannenlasagne",
+    "category": "Hauptgericht",
+    "tags": [
+      "One-Pot",
+      "einfach",
+      "Pasta"
+    ],
+    "time": 30,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "instagram.com/philippsteuer",
+    "notes": "Feierabendrezept – fertig in unter 30 Minuten in nur einer Pfanne.",
+    "ingredients": [
+      {
+        "a": "1-2 EL",
+        "n": "Öl"
+      },
+      {
+        "a": "200 g",
+        "n": "veganes Hack"
+      },
+      {
+        "a": "1 EL",
+        "n": "Knoblauchpulver"
+      },
+      {
+        "a": "1 TL",
+        "n": "Zwiebelpulver"
+      },
+      {
+        "a": "6-8",
+        "n": "Lasagneblätter, zerkleinert"
+      },
+      {
+        "a": "500 ml",
+        "n": "passierte Tomaten"
+      },
+      {
+        "a": "150 ml",
+        "n": "Gemüsebrühe"
+      },
+      {
+        "a": "1 Bund",
+        "n": "Basilikum"
+      },
+      {
+        "a": "100 g",
+        "n": "vegane Creme Fraiche"
+      },
+      {
+        "a": "50 g",
+        "n": "Streukäse (vegan)"
+      }
+    ],
+    "steps": [
+      "Veganes Hack in Öl für 5-7 Minuten anbraten, dann die Gewürze dazugeben und nochmal 2-3 Minuten weiter braten.",
+      "Mit den passierten Tomaten und der Gemüsebrühe ablöschen, die Lasagneblätter (grob zerbrochen) und den Basilikum dazugeben. Alles ordentlich verrühren.",
+      "Das Ganze mit Deckel etwa 10 Minuten köcheln lassen und zwischendurch umrühren, damit nichts anklebt.",
+      "Vegane Creme Fraiche und veganen Streukäse auf der Pfannenlasagne verteilen und alles weitere 5 Minuten mit Deckel köcheln lassen, bis der Streukäse geschmolzen ist."
+    ]
+  },
+  {
+    "id": "kartoffel-cheeseburger-auflauf-mit-nudeln",
+    "title": "Kartoffel Cheeseburger Auflauf mit Nudeln",
+    "category": "Hauptgericht",
+    "tags": [
+      "Pasta",
+      "einfach"
+    ],
+    "time": 30,
+    "wait": 20,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "instagram.com/philippsteuer",
+    "notes": "Ursprünglich mit Kartoffeln, aber Nudeln funktionieren mindestens genauso gut – weniger matschig und besseres Mundgefühl. Pflanzenmilch zur Soße geben, wenn sie zu fest ist.",
+    "ingredients": [
+      {
+        "a": "200g",
+        "n": "gekochte Nudeln"
+      },
+      {
+        "a": "250g",
+        "n": "veganes Hack (z.B. von Rewe)"
+      },
+      {
+        "a": "1 kleine",
+        "n": "rote Zwiebel"
+      },
+      {
+        "a": "2-3",
+        "n": "Gewürzgurken"
+      },
+      {
+        "a": "1 Hand voll",
+        "n": "Streukäse (vegan)"
+      },
+      {
+        "a": "150ml",
+        "n": "vegane Sahne"
+      },
+      {
+        "a": "2 EL",
+        "n": "Ketchup"
+      },
+      {
+        "a": "2 EL",
+        "n": "Mayo (vegan)"
+      },
+      {
+        "a": "1 EL",
+        "n": "Senf"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pflanzenmilch"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Salz"
+      }
+    ],
+    "steps": [
+      "Nudeln in Salzwasser gar kochen.",
+      "Veganes Hack in Öl nach Packungsangabe anbraten.",
+      "Gekochte Nudeln in eine Auflaufform geben, dann das Hack darüber verteilen.",
+      "Vegane Sahne, Ketchup, Mayo und Senf zu einer Soße verrühren. Bei Bedarf Pflanzenmilch hinzufügen, optional salzen.",
+      "Soße gleichmäßig über das Hack streichen.",
+      "Alles mit Streukäse und Gurken toppen.",
+      "Auflauf bei 200°C Ober-/Unterhitze ca. 20 Minuten im Ofen backen."
+    ]
+  },
+  {
+    "id": "zitronen-spinat-tortellini",
+    "title": "Zitronen-Spinat-Tortellini",
+    "category": "Hauptgericht",
+    "tags": [
+      "Pasta",
+      "einfach"
+    ],
+    "time": 20,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "instagram.com/philippsteuer",
+    "notes": "Nudelwasser vor dem Abgießen auffangen (ca. 80 ml). Frischer Basilikum optional zum Garnieren.",
+    "ingredients": [
+      {
+        "a": "250 g",
+        "n": "Gemüse-Tortellini"
+      },
+      {
+        "a": "75 g",
+        "n": "Butter"
+      },
+      {
+        "a": "3 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "1 TL",
+        "n": "Knoblauchpulver"
+      },
+      {
+        "a": "60 g",
+        "n": "veganer Parmesan / Hefeflocken"
+      },
+      {
+        "a": "250 ml",
+        "n": "Sojasahne"
+      },
+      {
+        "a": "80 g",
+        "n": "frischer Blattspinat, grob gehackt"
+      },
+      {
+        "a": "ca. 80 ml",
+        "n": "Nudelwasser"
+      },
+      {
+        "a": "¼ TL",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "Saft von 1 und Abrieb von ½",
+        "n": "Bio-Zitrone"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "frischer Basilikum"
+      }
+    ],
+    "steps": [
+      "Einen großen Topf mit gesalzenem Wasser zum Kochen bringen. Tortellini nach Packungsanweisung kochen. Vor dem Abgießen ca. 80 ml Nudelwasser abschöpfen und beiseite stellen.",
+      "Währenddessen Butter und Olivenöl in einer großen Pfanne bei mittlerer Temperatur erhitzen. Knoblauch und Pfeffer hinzufügen und kurz verrühren.",
+      "Sojasahne angießen und die Soße ca. 3 Minuten köcheln lassen, bis sie leicht reduziert ist.",
+      "Zitronensaft unterrühren – dabei stetig rühren, damit die Soße nicht gerinnt.",
+      "Zitronenabrieb und Parmesan dazugeben und rühren, bis die Soße cremig ist.",
+      "Spinat, gekochte Tortellini und einen Schluck Nudelwasser unter die Soße heben. Bei Bedarf mehr Nudelwasser hinzufügen.",
+      "Abschmecken und mit extra Parmesan sowie Basilikum servieren."
+    ]
+  },
+  {
+    "id": "vegane-cremesauce-pasta",
+    "title": "Vegane Cremesauce Pasta",
+    "category": "Hauptgericht",
+    "tags": [
+      "schnell",
+      "einfach",
+      "Pasta"
+    ],
+    "time": 20,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "instagram.com/philippsteuer",
+    "notes": "100 ml Nudelwasser vor dem Abgießen aufheben. Falls die Soße zu dick ist, etwas Nudelwasser einrühren.",
+    "ingredients": [
+      {
+        "a": "200 g",
+        "n": "Pasta"
+      },
+      {
+        "a": "2 EL",
+        "n": "vegane Butter"
+      },
+      {
+        "a": "4",
+        "n": "Knoblauchzehen, gerieben"
+      },
+      {
+        "a": "300 ml",
+        "n": "vegane Sahne"
+      },
+      {
+        "a": "100 g",
+        "n": "veganer Parmesan"
+      },
+      {
+        "a": "¼ TL",
+        "n": "Paprikapulver (edelsüß)"
+      },
+      {
+        "a": "¼ TL",
+        "n": "Muskat"
+      },
+      {
+        "a": "¼ TL",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "veganer Parmesan (zum Garnieren)"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "schwarzer Pfeffer (zum Garnieren)"
+      }
+    ],
+    "steps": [
+      "Pasta in Salzwasser nach Packungsanweisung kochen. Vor dem Abgießen 100 ml Nudelwasser aufheben.",
+      "Pasta abgießen, zurück in den Topf geben und mit einem kleinen Schuss Öl mischen, damit sie nicht klebt.",
+      "Währenddessen Butter in einer Pfanne schmelzen. Knoblauch 1–2 Minuten dazugeben.",
+      "Paprikapulver, Muskat und Pfeffer zugeben und 1 Minute mitrösten.",
+      "Sahne einrühren und 2–3 Minuten leicht köcheln lassen, bis sie dicker wird.",
+      "Parmesan zugeben und auf niedriger Hitze rühren, bis die Soße cremig ist. Abschmecken und nach Bedarf salzen.",
+      "Pfanne vom Herd nehmen, Pasta zur Soße geben und alles vermengen. Falls die Soße zu dick ist, etwas Nudelwasser einrühren.",
+      "Mit Pfeffer und extra Parmesan servieren."
+    ]
+  },
+  {
+    "id": "cremige-kartoffel-brokkoli-suppe",
+    "title": "Cremige Kartoffel-Brokkoli-Suppe",
+    "category": "Suppe",
+    "tags": [
+      "One-Pot",
+      "schnell"
+    ],
+    "time": 25,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "instagram.com/philippsteuer",
+    "notes": "Die Cashews sorgen für besondere Cremigkeit. Mit Salz und Pfeffer abschmecken und heiß servieren.",
+    "ingredients": [
+      {
+        "a": "1 TL",
+        "n": "Zwiebelpulver"
+      },
+      {
+        "a": "1 TL",
+        "n": "Knoblauchpulver"
+      },
+      {
+        "a": "900 g",
+        "n": "festkochende Kartoffeln"
+      },
+      {
+        "a": "3 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "950 ml",
+        "n": "Gemüsebrühe"
+      },
+      {
+        "a": "60 g",
+        "n": "Cashewkerne"
+      },
+      {
+        "a": "½ TL",
+        "n": "Salz (für den Topf)"
+      },
+      {
+        "a": "½ TL",
+        "n": "Salz (für den Mixer)"
+      },
+      {
+        "a": "450 g",
+        "n": "TK-Brokkoli (kleine Röschen)"
+      },
+      {
+        "a": "1 TL",
+        "n": "getrockneter Thymian"
+      },
+      {
+        "a": "¾ TL",
+        "n": "getrockneter Dill"
+      },
+      {
+        "a": "2 TL",
+        "n": "weißer Essig"
+      },
+      {
+        "a": "1 TL",
+        "n": "Dijon Senf"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Pfeffer"
+      }
+    ],
+    "steps": [
+      "Kartoffeln schälen und in Stücke schneiden.",
+      "Gemüsebrühe, Cashewkerne, Kartoffeln und ½ TL Salz in den Topf geben. Alles ca. 15 Minuten köcheln lassen, bis die Kartoffeln weich sind.",
+      "Währenddessen TK-Brokkoli kurz mit heißem Wasser abspülen und in kleine Röschen schneiden.",
+      "Wenn die Kartoffeln weich sind, den gesamten Topfinhalt in einen Mixer schöpfen. Thymian, Dill, Essig, Senf und ¼ TL Salz hinzufügen und alles cremig pürieren.",
+      "Die Suppe zurück in den Topf gießen und den Brokkoli dazugeben. Alles 5 Minuten köcheln lassen, bis der Brokkoli gar ist.",
+      "Mit Salz und Pfeffer abschmecken und heiß servieren."
+    ]
+  },
+  {
+    "id": "schupfnudelpfanne",
+    "title": "Schupfnudelpfanne",
+    "category": "Hauptgericht",
+    "tags": [
+      "One-Pot",
+      "einfach"
+    ],
+    "time": 25,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "instagram.com/philippsteuer",
+    "notes": "Soße bei Bedarf mit Wasser oder Gemüsebrühe verdünnen oder ohne Deckel einkochen lassen.",
+    "ingredients": [
+      {
+        "a": "1 EL",
+        "n": "vegane Butter"
+      },
+      {
+        "a": "2",
+        "n": "Knoblauchzehen, gepresst"
+      },
+      {
+        "a": "½",
+        "n": "Zwiebel, fein gewürfelt"
+      },
+      {
+        "a": "360 ml",
+        "n": "Kokosmilch (vollfett)"
+      },
+      {
+        "a": "2 EL",
+        "n": "veganer Frischkäse"
+      },
+      {
+        "a": "70 g",
+        "n": "getrocknete Tomaten in Öl, fein gehackt"
+      },
+      {
+        "a": "450 g",
+        "n": "Schupfnudeln"
+      },
+      {
+        "a": "60 g",
+        "n": "Babyspinat, grob gehackt"
+      },
+      {
+        "a": "1 TL",
+        "n": "italienische Kräuter"
+      },
+      {
+        "a": "½ TL",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Salz"
+      },
+      {
+        "a": "1 EL",
+        "n": "veganer Parmesan"
+      },
+      {
+        "a": "Saft ½",
+        "n": "Zitrone"
+      }
+    ],
+    "steps": [
+      "Butter in einer großen Pfanne bei mittlerer Hitze erwärmen. Zwiebel und Knoblauch dazugeben und 2–3 Minuten glasig und duftend anschmitzen.",
+      "Kokosmilch einrühren und Frischkäse dazugeben. Alles mit einem Schneebesen verrühren, bis eine glatte Soße entsteht. 2–3 Minuten leicht köcheln lassen, damit sie etwas eindickt.",
+      "Getrocknete Tomaten, Parmesan, italienische Kräuter, Pfeffer und eine Prise Salz unterrühren. 8–10 Minuten sanft köcheln lassen, dabei ein- bis zweimal umrühren. In der Zwischenzeit Schupfnudeln scharf anbraten.",
+      "Ist die Soße zu dick, schluckweise Wasser oder Gemüsebrühe dazugeben. Ist sie zu flüssig, ohne Deckel einkochen lassen.",
+      "Schupfnudeln und Spinat unterheben, bis der Spinat zusammenfällt. Zitronensaft einrühren, alles abschmecken und bei Bedarf nachwürzen. 3 Minuten weiter köcheln lassen.",
+      "Mit veganem Parmesan toppen und direkt servieren."
+    ]
+  },
+  {
+    "id": "knuspriger-spinat-kartoffelauflauf",
+    "title": "Knuspriger Spinat Kartoffelauflauf",
+    "category": "Hauptgericht",
+    "tags": [
+      "einfach",
+      "Backofen"
+    ],
+    "time": 35,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "miss_gruenkern",
+    "notes": "Für extra knusprige Kartoffelwürfel diese 15 Minuten in heißes Wasser mit 1 EL Backpulver geben, dann gut trocken tupfen.",
+    "ingredients": [
+      {
+        "a": "500 g",
+        "n": "Kartoffeln"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pommesgewürz"
+      },
+      {
+        "a": "1 EL",
+        "n": "Öl"
+      },
+      {
+        "a": "400 g",
+        "n": "Blattspinat, tiefgefroren"
+      },
+      {
+        "a": "1",
+        "n": "rote Zwiebel"
+      },
+      {
+        "a": "100 g",
+        "n": "Frischkäse"
+      },
+      {
+        "a": "1",
+        "n": "Knoblauchzehe"
+      },
+      {
+        "a": "1",
+        "n": "Mozzarella"
+      }
+    ],
+    "steps": [
+      "Kartoffeln klein würfeln. Für extra knusprige Würfel: 15 Minuten in heißes Wasser mit 1 EL Backpulver geben, dann gut trocken tupfen.",
+      "Kartoffelwürfel mit 1 EL Öl und Pommesgewürz vermengen. Im Backofen bei 200 °C Umluft oder in der Heißluftfritteuse bei 180 °C für 20 Minuten backen.",
+      "Zwiebel in Streifen schneiden und in etwas Öl andünsten. Spinat dazugeben und weiter garen, bis er gerade aufgetaut ist.",
+      "Frischkäse einrühren und Knoblauchzehe hineinpressen. Mit Salz, Pfeffer und Muskat abschmecken.",
+      "In eine Auflaufform zuerst die Spinatmischung, dann die Kartoffelwürfel und obendrauf den klein gezupften Mozzarella schichten.",
+      "Bei 190 °C Umluft für 10–15 Minuten backen."
+    ]
   }
 ]
