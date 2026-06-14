@@ -1428,5 +1428,56 @@
       "1 EL Öl erhitzen, Lauch und Spinat anschwitzen, dann beiseitestellen. Restliches Öl erhitzen, Hirse und Knoblauch kurz anbraten, dann mit Weißwein ablöschen und so viel heiße Brühe zugießen, dass alles gerade eben bedeckt ist. Unter Rühren ca. 15 Minuten garen, immer wieder etwas Brühe zugießen. Mit Salz, Pfeffer, Senf und Zitronensaft abschmecken. Parmesan reiben und zusammen mit dem Gemüse unterheben.",
       "Die Kürbiskerne in einer beschichteten Pfanne goldbraun rösten. Dill waschen und hacken, dann beides über das Hirsotto streuen."
     ]
+  },
+  {
+    "id": "johannisbeertorte",
+    "title": "Johannisbeertorte",
+    "category": "Dessert",
+    "tags": [
+      "Kuchen"
+    ],
+    "time": 30,
+    "wait": 0,
+    "portions": 1,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Unbekannt",
+    "notes": "Der Kuchen soll klebrig und zäh sein.",
+    "ingredients": [
+      {
+        "a": "225g",
+        "n": "Zucker"
+      },
+      {
+        "a": "2",
+        "n": "Eier"
+      },
+      {
+        "a": "75g",
+        "n": "zerlassene Butter"
+      },
+      {
+        "a": "150g",
+        "n": "Weizenmehl"
+      },
+      {
+        "a": "1 Teelöffel",
+        "n": "Backpulver"
+      },
+      {
+        "a": "1 Teelöffel",
+        "n": "Vanillezucker"
+      },
+      {
+        "a": "2 dl",
+        "n": "rote Johannisbeeren"
+      }
+    ],
+    "steps": [
+      "Eier und Zucker schaumig rühren.",
+      "Die anderen Zutaten bis auf die Johannisbeeren untermischen und den Teig in eine Springform füllen, die du vorher eingefettet und mit Semmelbröseln ausgestreut hast.",
+      "Die Johannisbeerendarüber verteilen.",
+      "Bei 190°C 30 Minuten backen."
+    ]
   }
 ]
