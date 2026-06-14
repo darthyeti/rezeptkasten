@@ -1352,5 +1352,81 @@
       "Rote Bete schälen und in feine Streifen schneiden. Mit reichlich Balsamico, Salz und Pfeffer würzen.",
       "Abgetropfte Nudeln mit dem Pesto vermengen, Rote-Bete-Streifen und Parmesanspäne samt restlichen Haselnüssen darüber verteilen und servieren."
     ]
+  },
+  {
+    "id": "gruenes-hirsotto",
+    "title": "Grünes Hirsotto",
+    "category": "Hauptgericht",
+    "tags": [
+      "glutenfrei",
+      "vegan",
+      "vegetarisch"
+    ],
+    "time": 40,
+    "wait": 0,
+    "portions": 4,
+    "kcal": 471,
+    "veg": "vegetarisch",
+    "source": "REWE Deine Küche Magazin",
+    "notes": "Du liebst Risotto? Dann probier mal unsere Variante mit Hirse und crunchy Kürbiskernen!",
+    "ingredients": [
+      {
+        "a": "250 g",
+        "n": "TK-Spinat"
+      },
+      {
+        "a": "2 Stangen",
+        "n": "Lauch"
+      },
+      {
+        "a": "2",
+        "n": "Knoblauchzehen"
+      },
+      {
+        "a": "2 EL",
+        "n": "Rapsöl"
+      },
+      {
+        "a": "250 g",
+        "n": "REWE Bio Goldhirse"
+      },
+      {
+        "a": "800–1000 ml",
+        "n": "Gemüsebrühe (heiß, ggf. glutenfrei)"
+      },
+      {
+        "a": "100 ml",
+        "n": "Weißwein"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Salz, Pfeffer"
+      },
+      {
+        "a": "1 TL",
+        "n": "Senf"
+      },
+      {
+        "a": "1",
+        "n": "Zitrone"
+      },
+      {
+        "a": "70 g",
+        "n": "Parmesan"
+      },
+      {
+        "a": "50 g",
+        "n": "Kürbiskerne"
+      },
+      {
+        "a": "5 g",
+        "n": "Dill"
+      }
+    ],
+    "steps": [
+      "Spinat antauen lassen. Lauch putzen, waschen und in Ringe schneiden. Knoblauch schälen, fein hacken.",
+      "1 EL Öl erhitzen, Lauch und Spinat anschwitzen, dann beiseitestellen. Restliches Öl erhitzen, Hirse und Knoblauch kurz anbraten, dann mit Weißwein ablöschen und so viel heiße Brühe zugießen, dass alles gerade eben bedeckt ist. Unter Rühren ca. 15 Minuten garen, immer wieder etwas Brühe zugießen. Mit Salz, Pfeffer, Senf und Zitronensaft abschmecken. Parmesan reiben und zusammen mit dem Gemüse unterheben.",
+      "Die Kürbiskerne in einer beschichteten Pfanne goldbraun rösten. Dill waschen und hacken, dann beides über das Hirsotto streuen."
+    ]
   }
 ]
