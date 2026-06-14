@@ -1622,6 +1622,10 @@
     "id": "rosenkohl-pasta",
     "title": "Rosenkohl-Pasta",
     "category": "Hauptgericht",
+    "tags": [
+      "Pasta",
+      "einfach"
+    ],
     "time": 25,
     "wait": 0,
     "portions": 4,
