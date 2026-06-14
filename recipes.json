@@ -1753,5 +1753,65 @@
       }
     ],
     "steps": []
+  },
+  {
+    "id": "gnocchi-mit-zucchini-und-tomaten",
+    "title": "Gnocchi mit Zucchini und Tomaten",
+    "category": "Hauptgericht",
+    "tags": [
+      "One-Pot",
+      "schnell"
+    ],
+    "time": 20,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "PIC-COLLAGE",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "4",
+        "n": "Zucchini"
+      },
+      {
+        "a": "2 EL",
+        "n": "CANTINELLE® Natives Olivenöl extra"
+      },
+      {
+        "a": "400 g",
+        "n": "CUCINA® Pasta/Gnocchi, Sorte: Gnocchi"
+      },
+      {
+        "a": "120 g",
+        "n": "Cocktailtomaten"
+      },
+      {
+        "a": "1/2 Bund",
+        "n": "frische Petersilie"
+      },
+      {
+        "a": "100 g",
+        "n": "CUCINA® Italienischer Reibekäse (z. B. Parmigiano Reggiano)"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "LE GUSTO® Pfeffer"
+      }
+    ],
+    "steps": [
+      "Zucchini waschen und in Scheiben oder Halbmonde schneiden.",
+      "Olivenöl in einer großen Pfanne erhitzen und die Zucchini darin anbraten.",
+      "Gnocchi nach Packungsanweisung kochen oder direkt in die Pfanne geben und mitbraten.",
+      "Cocktailtomaten halbieren und zu den Zucchini und Gnocchi in die Pfanne geben.",
+      "Alles zusammen kurz weitergaren, bis die Tomaten leicht weich sind.",
+      "Mit Salz und Pfeffer abschmecken.",
+      "Petersilie waschen, hacken und darüberstreuen.",
+      "Mit geriebenem Parmigiano Reggiano bestreut servieren."
+    ]
   }
 ]
