@@ -3,12 +3,16 @@
     "id": "pasta-gemuesesosse",
     "title": "Pasta mit cremiger Gemüsesoße",
     "category": "Hauptgericht",
+    "tags": [
+      "Pasta"
+    ],
     "time": 40,
     "wait": 0,
     "portions": 4,
     "kcal": 236,
     "veg": "vegan",
     "source": "REWE Magazin",
+    "notes": "",
     "ingredients": [
       {
         "a": "2",
