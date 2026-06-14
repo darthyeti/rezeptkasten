@@ -2527,5 +2527,57 @@
       "In eine Auflaufform zuerst die Spinatmischung, dann die Kartoffelwürfel und obendrauf den klein gezupften Mozzarella schichten.",
       "Bei 190 °C Umluft für 10–15 Minuten backen."
     ]
+  },
+  {
+    "id": "aioli",
+    "title": "Aioli",
+    "category": "Sonstiges",
+    "tags": [
+      "Sauce",
+      "Dip",
+      "Party Snack"
+    ],
+    "time": 5,
+    "wait": 0,
+    "portions": 1,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "chefkoch.de",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "250 ml",
+        "n": "Rapsöl"
+      },
+      {
+        "a": "1",
+        "n": "Ei(er)"
+      },
+      {
+        "a": "1 EL",
+        "n": "Essig"
+      },
+      {
+        "a": "1 TL",
+        "n": "Zucker"
+      },
+      {
+        "a": "0.5 TL",
+        "n": "Salz"
+      },
+      {
+        "a": "1 TL",
+        "n": "Senf"
+      },
+      {
+        "a": "3 Zehe/n",
+        "n": "Knoblauch"
+      }
+    ],
+    "steps": [
+      "Darauf achten, dass alle Zutaten in etwa die gleiche Temperatur haben.",
+      "Ei, Essig, Zucker, Salz, Senf und Knoblauch mit dem Mixstab pürieren.",
+      "Rapsöl langsam dazugeben und mixen, bis die Masse steif ist."
+    ]
   }
 ]
