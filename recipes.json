@@ -2097,11 +2097,12 @@
   },
   {
     "id": "kartoffel-cheeseburger-auflauf-mit-nudeln",
-    "title": "Kartoffel Cheeseburger Auflauf mit Nudeln",
+    "title": "Cheeseburger Auflauf mit Nudeln",
     "category": "Hauptgericht",
     "tags": [
       "Pasta",
-      "einfach"
+      "einfach",
+      "Backofen"
     ],
     "time": 30,
     "wait": 20,
