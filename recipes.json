@@ -1485,10 +1485,10 @@
   },
   {
     "id": "einfache-eierpasta",
-    "title": "Einfache Eierpasta",
+    "title": "Eierpasta Teig Grundrezept",
     "category": "Sonstiges",
     "tags": [
-      "Teigrezept"
+      "Teig"
     ],
     "time": 10,
     "wait": 20,
@@ -1678,5 +1678,73 @@
       "Hähnchen-Geschnetzeltes mit Salz und Pfeffer würzen, das Mehl untermischen. In einer Pfanne mit Öl hellbraun braten. Mit Wein ablöschen und fast vollständig einkochen lassen. Sahne zugießen, aufkochen und 3 Minuten bei milder Hitze köcheln. Parmesan unterrühren und mit Salz und Pfeffer abschmecken.",
       "Nudeln und Rosenkohl abgießen, gut abtropfen lassen und unter die Soße mischen. Mit Röstzwiebeln bestreut servieren."
     ]
+  },
+  {
+    "id": "pfannekuchen-teig-grundrezept",
+    "title": "Pfannekuchen Teig Grundrezept",
+    "category": "Sonstiges",
+    "tags": [
+      "Teig"
+    ],
+    "time": 0,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "",
+    "notes": "Nur Zutaten erkennbar, keine Zubereitungsschritte oder Titel im Bild vorhanden.",
+    "ingredients": [
+      {
+        "a": "150 g",
+        "n": "Mehl"
+      },
+      {
+        "a": "2",
+        "n": "Eier"
+      },
+      {
+        "a": "1 Prise",
+        "n": "Zucker"
+      },
+      {
+        "a": "250 ml",
+        "n": "Milch"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "id": "quiche-teig-grundrezept",
+    "title": "Quiche Teig Grundrezept",
+    "category": "Sonstiges",
+    "tags": [
+      "Teig"
+    ],
+    "time": 0,
+    "wait": 0,
+    "portions": 6,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "",
+    "notes": "Einfach in der Zubereitung, passt mit süßem oder sauren Belag.",
+    "ingredients": [
+      {
+        "a": "150 g",
+        "n": "Butter"
+      },
+      {
+        "a": "1 Prise",
+        "n": "Salz"
+      },
+      {
+        "a": "125 ml",
+        "n": "Wasser"
+      },
+      {
+        "a": "300 g",
+        "n": "Mehl"
+      }
+    ],
+    "steps": []
   }
 ]
