@@ -23,7 +23,7 @@ import { dirname, join } from "node:path";
 import { homedir } from "node:os";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const PORT = 8787;
+const PORT = Number(process.env.STUDIO_PORT) || 8787;
 
 /* Konfiguration liegt AUSSERHALB des Repos, damit der API-Key
    niemals in einen Commit geraten kann.
@@ -100,19 +100,40 @@ async function extractRecipe(apiKey, mediaType, base64) {
   return parsed;
 }
 
-/* ---------- Speichern, Seiten bauen, pushen ---------- */
-async function saveAndPush(newRecipes, baseUrl) {
+/* ---------- Speichern, Seiten bauen, pushen ----------
+   incoming: Rezepte ohne id = neu (id wird erzeugt),
+             Rezepte mit vorhandener id = bestehendes Rezept ersetzen.
+   deletes:  Liste von ids, die aus der Sammlung entfernt werden. */
+async function saveAndPush(incoming, deletes, baseUrl) {
   const log = [];
   const file = join(ROOT, "recipes.json");
   const catalog = JSON.parse(readFileSync(file, "utf8"));
   const ids = new Set(catalog.map((r) => r.id));
-  for (const r of newRecipes) {
-    let id = slug(r.title), n = 2;
-    while (ids.has(id)) id = slug(r.title) + "-" + n++;
-    ids.add(id);
-    if (Array.isArray(r.tags) && r.tags.length === 0) delete r.tags;
-    catalog.push({ id, ...r });
+  const added = [], updated = [], removed = [];
+
+  // 1) Löschungen
+  for (const id of (deletes || [])) {
+    const idx = catalog.findIndex((r) => r.id === id);
+    if (idx > -1) { removed.push(catalog[idx].title); catalog.splice(idx, 1); ids.delete(id); }
   }
+
+  // 2) Hinzufügen / Aktualisieren
+  for (const r of incoming) {
+    const { id: incomingId, ...data } = r;
+    if (Array.isArray(data.tags) && data.tags.length === 0) delete data.tags;
+    const idx = incomingId ? catalog.findIndex((x) => x.id === incomingId) : -1;
+    if (idx > -1) {
+      catalog[idx] = { id: incomingId, ...data }; // bestehende id behalten -> Links bleiben gültig
+      updated.push(data.title);
+    } else {
+      let id = slug(data.title), n = 2;
+      while (ids.has(id)) id = slug(data.title) + "-" + n++;
+      ids.add(id);
+      catalog.push({ id, ...data });
+      added.push(data.title);
+    }
+  }
+
   writeFileSync(file, JSON.stringify(catalog, null, 2));
   log.push("✓ recipes.json aktualisiert (" + catalog.length + " Rezepte)");
 
@@ -120,10 +141,15 @@ async function saveAndPush(newRecipes, baseUrl) {
   log.push(build.ok ? "✓ Bring-Seiten neu erzeugt" : "✗ Bring-Seiten: " + build.out);
   if (!build.ok) return { ok: false, log };
 
-  const titles = newRecipes.map((r) => r.title).join(", ");
+  const parts = [];
+  if (added.length) parts.push("hinzugefügt: " + added.join(", "));
+  if (updated.length) parts.push("aktualisiert: " + updated.join(", "));
+  if (removed.length) parts.push("gelöscht: " + removed.join(", "));
+  const msg = "Rezepte " + (parts.join(" | ") || "aktualisiert");
+
   for (const args of [
     ["add", "recipes.json", "r", "img"],
-    ["commit", "-m", "Rezepte hinzugefügt: " + titles],
+    ["commit", "-m", msg],
     ["push"],
   ]) {
     const res = await run("git", args);
@@ -186,6 +212,14 @@ const PAGE = `<!doctype html>
   <div class="drop" id="drop">📷 Rezeptfotos hierher ziehen oder klicken<br>
     <span style="font-size:13px">(mehrere gleichzeitig möglich)</span></div>
   <input type="file" id="file" accept="image/*" multiple hidden>
+  <div class="card" id="editpanel">
+    <h3>Vorhandenes Rezept bearbeiten</h3>
+    <div class="row" style="margin-top:0">
+      <select id="existing" style="flex:1;min-width:160px"></select>
+      <button class="btn" id="loadbtn">Bearbeiten</button>
+    </div>
+    <span class="hint">Lädt das Rezept ins Formular. Änderungen (auch Löschen) werden erst beim Pushen übernommen. Die Adresse des Rezepts bleibt gleich.</span>
+  </div>
   <div id="cards"></div>
   <pre id="log" hidden></pre>
 </main>
@@ -227,6 +261,30 @@ drop.ondragleave = function(){ drop.classList.remove('over'); };
 drop.ondrop = function(e){ e.preventDefault(); drop.classList.remove('over'); handleFiles(e.dataTransfer.files); };
 file.onchange = function(){ handleFiles(file.files); file.value=''; };
 
+/* ---- Vorhandene Rezepte zum Bearbeiten laden ---- */
+var existingRecipes = [];
+function loadExisting(){
+  fetch('/api/recipes').then(function(r){ return r.json(); }).then(function(list){
+    existingRecipes = list || [];
+    el('existing').innerHTML = '<option value="">— Rezept wählen —</option>' +
+      existingRecipes.map(function(r){
+        return '<option value="' + esc(r.id) + '">' + esc(r.title) + '</option>'; }).join('');
+  });
+}
+loadExisting();
+
+el('loadbtn').onclick = function(){
+  var id = el('existing').value;
+  if(!id) return;
+  var open = drafts.some(function(d){ return d.id===id && d.status!=='entfernt'; });
+  if(open){ alert('Dieses Rezept ist schon zum Bearbeiten geöffnet.'); return; }
+  var rec = existingRecipes.filter(function(r){ return r.id===id; })[0];
+  if(!rec) return;
+  drafts.push({ status:'ok', recipe: rec, id: id, edit: true, name: 'bearbeiten' });
+  render();
+  window.scrollTo(0, document.body.scrollHeight);
+};
+
 function handleFiles(list){
   Array.prototype.forEach.call(list, function(f){
     if(f.type.indexOf('image/') !== 0) return;
@@ -257,9 +315,15 @@ function render(){
     if(d.status==='lädt') return '<div class="card"><span class="status">⏳ ' + esc(d.name) + ' wird gelesen …</span></div>';
     if(d.status==='fehler') return '<div class="card"><span class="status err">✗ ' + esc(d.name) + ': ' + esc(d.error) + '</span></div>';
     if(d.status==='entfernt') return '';
+    if(d.status==='todelete') return '<div class="card"><span class="status err">🗑 ' +
+      esc(d.recipe.title) + ' wird beim Speichern gelöscht.</span> ' +
+      '<button class="btn ghost" data-undel="' + i + '">Rückgängig</button></div>';
     var r = d.recipe;
+    var badge = d.edit
+      ? '<span class="status" style="color:var(--gold)">● bearbeiten</span>'
+      : '<span class="status">(' + esc(d.name) + ')</span>';
     return '<div class="card" data-i="' + i + '">' +
-      '<h3>✓ ' + esc(r.title) + ' <span class="status">(' + esc(d.name) + ')</span></h3>' +
+      '<h3>✓ ' + esc(r.title) + ' ' + badge + '</h3>' +
       '<label>Titel</label><input data-f="title" value="' + esc(r.title) + '">' +
       '<div class="grid2">' +
       '<div><label>Kategorie</label><select data-f="category">' +
@@ -287,17 +351,28 @@ function render(){
       '<label>Zubereitung (ein Schritt pro Zeile)</label>' +
       '<textarea data-f="steps">' + esc(stepText(r)) + '</textarea>' +
       '<label>Notizen</label><input data-f="notes" value="' + esc(r.notes||'') + '">' +
-      '<div class="row"><button class="btn ghost" data-rm="' + i + '">Verwerfen</button></div>' +
+      '<div class="row"><button class="btn ghost" data-rm="' + i + '">Verwerfen</button>' +
+        (d.edit ? '<button class="btn ghost err" data-del="' + i + '">Aus Sammlung löschen</button>' : '') +
+      '</div>' +
       '</div>';
   }).join('');
 
   Array.prototype.forEach.call(document.querySelectorAll('[data-rm]'), function(b){
     b.onclick = function(){ drafts[Number(b.dataset.rm)].status = 'entfernt'; render(); };
   });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-del]'), function(b){
+    b.onclick = function(){
+      if(!confirm('Dieses Rezept wirklich aus der Sammlung löschen? Es wird beim nächsten Push dauerhaft entfernt.')) return;
+      drafts[Number(b.dataset.del)].status = 'todelete'; render();
+    };
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-undel]'), function(b){
+    b.onclick = function(){ drafts[Number(b.dataset.undel)].status = 'ok'; render(); };
+  });
 
-  var ready = drafts.filter(function(d){ return d.status==='ok'; }).length;
+  var ready = drafts.filter(function(d){ return d.status==='ok' || d.status==='todelete'; }).length;
   el('pushbar').hidden = ready === 0;
-  el('pushinfo').textContent = ready + (ready===1 ? ' Rezept bereit' : ' Rezepte bereit');
+  el('pushinfo').textContent = ready + (ready===1 ? ' Änderung bereit' : ' Änderungen bereit');
 }
 
 /* ---- Formulardaten einsammeln & pushen ---- */
@@ -311,7 +386,7 @@ function collect(){
     if(card.querySelector('[data-f="onepot"]').checked) tags.push('One-Pot');
     get('tagsextra').split(',').map(function(t){ return t.trim(); }).filter(Boolean)
       .forEach(function(t){ if(tags.indexOf(t) === -1) tags.push(t); });
-    return {
+    var rec = {
       title: get('title').trim(),
       category: get('category'),
       tags: tags,
@@ -325,20 +400,28 @@ function collect(){
           return p === -1 ? { a:'', n:l } : { a:l.slice(0,p).trim(), n:l.slice(p+1).trim() }; }),
       steps: get('steps').split('\\n').map(function(l){ return l.trim(); }).filter(Boolean),
     };
+    if(d.edit && d.id) rec.id = d.id;
+    return rec;
   }).filter(Boolean);
+}
+
+function collectDeletes(){
+  return drafts.filter(function(d){ return d.status==='todelete' && d.id; })
+    .map(function(d){ return d.id; });
 }
 
 el('push').onclick = function(){
   var recipes = collect();
-  if(!recipes.length) return;
+  var deletes = collectDeletes();
+  if(!recipes.length && !deletes.length) return;
   el('push').disabled = true; el('push').textContent = 'Pushe …';
   fetch('/api/save', { method:'POST', headers:{'Content-Type':'application/json'},
-    body: JSON.stringify({ recipes: recipes })
+    body: JSON.stringify({ recipes: recipes, deletes: deletes })
   }).then(function(r){ return r.json(); }).then(function(res){
     el('log').hidden = false;
     el('log').textContent = res.log.join('\\n');
     el('push').disabled = false; el('push').textContent = 'Speichern & zu GitHub pushen';
-    if(res.ok){ drafts = []; render(); }
+    if(res.ok){ drafts = []; render(); loadExisting(); }
     window.scrollTo(0, document.body.scrollHeight);
   });
 };
@@ -366,6 +449,15 @@ const server = createServer(async (req, res) => {
       });
     }
 
+    if (req.method === "GET" && req.url === "/api/recipes") {
+      try {
+        const catalog = JSON.parse(readFileSync(join(ROOT, "recipes.json"), "utf8"));
+        return send(200, catalog);
+      } catch {
+        return send(200, []);
+      }
+    }
+
     if (req.method === "POST" && req.url === "/api/config") {
       const body = await readBody(req);
       const cfg = loadConfig();
@@ -391,7 +483,7 @@ const server = createServer(async (req, res) => {
     if (req.method === "POST" && req.url === "/api/save") {
       const cfg = loadConfig();
       const body = await readBody(req);
-      const result = await saveAndPush(body.recipes || [], cfg.baseUrl || "");
+      const result = await saveAndPush(body.recipes || [], body.deletes || [], cfg.baseUrl || "");
       return send(200, result);
     }
 
