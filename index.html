@@ -54,8 +54,11 @@
   .meta{font-size:13px;color:var(--dim);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
   .badge{font-size:11px;font-weight:700;color:var(--match);border:1px solid var(--match);border-radius:999px;padding:2px 8px}
   .tagbadge{font-size:11px;font-weight:700;color:var(--gold);background:#fbf3df;border:1px solid var(--gold);border-radius:999px;padding:2px 8px}
+  .pill.catpill{color:var(--accent);border-color:#e6c0b3}
+  .pill.catpill.on{background:var(--accent);color:#fff;border-color:var(--accent)}
   .pill.tag{border-style:dashed}
   .pill.tag.on{background:var(--gold);color:#3a2c10;border-color:var(--gold);border-style:solid}
+  .fbreak{flex-basis:100%;height:0;margin:0;border:0}
   .matchbar{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--match);font-weight:600}
   .matchbar em{font-style:normal;color:var(--dim);font-weight:500}
   .empty{text-align:center;color:var(--dim);padding:48px 16px;font-size:15px;line-height:1.6}
@@ -152,7 +155,7 @@ let checked = LS.get("rk-checked", {});         // abgehakte Einkaufsposten
 let apiKey  = LS.get("rk-key", "");
 
 let tab = "rezepte";
-let tokens = [], cat = "Alle", vegOnly = false, maxTime = 0, tagFilter = "";
+let tokens = [], cat = "Alle", vegOnly = false, maxTime = 0, tagFilters = [];
 let loadError = "";
 
 const all  = () => [...catalog.filter(r => !deleted.includes(r.id)), ...custom];
@@ -209,7 +212,7 @@ function render(){
 function renderRecipes(m){
   let list = all().map(r => ({ r, m: matchInfo(r, tokens) }));
   if(cat !== "Alle") list = list.filter(x => x.r.category === cat);
-  if(tagFilter)      list = list.filter(x => (x.r.tags || []).includes(tagFilter));
+  if(tagFilters.length) list = list.filter(x => tagFilters.every(t => (x.r.tags || []).includes(t)));
   if(vegOnly)        list = list.filter(x => x.r.veg);
   if(maxTime)        list = list.filter(x => (x.r.time + (x.r.wait || 0)) <= maxTime);
   if(tokens.length){
@@ -227,8 +230,9 @@ function renderRecipes(m){
       <button class="addbtn" id="tokadd">Zutat hinzufügen</button>
     </div>
     <div class="filters">
-      ${CATS.map(c => `<button class="pill ${cat===c?"on":""}" data-cat="${c}">${c}</button>`).join("")}
-      ${allTags().map(t => `<button class="pill tag ${tagFilter===t?"on":""}" data-tag="${esc(t)}">${esc(t)}</button>`).join("")}
+      ${CATS.map(c => `<button class="pill catpill ${cat===c?"on":""}" data-cat="${c}">${c}</button>`).join("")}
+      <span class="fbreak"></span>
+      ${allTags().map(t => `<button class="pill tag ${tagFilters.includes(t)?"on":""}" data-tag="${esc(t)}">${esc(t)}</button>`).join("")}
       <button class="pill ${vegOnly?"on":""}" id="fveg">vegetarisch</button>
       <button class="pill ${maxTime===30?"on":""}" id="ftime">≤ 30 Min</button>
       <span class="count">${list.length} Treffer</span>
@@ -258,7 +262,11 @@ function renderRecipes(m){
   document.getElementById("tokadd").addEventListener("click", add);
   m.querySelectorAll("[data-tok]").forEach(b => b.addEventListener("click", () => { tokens = tokens.filter(t => t !== b.dataset.tok); render(); }));
   m.querySelectorAll("[data-cat]").forEach(b => b.addEventListener("click", () => { cat = b.dataset.cat; render(); }));
-  m.querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => { tagFilter = tagFilter === b.dataset.tag ? "" : b.dataset.tag; render(); }));
+  m.querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => {
+    const t = b.dataset.tag;
+    tagFilters = tagFilters.includes(t) ? tagFilters.filter(x => x !== t) : [...tagFilters, t];
+    render();
+  }));
   document.getElementById("fveg").addEventListener("click", () => { vegOnly = !vegOnly; render(); });
   document.getElementById("ftime").addEventListener("click", () => { maxTime = maxTime === 30 ? 0 : 30; render(); });
   m.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => openDetail(b.dataset.open)));
