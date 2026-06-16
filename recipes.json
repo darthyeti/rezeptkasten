@@ -533,9 +533,7 @@
     "title": "Brokkoli Orzo",
     "category": "Hauptgericht",
     "tags": [
-      "One-Pot",
-      "vegan",
-      "schnell"
+      "One-Pot"
     ],
     "time": 25,
     "wait": 0,
@@ -947,7 +945,7 @@
     "tags": [
       "One-Pot",
       "Backofen",
-      "einfach"
+      "Einfach"
     ],
     "time": 15,
     "wait": 40,
@@ -1223,7 +1221,7 @@
     "tags": [
       "Pasta",
       "Backofen",
-      "einfach"
+      "Einfach"
     ],
     "time": 40,
     "wait": 0,
@@ -1617,7 +1615,7 @@
     "category": "Hauptgericht",
     "tags": [
       "Pasta",
-      "einfach"
+      "Einfach"
     ],
     "time": 25,
     "wait": 0,
@@ -1752,8 +1750,7 @@
     "title": "Gnocchi mit Zucchini und Tomaten",
     "category": "Hauptgericht",
     "tags": [
-      "One-Pot",
-      "schnell"
+      "One-Pot"
     ],
     "time": 20,
     "wait": 0,
@@ -1813,8 +1810,7 @@
     "category": "Hauptgericht",
     "tags": [
       "Backofen",
-      "einfach",
-      "schnell"
+      "Einfach"
     ],
     "time": 35,
     "wait": 0,
@@ -1889,7 +1885,7 @@
     "title": "Pizzaschnecken",
     "category": "Sonstiges",
     "tags": [
-      "einfach",
+      "Einfach",
       "Party Snack",
       "Backofen"
     ],
@@ -1951,7 +1947,7 @@
     "tags": [
       "Backofen",
       "Asiatisch",
-      "einfach"
+      "Einfach"
     ],
     "time": 30,
     "wait": 15,
@@ -2036,7 +2032,7 @@
     "category": "Hauptgericht",
     "tags": [
       "One-Pot",
-      "einfach",
+      "Einfach",
       "Pasta"
     ],
     "time": 30,
@@ -2101,7 +2097,7 @@
     "category": "Hauptgericht",
     "tags": [
       "Pasta",
-      "einfach",
+      "Einfach",
       "Backofen"
     ],
     "time": 30,
@@ -2173,7 +2169,7 @@
     "category": "Hauptgericht",
     "tags": [
       "Pasta",
-      "einfach"
+      "Einfach"
     ],
     "time": 20,
     "wait": 0,
@@ -2243,8 +2239,7 @@
     "title": "Vegane Cremesauce Pasta",
     "category": "Hauptgericht",
     "tags": [
-      "schnell",
-      "einfach",
+      "Einfach",
       "Pasta"
     ],
     "time": 20,
@@ -2316,8 +2311,7 @@
     "title": "Cremige Kartoffel-Brokkoli-Suppe",
     "category": "Suppe",
     "tags": [
-      "One-Pot",
-      "schnell"
+      "One-Pot"
     ],
     "time": 25,
     "wait": 0,
@@ -2399,7 +2393,7 @@
     "category": "Hauptgericht",
     "tags": [
       "One-Pot",
-      "einfach"
+      "Einfach"
     ],
     "time": 25,
     "wait": 0,
@@ -2476,7 +2470,7 @@
     "title": "Knuspriger Spinat Kartoffelauflauf",
     "category": "Hauptgericht",
     "tags": [
-      "einfach",
+      "Einfach",
       "Backofen"
     ],
     "time": 35,
