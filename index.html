@@ -97,6 +97,9 @@
   .plan-chip{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 6px 5px 12px;
     font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px;margin:4px 6px 0 0}
   .plan-chip button{background:none;border:none;color:var(--dim);font-size:14px;padding:0 4px}
+  .plan-chip .plan-open{color:var(--ink);font-size:13px;font-weight:600;font-family:inherit;
+    padding:0;text-align:left;border-radius:4px}
+  .plan-chip .plan-open:hover,.plan-chip .plan-open:focus-visible{color:var(--accent);text-decoration:underline;outline:none}
   /* Einkaufsliste */
   .shop-group{margin-bottom:6px}
   .shop-item{display:flex;align-items:flex-start;gap:10px;background:var(--paper);border:1px solid var(--line);
@@ -353,7 +356,7 @@ function renderPlan(m){
         </div>
         <div>${(plan[d] || []).map((id, i) => {
           const r = byId(id);
-          return r ? `<span class="plan-chip">${esc(r.title)}
+          return r ? `<span class="plan-chip"><button class="plan-open" data-plan-open="${esc(id)}" title="Rezept öffnen">${esc(r.title)}</button>
             <button data-rm="${d}|${i}" title="Entfernen">×</button></span>` : "";
         }).join("")}</div>
       </div>`).join("")}
@@ -376,6 +379,7 @@ function renderPlan(m){
     LS.set("rk-plan", plan);
     render();
   }));
+  m.querySelectorAll("[data-plan-open]").forEach(b => b.addEventListener("click", () => openDetail(b.dataset.planOpen)));
   document.getElementById("clearPlan").addEventListener("click", () => {
     if(confirm("Den kompletten Wochenplan leeren?")){ plan = {}; LS.set("rk-plan", plan); render(); }
   });
