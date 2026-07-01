@@ -9,7 +9,7 @@ Ein schlanker, statischer Rezeptkatalog für GitHub Pages. Kein Backend, kein Bu
 - **Wochenplan:** Gerichte den Wochentagen zuordnen (lokal im Browser gespeichert).
 - **Einkaufsliste:** Wird automatisch aus dem Wochenplan zusammengeführt (gleiche Zutaten werden summiert), abhakbar, per Knopf kopierbar oder über das Teilen-Menü des Handys weitergebbar.
 - **Bring!-Export:** Pro Rezept ein Knopf "Zutaten an Bring! senden". Bring liest dafür die statischen Rezeptseiten unter `r/<id>/` aus (schema.org-Format).
-- **Foto-Import:** Neues Rezept fotografieren, Claude extrahiert Titel, Zutaten und Schritte automatisch (optional, eigener API-Key nötig).
+- **Wochenplan-Sync per Code:** Wochenplan und Einkaufsliste liegen pro Browser. Über die Einstellungen erzeugst du einen kopierbaren Code und spielst ihn auf einem anderen Gerät ein. Der Import ersetzt den dortigen Plan vollständig (kein Zusammenführen).
 
 ## Deployment auf GitHub Pages
 
@@ -27,10 +27,12 @@ python3 -m http.server
 
 ## Rezepte pflegen
 
-Die Quelle der Wahrheit ist `recipes.json` im Repo. Es gibt zwei Wege, Rezepte hinzuzufügen:
+Die Quelle der Wahrheit ist `recipes.json` im Repo. Es gibt zwei Wege, Rezepte zu pflegen:
 
-1. **Direkt in `recipes.json` editieren** (Schema siehe vorhandene Einträge).
-2. **Per Foto in der App:** Das Rezept landet zunächst nur im Browser (localStorage). Über *Einstellungen → Katalog exportieren* lädst du eine aktualisierte `recipes.json` herunter, ersetzt damit die Datei im Repo und pushst.
+1. **Über das Rezept-Studio (empfohlen):** Lokales Werkzeug am Mac. Fotos reinziehen, Claude extrahiert die Rezepte, prüfen, und ein Klick aktualisiert `recipes.json`, baut die Bring-Seiten neu und pusht. Details unten im Abschnitt "Rezept-Studio".
+2. **Direkt in `recipes.json` editieren** (Schema siehe vorhandene Einträge). Danach die Bring-Seiten neu bauen (siehe unten) und committen.
+
+> Hinweis: Der frühere Foto-Import direkt in der öffentlichen App wurde entfernt. Rezepte werden nur noch über das Studio oder von Hand gepflegt. Die Einstellungen der App enthalten jetzt stattdessen die Wochenplan-Sync (siehe unten).
 
 Nach jeder Änderung an `recipes.json` einmal ausführen und mitcommitten (mit deiner echten Pages-Adresse!):
 
@@ -46,7 +48,6 @@ Bring! importiert Rezepte über einen Deeplink: die App ruft eine öffentliche R
 
 - Funktioniert nur, wenn die Seite **öffentlich** erreichbar ist (GitHub Pages, kein privates Repo mit deaktivierten Pages).
 - Funktioniert pro Rezept. Für die **gesammelte Wochenliste** kopierst du die Liste und fügst sie in Bring über die Mehrfacheingabe ein (Artikel mit Komma getrennt). Bring importiert keine geteilten Textlisten.
-- Lokal hinzugefügte Rezepte (nur im Browser) haben noch keinen Bring-Knopf, erst nach dem Export ins Repo.
 
 ### Fehler „failed to process recipe / could not detect recipe“
 
@@ -57,12 +58,15 @@ In dieser Reihenfolge prüfen:
 3. **Wurde das Skript mit Basis-URL ausgeführt?** Ohne sie fehlen absolute `url`/`image`-Felder, woran der Bring-Parser scheitern kann.
 4. **Gegencheck mit Bring selbst:** Unter https://www.getbring.com/de/integration-prufen kannst du eine Rezept-URL direkt testen.
 
-## Foto-Import einrichten (optional)
+## Wochenplan geräteübergreifend übertragen
 
-1. Eigenen API-Key unter [console.anthropic.com](https://console.anthropic.com) erstellen.
-2. In der App unter **Einstellungen** eintragen.
+Wochenplan und abgehakte Einkaufsposten liegen nur im Browser des jeweiligen Geräts. Um beides auf ein anderes Gerät zu bringen:
 
-Der Key wird ausschließlich im localStorage deines Browsers gespeichert und nur direkt an `api.anthropic.com` gesendet. **Niemals den Key in Code oder Repo committen.** Da der Key im Browser liegt, nutze ihn nur auf eigenen Geräten und setze in der Anthropic-Konsole am besten ein Ausgabenlimit.
+1. Auf dem Quellgerät: **Einstellungen → "Plan-Code erzeugen"**. Der Code erscheint im Textfeld und wird zugleich in die Zwischenablage kopiert.
+2. Den Code auf das Zielgerät übertragen (z. B. per Nachricht an dich selbst).
+3. Auf dem Zielgerät: **Einstellungen**, den Code in das Import-Feld einfügen und **"Plan importieren"** drücken.
+
+Der Import **ersetzt** auf dem Zielgerät den vorhandenen Wochenplan und die Häkchen vollständig, es wird nichts zusammengeführt. Die Übertragung ist einseitig (Quelle überschreibt Ziel) und manuell, es gibt bewusst keinen automatischen Live-Sync und kein Backend. Ungültige oder unvollständige Codes werden abgewiesen und nicht importiert.
 
 ## Hinweis zu den Rezeptdaten
 
@@ -73,9 +77,9 @@ Reine Zutatenlisten und Kochanleitungen gelten im Allgemeinen als nicht schutzf�
 | Daten | Ort |
 |---|---|
 | Rezeptkatalog | `recipes.json` im Repo |
-| Wochenplan, Häkchen, Foto-Entwürfe, API-Key | localStorage des Browsers |
+| Wochenplan, Häkchen | localStorage des Browsers |
 
-localStorage ist pro Gerät. Wer den Plan geräteübergreifend will, braucht den nächsten Ausbauschritt (kleines Backend oder z. B. Supabase).
+localStorage ist pro Gerät. Den Wochenplan (samt Häkchen) überträgst du bei Bedarf per Code auf ein anderes Gerät, siehe "Wochenplan geräteübergreifend übertragen". Ein automatischer Sync über ein Backend ist bewusst nicht vorgesehen, das würde dem statischen, kostenfreien Ansatz widersprechen.
 
 ## Fehlersuche Bring-Import ("could not detect recipe link")
 
@@ -111,13 +115,13 @@ node scripts/studio.mjs
 
 Alternativ einfach die Datei `studio.command` doppelklicken (falls macOS meckert: einmal im Terminal `chmod +x studio.command` ausführen).
 
-Dann http://localhost:8787 öffnen. Beim ersten Start trägst du API-Key und deine GitHub-Pages-Adresse ein. Die Konfiguration landet **außerhalb des Repos** unter `~/.config/rezeptkasten/studio.json` und kann so nie in einen Commit geraten. Eine evtl. noch vorhandene alte `.studio.json` im Repo wird beim Start automatisch dorthin übernommen und entfernt. Danach:
+Dann http://localhost:8787 öffnen. Beim ersten Start trägst du API-Key und deine GitHub-Pages-Adresse ein. Den API-Key erstellst du unter [console.anthropic.com](https://console.anthropic.com); dort kannst du am besten gleich ein Ausgabenlimit als Sicherheitsnetz setzen. Die Konfiguration landet **außerhalb des Repos** unter `~/.config/rezeptkasten/studio.json` und kann so nie in einen Commit geraten. Eine evtl. noch vorhandene alte `.studio.json` im Repo wird beim Start automatisch dorthin übernommen und entfernt. Danach:
 
 1. Rezeptfotos in die Fläche ziehen (mehrere gleichzeitig möglich).
 2. Claude extrahiert die Rezepte, du prüfst und korrigierst sie in den Formularen.
 3. Ein Klick auf "Speichern & zu GitHub pushen" aktualisiert `recipes.json`, baut die Bring-Seiten neu und pusht alles. Ein bis zwei Minuten später ist das Rezept in der App, inklusive funktionierendem Bring-Knopf.
 
-Der Foto-Import in der öffentlichen App (mit Key im Browser) bleibt als Notlösung für unterwegs, der empfohlene Weg ist das Studio.
+Das Studio ist der einzige Weg für den Foto-Import. Die öffentliche App verarbeitet keinen API-Key mehr.
 
 ## Etiketten (Tags) wie One-Pot
 
