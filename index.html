@@ -305,7 +305,7 @@ function openDetail(id){
     </div>
     ${bringUrl ? `` : isLocal
       ? `<p class="field-note">Bring-Export funktioniert nur über die öffentliche GitHub-Pages-Adresse, nicht lokal. Bring muss die Rezeptseite aus dem Internet abrufen können.</p>`
-      : `<p class="field-note">Bring-Export gibt es für dieses Rezept, sobald es in der recipes.json im Repo liegt und die Rezeptseiten neu erzeugt wurden (siehe Einstellungen → Katalog exportieren).</p>`}
+      : `<p class="field-note">Bring-Export gibt es für dieses Rezept, sobald es in der recipes.json im Repo liegt und die Rezeptseiten neu erzeugt wurden (Pflege über das Studio, siehe README).</p>`}
   `;
   dlg.querySelector("[data-x]").addEventListener("click", () => dlg.close());
   dlg.addEventListener("click", e => { if(e.target === dlg) dlg.close(); }, { once: true });
