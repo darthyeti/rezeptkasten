@@ -135,9 +135,6 @@
 
 <main id="main"></main>
 
-<button class="fab" id="fab" hidden>+ Rezept fotografieren</button>
-<input type="file" id="file" accept="image/*" hidden>
-
 <dialog id="detail"></dialog>
 <dialog id="settings"></dialog>
 
@@ -151,17 +148,15 @@ const DAYS = ["Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","S
 const CATS = ["Alle","Hauptgericht","Suppe","Salat","Dessert","Sonstiges"];
 
 let catalog = [];                               // aus recipes.json (im Repo)
-let custom  = LS.get("rk-custom", []);          // per Foto/Hand hinzugefügt (nur lokal)
 let deleted = LS.get("rk-deleted", []);         // ausgeblendete Katalog-Rezepte
 let plan    = LS.get("rk-plan", {});            // { Montag:[ids], ... }
 let checked = LS.get("rk-checked", {});         // abgehakte Einkaufsposten
-let apiKey  = LS.get("rk-key", "");
 
 let tab = "rezepte";
 let tokens = [], cat = "Alle", vegOnly = false, maxTime = 0, tagFilters = [];
 let loadError = "";
 
-const all  = () => [...catalog.filter(r => !deleted.includes(r.id)), ...custom];
+const all  = () => catalog.filter(r => !deleted.includes(r.id));
 const byId = id => all().find(r => r.id === id);
 const norm = s => (s || "").toLowerCase().trim();
 const esc  = s => String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -194,17 +189,11 @@ function bindHeader(){
       render();
     }));
   document.getElementById("openSettings").addEventListener("click", openSettings);
-  document.getElementById("fab").addEventListener("click", () => {
-    if(!apiKey){ openSettings("Für den Foto-Import brauchst du einen eigenen Anthropic-API-Key (wird nur lokal in deinem Browser gespeichert)."); return; }
-    document.getElementById("file").click();
-  });
-  document.getElementById("file").addEventListener("change", handlePhoto);
 }
 
 /* ================= Rendering ================= */
 function render(){
   document.getElementById("eyebrow").textContent = "Dein Katalog · " + all().length + " Rezepte";
-  document.getElementById("fab").hidden = tab !== "rezepte";
   const m = document.getElementById("main");
   if(tab === "rezepte") renderRecipes(m);
   else if(tab === "plan") renderPlan(m);
@@ -240,9 +229,8 @@ function renderRecipes(m){
       <button class="pill ${maxTime===30?"on":""}" id="ftime">≤ 30 Min</button>
       <span class="count">${list.length} Treffer</span>
     </div>
-    <div id="importError"></div>
     ${list.length === 0
-      ? `<div class="empty">Nichts gefunden. Entferne eine Zutat oder einen Filter,<br>oder fotografiere ein neues Rezept.</div>`
+      ? `<div class="empty">Nichts gefunden. Entferne eine Zutat oder einen Filter.</div>`
       : `<div class="grid">${list.map(({r, m}) => `
           <button class="card" data-open="${esc(r.id)}">
             <div class="cat">${esc(r.category)}</div>
@@ -279,11 +267,10 @@ function renderRecipes(m){
 function openDetail(id){
   const r = byId(id); if(!r) return;
   const dlg = document.getElementById("detail");
-  const isCustom = custom.some(c => c.id === id);
   const isLocal = location.protocol === "file:" ||
     ["localhost", "127.0.0.1", "0.0.0.0"].includes(location.hostname);
   const recipePage = new URL("r/" + id + "/", new URL(".", location.href)).href;
-  const bringUrl = (isCustom || isLocal) ? "" :
+  const bringUrl = isLocal ? "" :
     "https://api.getbring.com/rest/bringrecipes/deeplink?url=" +
     encodeURIComponent(recipePage) + "&source=web";
 
@@ -335,9 +322,7 @@ function openDetail(id){
   });
   dlg.querySelector("#del").addEventListener("click", () => {
     if(!confirm("Dieses Rezept wirklich aus deinem Katalog entfernen?")) return;
-    if(isCustom) custom = custom.filter(c => c.id !== id);
-    else { deleted.push(id); LS.set("rk-deleted", deleted); }
-    LS.set("rk-custom", custom);
+    deleted.push(id); LS.set("rk-deleted", deleted);
     dlg.close(); render();
   });
   dlg.showModal();
@@ -455,58 +440,28 @@ function renderShopping(m){
   document.getElementById("reset").addEventListener("click", () => { checked = {}; LS.set("rk-checked", checked); render(); });
 }
 
-/* ================= Foto-Import (Claude) ================= */
-async function handlePhoto(e){
-  const file = e.target.files && e.target.files[0];
-  e.target.value = "";
-  if(!file) return;
-  const fab = document.getElementById("fab");
-  fab.disabled = true; fab.textContent = "Lese Rezept …";
-  const errBox = () => document.getElementById("importError");
-  if(errBox()) errBox().innerHTML = "";
-  try{
-    const base64 = await new Promise((res, rej) => {
-      const r = new FileReader();
-      r.onload = () => res(r.result.split(",")[1]);
-      r.onerror = () => rej(new Error("Datei konnte nicht gelesen werden"));
-      r.readAsDataURL(file);
-    });
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-        "anthropic-version": "2023-06-01",
-        "anthropic-dangerous-direct-browser-access": "true"
-      },
-      body: JSON.stringify({
-        model: "claude-sonnet-4-6",
-        max_tokens: 1500,
-        messages: [{
-          role: "user",
-          content: [
-            { type: "image", source: { type: "base64", media_type: file.type || "image/jpeg", data: base64 } },
-            { type: "text", text: 'Extrahiere das Kochrezept aus diesem Foto. Berücksichtige handschriftliche Änderungen (durchgestrichene Zutaten ersetzen). Antworte AUSSCHLIESSLICH mit einem JSON-Objekt, ohne Markdown, exakt in diesem Schema: {"title":string,"category":"Hauptgericht"|"Suppe"|"Salat"|"Dessert"|"Sonstiges","time":number,"wait":number,"portions":number,"kcal":number|null,"veg":"vegan"|"vegetarisch"|null,"source":string,"notes":string,"ingredients":[{"a":string,"n":string}],"steps":[string]}' }
-          ]
-        }]
-      })
-    });
-    const data = await response.json();
-    if(data.error) throw new Error(data.error.message || "API-Fehler");
-    const text = (data.content || []).map(b => b.text || "").join("\n");
-    const parsed = JSON.parse(text.replace(/```json|```/g, "").trim());
-    if(!parsed.title || !Array.isArray(parsed.ingredients)) throw new Error("Unvollständiges Rezept erkannt");
-    parsed.id = "r-" + Date.now();
-    custom.push(parsed);
-    LS.set("rk-custom", custom);
-    render();
-    openDetail(parsed.id);
-  }catch(err){
-    render();
-    const box = document.getElementById("importError");
-    if(box) box.innerHTML = `<div class="error">Import fehlgeschlagen: ${esc(err.message || "Bitte noch einmal versuchen.")}</div>`;
+/* ================= Plan-Sync (Export/Import per Code) ================= */
+// Kodiert Wochenplan + abgehakte Posten in einen kopierbaren Code und zurück.
+// Format: "RKPLAN1:" + Base64(UTF-8(JSON)). Der Präfix erlaubt sauberes Abweisen von Fremdtext.
+const PLAN_CODE_PREFIX = "RKPLAN1:";
+
+function encodePlanCode(){
+  const payload = { plan, checked };
+  const json = JSON.stringify(payload);
+  const b64 = btoa(String.fromCharCode(...new TextEncoder().encode(json)));
+  return PLAN_CODE_PREFIX + b64;
+}
+
+function decodePlanCode(code){
+  const trimmed = (code || "").trim();
+  if(!trimmed.startsWith(PLAN_CODE_PREFIX)) throw new Error("Kein gültiger Plan-Code (Präfix fehlt).");
+  const b64 = trimmed.slice(PLAN_CODE_PREFIX.length).trim();
+  const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  const data = JSON.parse(new TextDecoder().decode(bytes));
+  if(!data || typeof data !== "object" || typeof data.plan !== "object" || typeof data.checked !== "object"){
+    throw new Error("Code hat ein unerwartetes Format.");
   }
-  fab.disabled = false; fab.textContent = "+ Rezept fotografieren";
+  return data;
 }
 
 /* ================= Einstellungen ================= */
@@ -516,44 +471,51 @@ function openSettings(msg){
     <button class="close" data-x>×</button>
     <h2>Einstellungen</h2>
     ${msg ? `<div class="error">${esc(msg)}</div>` : ""}
-    <label class="field" for="key">Anthropic-API-Key (für den Foto-Import)</label>
-    <input type="password" id="key" value="${esc(apiKey)}" placeholder="sk-ant-…" style="width:100%">
-    <p class="field-note">Der Schlüssel wird ausschließlich lokal in deinem Browser gespeichert (localStorage) und nur direkt an api.anthropic.com gesendet. Niemals in das GitHub-Repo eintragen oder committen.</p>
-    <h4>Katalog</h4>
+    <h4>Wochenplan geräteübergreifend</h4>
+    <p class="field-note">Wochenplan und abgehakte Einkaufsposten liegen nur in diesem Browser. Über den Code überträgst du beides auf ein anderes Gerät. Das Importieren <strong>ersetzt</strong> dort den vorhandenen Plan vollständig.</p>
     <div class="row" style="margin-top:8px">
-      <button class="btn" id="exp">Katalog als recipes.json exportieren</button>
-      <button class="btn" id="imp">recipes.json importieren</button>
-      <input type="file" id="impfile" accept="application/json" hidden>
+      <button class="btn" id="planExp">Plan-Code erzeugen</button>
     </div>
-    <p class="field-note">Per Foto hinzugefügte Rezepte liegen zunächst nur in diesem Browser. Exportiere die Datei und committe sie ins Repo, damit sie überall verfügbar sind und der Bring-Export funktioniert. Danach das Skript „node scripts/build-bring-pages.mjs“ ausführen (siehe README).</p>
-    <div class="row"><button class="btn primary" id="save">Speichern</button></div>
+    <textarea id="planExpBox" readonly hidden style="width:100%;min-height:70px;margin-top:8px;font-family:monospace;font-size:12px" placeholder="Hier erscheint dein Code …"></textarea>
+    <div id="planExpMsg"></div>
+    <label class="field" for="planImpBox" style="margin-top:14px">Plan-Code importieren</label>
+    <textarea id="planImpBox" style="width:100%;min-height:70px;font-family:monospace;font-size:12px" placeholder="Code vom anderen Gerät hier einfügen …"></textarea>
+    <div class="row" style="margin-top:8px"><button class="btn primary" id="planImp">Plan importieren (ersetzt vorhandenen)</button></div>
+    <div id="planImpMsg"></div>
   `;
   dlg.querySelector("[data-x]").addEventListener("click", () => dlg.close());
-  dlg.querySelector("#save").addEventListener("click", () => {
-    apiKey = dlg.querySelector("#key").value.trim();
-    LS.set("rk-key", apiKey);
-    dlg.close();
-  });
-  dlg.querySelector("#exp").addEventListener("click", () => {
-    const merged = [...catalog.filter(r => !deleted.includes(r.id)), ...custom];
-    const blob = new Blob([JSON.stringify(merged, null, 2)], { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "recipes.json";
-    a.click();
-    URL.revokeObjectURL(a.href);
-  });
-  dlg.querySelector("#imp").addEventListener("click", () => dlg.querySelector("#impfile").click());
-  dlg.querySelector("#impfile").addEventListener("change", async e => {
-    const f = e.target.files[0]; if(!f) return;
+
+  const expBox = dlg.querySelector("#planExpBox");
+  const expMsg = dlg.querySelector("#planExpMsg");
+  dlg.querySelector("#planExp").addEventListener("click", async () => {
+    const code = encodePlanCode();
+    expBox.hidden = false;
+    expBox.value = code;
+    expBox.focus(); expBox.select();
     try{
-      const data = JSON.parse(await f.text());
-      if(!Array.isArray(data)) throw new Error();
-      catalog = data; custom = []; deleted = [];
-      LS.set("rk-custom", custom); LS.set("rk-deleted", deleted);
-      dlg.close(); render();
-    }catch{ alert("Datei konnte nicht gelesen werden."); }
+      await navigator.clipboard.writeText(code);
+      expMsg.innerHTML = `<p class="field-note">Code erzeugt und in die Zwischenablage kopiert.</p>`;
+    }catch{
+      expMsg.innerHTML = `<p class="field-note">Code erzeugt. Bitte markieren und manuell kopieren.</p>`;
+    }
   });
+
+  const impMsg = dlg.querySelector("#planImpMsg");
+  dlg.querySelector("#planImp").addEventListener("click", () => {
+    const raw = dlg.querySelector("#planImpBox").value;
+    let data;
+    try{
+      data = decodePlanCode(raw);
+    }catch(err){
+      impMsg.innerHTML = `<div class="error">Import fehlgeschlagen: ${esc(err.message || "Code konnte nicht gelesen werden.")}</div>`;
+      return;
+    }
+    if(!confirm("Vorhandenen Wochenplan und abgehakte Posten auf diesem Gerät ersetzen?")) return;
+    plan = data.plan; checked = data.checked;
+    LS.set("rk-plan", plan); LS.set("rk-checked", checked);
+    dlg.close(); render();
+  });
+
   dlg.showModal();
 }
 
