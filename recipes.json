@@ -2574,5 +2574,105 @@
       "Ei, Essig, Zucker, Salz, Senf und Knoblauch mit dem Mixstab pürieren.",
       "Rapsöl langsam dazugeben und mixen, bis die Masse steif ist."
     ]
+  },
+  {
+    "id": "kritharaki-bowl-mit-veganem-tzatziki-und-snack-bal",
+    "title": "Kritharaki Bowl mit veganem Tzatziki und Snack Balls",
+    "category": "Hauptgericht",
+    "tags": [
+      "Bowl"
+    ],
+    "time": 30,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "Billie Green",
+    "notes": "Für ein besonders cremiges Tzatziki die Snackgurke grob raspeln, leicht mit Salz und einer Prise Zucker würzen und etwa 10 Minuten ziehen lassen. Anschließend gut ausdrücken. Die Bowl schmeckt noch authentischer mit etwas zerbröseltem veganem Feta und extra frischem Dill.",
+    "ingredients": [
+      {
+        "a": "125 g",
+        "n": "Kritharaki-Nudeln"
+      },
+      {
+        "a": "2 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "1",
+        "n": "Bio-Zitrone"
+      },
+      {
+        "a": "1 Handvoll",
+        "n": "Dill und Petersilie"
+      },
+      {
+        "a": "200 g",
+        "n": "vegane Joghurtalternative"
+      },
+      {
+        "a": "1",
+        "n": "Knoblauchzehe"
+      },
+      {
+        "a": "1",
+        "n": "Snackgurke (für Tzatziki)"
+      },
+      {
+        "a": "1",
+        "n": "Bio-Zitrone (für Tzatziki)"
+      },
+      {
+        "a": "1 EL",
+        "n": "Olivenöl (für Tzatziki)"
+      },
+      {
+        "a": "1 Handvoll",
+        "n": "gehackter Dill oder glatte Petersilie (für Tzatziki)"
+      },
+      {
+        "a": "2 Packungen",
+        "n": "Billie Green Vegane Snack Balls"
+      },
+      {
+        "a": "4",
+        "n": "Snackgurken"
+      },
+      {
+        "a": "200 g",
+        "n": "Kirschtomaten"
+      },
+      {
+        "a": "je 1",
+        "n": "rote und gelbe Paprika"
+      },
+      {
+        "a": "½",
+        "n": "Zwiebel"
+      },
+      {
+        "a": "50 g",
+        "n": "Oliven"
+      },
+      {
+        "a": "nach Belieben",
+        "n": "milde Peperoni"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz und Pfeffer"
+      }
+    ],
+    "steps": [
+      "Die Kritharaki nach Packungsanleitung in Salzwasser garen. Abgießen, kurz ausdampfen lassen und mit Olivenöl, etwas Zitronenabrieb sowie reichlich Zitronensaft vermengen. Die Kräuter fein hacken, unterheben und mit Salz und Pfeffer abschmecken.",
+      "Für das Tzatziki die Gurke grob raspeln und leicht ausdrücken. Den Knoblauch fein reiben und mit der Gurke, der veganen Joghurtalternative, Olivenöl, etwas Zitronenabrieb und Zitronensaft verrühren. Mit fein gehacktem Dill oder Petersilie verfeinern und mit Salz sowie Pfeffer abschmecken.",
+      "Die Snackgurken würfeln oder in feine Scheiben hobeln, die Kirschtomaten halbieren, die Paprika klein schneiden und die rote Zwiebel in feine Streifen schneiden. Alles mit etwas Olivenöl, Salz und Pfeffer marinieren.",
+      "Die Billie Green Veganen Snack Balls in einer Pfanne mit etwas Olivenöl oder im Airfryer goldbraun und knusprig zubereiten.",
+      "Die Kritharaki auf zwei Schalen verteilen. Das Gemüse, die Oliven und nach Belieben die Peperoni darauf anrichten. Einen großzügigen Klecks Tzatziki dazugeben und die warmen Snack Balls daraufsetzen. Mit frischen Kräutern garnieren und servieren."
+    ]
   }
 ]
