@@ -2996,5 +2996,355 @@
       "Olivenöl in einer Pfanne erhitzen und die Birnen darin bei hoher Hitze 4 Minuten braten, bevor die Nudeln gar sind. Mit Salz, Pfeffer und Zucker würzen. Radicchio dazugeben und 30 Sekunden braten.",
       "Die Nudeln abgießen und gut abtropfen lassen. In der Pfanne zu den Birnen und dem Radicchio geben. Gorgonzolasauce schwenken und auf eine Platte geben. Das Birnen-Radicchio-Gemüse darüber geben und mit etwas geriebenem Pecorino servieren."
     ]
+  },
+  {
+    "id": "lauwarmes-lachs-carpaccio",
+    "title": "Lauwarmes Lachs-Carpaccio",
+    "category": "Hauptgericht",
+    "tags": [
+      "Backofen",
+      "Fisch",
+      "Carpaccio",
+      "Salat"
+    ],
+    "time": 30,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch (Seite 88)",
+    "notes": "Bibo hat recht: Frischer Fisch stinkt nicht. Bei diesem Gericht ist es besonders wichtig, absolut frischen Lachs zu kaufen. Wer Probleme mit rohem Fisch hat, kann natürlich nur Räucherlachs verwenden – dann aber mit dem Salz zurückhalten.",
+    "ingredients": [
+      {
+        "a": "2 große",
+        "n": "Kartoffeln"
+      },
+      {
+        "a": "2 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "10 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "2",
+        "n": "Birnen"
+      },
+      {
+        "a": "300 g",
+        "n": "frisches Lachsfilet ohne Haut"
+      },
+      {
+        "a": "300 g",
+        "n": "Räucherlachs in Scheiben"
+      },
+      {
+        "a": "2 EL",
+        "n": "Limettensaft"
+      },
+      {
+        "a": "2–3 EL",
+        "n": "Honig"
+      },
+      {
+        "a": "3 TL",
+        "n": "grober Senf"
+      },
+      {
+        "a": "1",
+        "n": "kleiner Radicchio"
+      },
+      {
+        "a": "100 g",
+        "n": "Schlagsahne"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "1 Bund",
+        "n": "Schnittlauch"
+      }
+    ],
+    "steps": [
+      "Die Kartoffeln waschen, schälen und in Würfel schneiden. Ca. 4 EL Olivenöl in einer Pfanne erhitzen und die Kartoffelwürfel unter Schwenken darin 6–8 Minuten goldbraun braten. Birnen vierteln, entkernen und würfeln. Zu den Kartoffeln geben und 2 Minuten braten.",
+      "Inzwischen den frischen Lachs in dünne Scheiben schneiden und mit den Räucherlachsscheiben abwechselnd auf eine Platte schichten. Limettensaft, 6 EL Olivenöl, Honig und Senf verrühren und über den Lachs geben. 5 Minuten in ca. 150 °C heißen Ofen erwärmen. Kurz vor dem Servieren unter die Kartoffeln geben.",
+      "Radicchio putzen und in feine Streifen schneiden. Kurz vor dem Servieren unter die Kartoffeln geben.",
+      "Sahne kurz aufkochen, salzen und pfeffern. Schnittlauch fein schneiden und in die Sahne geben. Kartoffel-Birnen-Mischung über den Lachs verteilen und die Schnittlauchsahne über den Lachs verteilen."
+    ]
+  },
+  {
+    "id": "standard-stir-fry",
+    "title": "Standard Stir-Fry",
+    "category": "Hauptgericht",
+    "tags": [
+      "One-Pot",
+      "Wok"
+    ],
+    "time": 20,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch S. 28",
+    "notes": "Grenzenlose Möglichkeiten: Diesen Stir-fry kann man beliebig variieren: mit Geflügel, anderen Gemüsen oder Tofu anstelle des Fleisches. Die Zubereitungsmethode bleibt jedoch immer die gleiche.",
+    "ingredients": [
+      {
+        "a": "400 g",
+        "n": "Rindfleisch aus der Hüfte"
+      },
+      {
+        "a": "175 g",
+        "n": "Shiitakepilze"
+      },
+      {
+        "a": "1 Bund",
+        "n": "Frühlingszwiebeln"
+      },
+      {
+        "a": "100 g",
+        "n": "Möhren"
+      },
+      {
+        "a": "50 g",
+        "n": "Cashewnüsse"
+      },
+      {
+        "a": "1",
+        "n": "rote Chilischote"
+      },
+      {
+        "a": "1",
+        "n": "Knoblauchzehe"
+      },
+      {
+        "a": "6 EL",
+        "n": "Sojasouce"
+      },
+      {
+        "a": "2 EL",
+        "n": "Zucker"
+      },
+      {
+        "a": "Mehl",
+        "n": "zum Wenden"
+      },
+      {
+        "a": "ca. 50 ml",
+        "n": "Erdnussöl"
+      }
+    ],
+    "steps": [
+      "Das Fleisch in dünne Streifen schneiden. Shiitakepilze putzen und je nach Größe klein schneiden. Die Frühlingszwiebeln in 3 cm lange schräge Stücke schneiden. Die Möhren schälen und wie die Zwiebeln schneiden. Cashewnüsse grob zerkleinern.",
+      "Chilischote entkernen und fein würfeln. Knoblauch pellen und in feine Scheiben schneiden. Beides in einer Schüssel mit Sojasouce und Zucker mischen.",
+      "Das Fleisch in etwas Mehl wenden und das überschüssige Mehl abschütteln. Reichlich Öl im Wok stark erhitzen. Wenn das Öl den Rauchpunkt erreicht, das Fleisch schnell unter Rühren anbraten. Herausnehmen und fast das gesamte Öl abgeben.",
+      "Die Gemüse in den Wok geben und bei hoher Hitze 3 Minuten unter ständigem Rühren braten. Fleisch und Cashewnüsse darin schwenken und eine Minute kochen. Fleisch und Cashewnüsse darin schwenken und sofort servieren."
+    ]
+  },
+  {
+    "id": "tante-poppes-sommersalat",
+    "title": "Tante Poppes Sommersalat",
+    "category": "Salat",
+    "tags": [
+      "Salat",
+      "Bowl"
+    ],
+    "time": 15,
+    "wait": 15,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Tante Poppe",
+    "notes": "Süße Äpfel verlieren sich geschmacklich. Knackige, säuerliche Äpfel verwenden. Der Salat schmeckt auch auf geröstetem Graubrot.",
+    "ingredients": [
+      {
+        "a": "2",
+        "n": "rote Paprika"
+      },
+      {
+        "a": "2",
+        "n": "rote Äpfel"
+      },
+      {
+        "a": "1",
+        "n": "Salatgurke"
+      },
+      {
+        "a": "1/2 Bund",
+        "n": "Dill"
+      },
+      {
+        "a": "1",
+        "n": "rote Zwiebel"
+      },
+      {
+        "a": "150 g",
+        "n": "Magerquark"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Saft einer Zitrone"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "1",
+        "n": "Kopfsalat"
+      }
+    ],
+    "steps": [
+      "Paprika vierteln und entkernen. Äpfel mit einem Kernausstecher und einem Löffel herausschneiden. Gurke schälen, längs halbieren und die Kerne mit einem Löffel herausschneiden. Alles in ca. 1 cm große Würfel schneiden.",
+      "Dill fein schneiden und mit einem Löffel in sehr feine Ringe schneiden oder hobeln. Zwiebel in sehr feine Ringe schneiden oder hobeln.",
+      "Paprika, Apfel, Gurke und Zwiebel mit Quark und Zitronensaft in einer Schüssel vermengen. Salzen und pfeffern. 15 Minuten ziehen lassen.",
+      "Kopfsalat putzen, waschen und trockenschleudern. Salatblätter auf einer Platte verteilen und das angemachte Gemüse darauf geben."
+    ]
+  },
+  {
+    "id": "penne-mit-erbsen-mascarpone-sauce",
+    "title": "Penne mit Erbsen-Mascarpone-Sauce",
+    "category": "Hauptgericht",
+    "tags": [
+      "One-Pot",
+      "Pasta",
+      "Sauce"
+    ],
+    "time": 25,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch (Foto)",
+    "notes": "Mascarpone ist ein fetter italienischer Frischkäse (80% Fett). Wer will, ersetzt ihn durch Schlagsahne mit 30% Fett, auch nicht gerade schlank, aber immerhin.",
+    "ingredients": [
+      {
+        "a": "500 g",
+        "n": "Penne rigate"
+      },
+      {
+        "a": "125 g",
+        "n": "durchwachsener Speck"
+      },
+      {
+        "a": "2",
+        "n": "Knoblauchzehen"
+      },
+      {
+        "a": "1/2",
+        "n": "Gemüsezwiebel"
+      },
+      {
+        "a": "2 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "125 g",
+        "n": "Tiefkühl-Erbsen"
+      },
+      {
+        "a": "125 g",
+        "n": "Mascarpone"
+      },
+      {
+        "a": "1-2 TL",
+        "n": "Zitronensaft"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Basilikumblätter zum Garnieren"
+      }
+    ],
+    "steps": [
+      "Gemüsezwiebel schälen und in feine Streifen schneiden. Speck würfeln. Knoblauch schälen und fein hacken.",
+      "Nudeln in Salzwasser nach Packungsangabe kochen. Während die Nudeln kochen, das Olivenöl in einer Pfanne erhitzen.",
+      "Speck und Knoblauch darin unter Rühren anschnitzen. Die Zwiebelstreifen darin unter Rühren anschwitzen.",
+      "Erbsen und Speck und Knoblauch dazugeben und alles knusprig braten, ca. 3 bis 4 Minuten lang.",
+      "Pfanne mit 3 Esslöffeln des Nudelwassers ablöschen und 1 Minute kochen lassen. Mascarpone mit Salz und Zitronensaft abschmecken.",
+      "Nudeln abgießen, abtropfen lassen, mit der Sauce mischen und mit Basilikum garniert servieren."
+    ]
+  },
+  {
+    "id": "tomaten-brot-salat",
+    "title": "Tomaten-Brot-Salat",
+    "category": "Salat",
+    "tags": [
+      "Salat",
+      "Bowl",
+      "Brot"
+    ],
+    "time": 20,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Kochbuch (unbekannt)",
+    "notes": "Mein absoluter Star unter den Salaten. Den mache ich wahnsinnig gern und den esse ich auch wahnsinnig gern. Und einfach ist er dazu auch noch. Tipp: Wenn man kein trockenes Brot zur Hand hat, kann man auch frisches Brot im Backofen trocken rösten.",
+    "ingredients": [
+      {
+        "a": "ca. 100 ml",
+        "n": "Balsamico-Essig"
+      },
+      {
+        "a": "200 g",
+        "n": "altbackenes Ciabatta-Brot, in Scheiben geschnitten"
+      },
+      {
+        "a": "400 g",
+        "n": "Tomaten, geviertelt"
+      },
+      {
+        "a": "100 g",
+        "n": "gehackte Oliven, schwarze und grüne gemischt"
+      },
+      {
+        "a": "20",
+        "n": "halbierende Kapernäpfel"
+      },
+      {
+        "a": "1 Bund",
+        "n": "Basilikum, fein geschnitten"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Zucker"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Olivenöl"
+      }
+    ],
+    "steps": [
+      "Den Balsamico-Essig in einem Topf erhitzen.",
+      "Die trockenen Brotscheiben einzeln auf ein tiefes Blech legen und vorsichtig mit warmem Essig begießen. Das Brot sollte sich nicht auflösen.",
+      "Tomaten, Oliven und Kapernäpfel in eine Schüssel geben und mit Salz, Pfeffer, Zucker, Olivenöl und dem restlichen Essig vermischen.",
+      "Zum Schluss das marinierte Brot grob würfeln und zusammen mit dem Basilikum vorsichtig unterheben."
+    ]
   }
 ]
