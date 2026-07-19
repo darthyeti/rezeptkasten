@@ -190,7 +190,7 @@ function bindHeader(){
       document.querySelectorAll("nav.tabs button").forEach(x => x.classList.toggle("on", x === b));
       render();
     }));
-  document.getElementById("openSettings").addEventListener("click", openSettings);
+  document.getElementById("openSettings").addEventListener("click", () => openSettings());
 }
 
 /* ================= Rendering ================= */
@@ -458,8 +458,11 @@ function encodePlanCode(){
 
 function decodePlanCode(code){
   const trimmed = (code || "").trim();
-  if(!trimmed.startsWith(PLAN_CODE_PREFIX)) throw new Error("Kein gültiger Plan-Code (Präfix fehlt).");
-  const b64 = trimmed.slice(PLAN_CODE_PREFIX.length).trim();
+  // Präfix tolerant prüfen: Messenger/Tastaturen ändern gern Groß-/Kleinschreibung
+  const m = /^rkplan1:/i.exec(trimmed);
+  if(!m) throw new Error("Kein gültiger Plan-Code (Präfix fehlt).");
+  // Whitespace im Base64 entfernen (Zeilenumbrüche durch Umbruch in Messengern)
+  const b64 = trimmed.slice(m[0].length).replace(/\s+/g, "");
   const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
   const data = JSON.parse(new TextDecoder().decode(bytes));
   if(!data || typeof data !== "object" || typeof data.plan !== "object" || typeof data.checked !== "object"){
