@@ -2674,5 +2674,327 @@
       "Die Billie Green Veganen Snack Balls in einer Pfanne mit etwas Olivenöl oder im Airfryer goldbraun und knusprig zubereiten.",
       "Die Kritharaki auf zwei Schalen verteilen. Das Gemüse, die Oliven und nach Belieben die Peperoni darauf anrichten. Einen großzügigen Klecks Tzatziki dazugeben und die warmen Snack Balls daraufsetzen. Mit frischen Kräutern garnieren und servieren."
     ]
+  },
+  {
+    "id": "spinatsalat-mit-gebratenen-tomaten",
+    "title": "Spinatsalat mit gebratenen Tomaten",
+    "category": "Salat",
+    "tags": [
+      "Pfanne",
+      "Salat"
+    ],
+    "time": 20,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Kochbuch S. 39",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "4 EL",
+        "n": "weißer Balsamico-Essig"
+      },
+      {
+        "a": "100 g",
+        "n": "junger Ziegenkäse (z. B. Picandou)"
+      },
+      {
+        "a": "5 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "schwarzer Pfeffer"
+      },
+      {
+        "a": "400 g",
+        "n": "Frühlingsblattspinat oder Neuseeland-Spinat"
+      },
+      {
+        "a": "6",
+        "n": "mittelgroße Eiertomaten"
+      },
+      {
+        "a": "ca. 4 EL",
+        "n": "Zucker"
+      }
+    ],
+    "steps": [
+      "Essig und 5 EL heißes Wasser in einem kleinen Topf aufkochen und mit dem Ziegenkäse und 4 EL Olivenöl verrühren. Mit Salz und Pfeffer würzen und beiseite stellen.",
+      "Spinat putzen, waschen und trockenschleudern.",
+      "Tomaten quer halbieren. Die Schnittflächen in den Zucker drücken. Restliches Öl in einer Pfanne erhitzen und die Tomaten mit den Schnittflächen nach unten in die Pfanne geben. So lange braten, bis die Tomaten hellbraun karamellisieren.",
+      "Spinat mit der Ziegenkäsesauce und den Tomaten auf Teller geben und mit reichlich grobem schwarzem Pfeffer bestreut servieren."
+    ]
+  },
+  {
+    "id": "raeucherlachs-pizza",
+    "title": "Räucherlachs-Pizza",
+    "category": "Hauptgericht",
+    "tags": [
+      "Backofen",
+      "Pizza"
+    ],
+    "time": 20,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch Seite 58",
+    "notes": "Kaviar kann durch Keta-Kaviar ersetzt werden.",
+    "ingredients": [
+      {
+        "a": "1",
+        "n": "rote Zwiebel"
+      },
+      {
+        "a": "1/2 Bund",
+        "n": "Dill"
+      },
+      {
+        "a": "1 Bund",
+        "n": "Schnittlauch"
+      },
+      {
+        "a": "1 Rezept",
+        "n": "Pizzateig"
+      },
+      {
+        "a": "1-2 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "250 g",
+        "n": "Crème fraîche"
+      },
+      {
+        "a": "schwarzer Pfeffer",
+        "n": "nach Geschmack"
+      },
+      {
+        "a": "300 g",
+        "n": "Räucherlachs (in dünnen Scheiben)"
+      },
+      {
+        "a": "2 EL",
+        "n": "Keta-Kaviar (ersatzweise Forellenkaviar)"
+      }
+    ],
+    "steps": [
+      "Den Ofen auf 250 °C vorheizen (Umluft 225 °C).",
+      "Die Zwiebel in feine Ringe schneiden. Den Teig halbieren und auf einer bemehlten Fläche dünn ausrollen.",
+      "Mit Olivenöl bestreichen und die Zwiebelstreifen darauf verteilen. In den heißen Ofen geben und auf der untersten Schiene ca. 12 Minuten knusprig backen.",
+      "Dill und Schnittlauch fein schneiden, etwas davon beiseite legen. Rest mit der Crème fraîche und dem frisch gemahlenen Pfeffer verrühren.",
+      "Pizza aus dem Ofen nehmen und die Crème fraîche darauf verteilen. Mit Lachs belegen und mit Kaviar und den restlichen Kräutern garnieren."
+    ]
+  },
+  {
+    "id": "kuerbis-zwiebel-pizza",
+    "title": "Kürbis-Zwiebel-Pizza",
+    "category": "Hauptgericht",
+    "tags": [
+      "Backofen",
+      "Pizza"
+    ],
+    "time": 20,
+    "wait": 30,
+    "portions": 1,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch",
+    "notes": "Man kann natürlich auch die doppelten Mengen nehmen und 2 Pizzen herstellen.",
+    "ingredients": [
+      {
+        "a": "1/2 Rezept",
+        "n": "Pizzateig"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Butter oder Öl für das Blech"
+      },
+      {
+        "a": "150 g",
+        "n": "Crème fraîche"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Geschmack",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "1",
+        "n": "roter Apfel"
+      },
+      {
+        "a": "2-3",
+        "n": "kleine Zwiebeln"
+      },
+      {
+        "a": "50 g",
+        "n": "Rucola"
+      },
+      {
+        "a": "300 g",
+        "n": "Kürbisfleisch"
+      },
+      {
+        "a": "50 g",
+        "n": "Tiroler Speck in Scheiben"
+      }
+    ],
+    "steps": [
+      "Pizzateig auf einer bemehlten Fläche dünn ausrollen. Auf ein leicht gefettetes und mit Mehl bestreutes Blech legen.",
+      "Crème fraîche mit Salz und Pfeffer verrühren und auf dem Pizzaboden verteilen.",
+      "Apfel mit einem Apfelausstecher entkernen. Kürbis, Apfel und Zwiebeln fein hobeln und auf dem Pizzaboden verteilen. Mit Salz und Pfeffer würzen.",
+      "Im vorgeheizten Ofen bei 220 °C (Umluft 200 °C) auf der untersten Schiene 30 Minuten backen. Inzwischen Rucola putzen, waschen und trockenschleudern. Mit dem Tiroler Speck auf der Pizza verteilen und servieren."
+    ]
+  },
+  {
+    "id": "petersilienwurzelsuppe",
+    "title": "Petersilienwurzelsuppe",
+    "category": "Suppe",
+    "tags": [
+      "One-Pot",
+      "Suppe"
+    ],
+    "time": 45,
+    "wait": 0,
+    "portions": 7,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch Seite 60",
+    "notes": "Pancetta, Bacon und Speck lassen sich sehr gut in der Mikrowelle braten. Die Scheiben auf einen Teller geben und mit etwas Küchenkrepp abdecken. Je nach Wattstärke 1–2 Minuten braten.",
+    "ingredients": [
+      {
+        "a": "600 g",
+        "n": "Petersilienwurzeln"
+      },
+      {
+        "a": "150 g",
+        "n": "Zwiebeln"
+      },
+      {
+        "a": "200 g",
+        "n": "Kartoffeln (mehlig kochend)"
+      },
+      {
+        "a": "50 g",
+        "n": "durchgewachsener Speck"
+      },
+      {
+        "a": "1 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "1,5 l",
+        "n": "Geflügel- oder Gemüsebrühe"
+      },
+      {
+        "a": "2 Zweige",
+        "n": "Thymian"
+      },
+      {
+        "a": "2 EL",
+        "n": "Honig"
+      },
+      {
+        "a": "250 g",
+        "n": "Schlagsahne"
+      },
+      {
+        "a": "Salz, Pfeffer",
+        "n": ""
+      },
+      {
+        "a": "100 g",
+        "n": "Pancetta in sehr dünnen Scheiben (ungeräucherter italienischer Bauchspeck)"
+      },
+      {
+        "a": "bestes",
+        "n": "Olivenöl"
+      }
+    ],
+    "steps": [
+      "Zwiebeln pellen und fein würfeln. Petersilienwurzeln und Kartoffeln waschen und schälen. In 2 cm große Würfel schneiden. Den Speck würfeln.",
+      "In einem Topf erhitzen und Zwiebeln und Speck zusammen bei mittlerer Hitze 4 Minuten anschwitzen. Petersilienwurzeln und Kartoffeln dazugeben und eine weitere Minute anschwitzen.",
+      "Die Brühe angießen, zum Kochen bringen und 30 Minuten sanft kochen lassen. Thymian fein schneiden, 5 Minuten vor Ende der Garzeit Honig und Thymian in die Suppe geben.",
+      "Die Suppe fein pürieren, die Sahne dazugeben, erneut kurz aufkochen und mit Salz und Pfeffer würzen.",
+      "Pancetta in einer beschichteten Pfanne knusprig braten. Die Suppe in tiefe Teller geben, Pancetta darauf verteilen und mit dem besten Olivenöl beträufeln."
+    ]
+  },
+  {
+    "id": "penne-mit-gorgonzolasauce",
+    "title": "Penne mit Gorgonzolasauce",
+    "category": "Hauptgericht",
+    "tags": [
+      "Pasta",
+      "Sauce"
+    ],
+    "time": 25,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Kochbuch",
+    "notes": "Mit etwas geriebenem Pecorino oder Parmesan servieren.",
+    "ingredients": [
+      {
+        "a": "150 g",
+        "n": "Mascarpone"
+      },
+      {
+        "a": "100 g",
+        "n": "Gorgonzola"
+      },
+      {
+        "a": "schwarzer Pfeffer",
+        "n": ""
+      },
+      {
+        "a": "2",
+        "n": "Birnen"
+      },
+      {
+        "a": "2 kleine Köpfe",
+        "n": "Radicchio"
+      },
+      {
+        "a": "Zucker",
+        "n": ""
+      },
+      {
+        "a": "40 g",
+        "n": "Pecorino oder Parmesan, gerieben"
+      },
+      {
+        "a": "400 g",
+        "n": "Penne"
+      },
+      {
+        "a": "Salz",
+        "n": ""
+      },
+      {
+        "a": "3 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "30 Sekunden",
+        "n": "(Bratzeit Radicchio)"
+      }
+    ],
+    "steps": [
+      "Mascarpone mit 3 EL Wasser in eine Pfanne geben. Gorgonzola hineinbröseln und auf dem Herd bei niedriger Temperatur erhitzen. Mit grobem Pfeffer würzen.",
+      "Die Birnen vierteln, entkernen und in Würfel schneiden. Radicchio putzen, waschen und in feine Streifen schneiden. Die Nudeln in kochendem Salzwasser nach Packungsanweisung garen.",
+      "Olivenöl in einer Pfanne erhitzen und die Birnen darin bei hoher Hitze 4 Minuten braten, bevor die Nudeln gar sind. Mit Salz, Pfeffer und Zucker würzen. Radicchio dazugeben und 30 Sekunden braten.",
+      "Die Nudeln abgießen und gut abtropfen lassen. In der Pfanne zu den Birnen und dem Radicchio geben. Gorgonzolasauce schwenken und auf eine Platte geben. Das Birnen-Radicchio-Gemüse darüber geben und mit etwas geriebenem Pecorino servieren."
+    ]
   }
 ]
