@@ -3346,5 +3346,363 @@
       "Tomaten, Oliven und Kapernäpfel in eine Schüssel geben und mit Salz, Pfeffer, Zucker, Olivenöl und dem restlichen Essig vermischen.",
       "Zum Schluss das marinierte Brot grob würfeln und zusammen mit dem Basilikum vorsichtig unterheben."
     ]
+  },
+  {
+    "id": "kartoffelgnocchi-mit-tomaten-und-ricotta",
+    "title": "Kartoffelgnocchi mit Tomaten und Ricotta",
+    "category": "Hauptgericht",
+    "tags": [
+      "Pasta",
+      "Sauce"
+    ],
+    "time": 60,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "unbekannt",
+    "notes": "Wer es eilig hat, kauft Gnocchi aus dem Supermarkt. Mit einer fertigen Sauce schmecken auch die...",
+    "ingredients": [
+      {
+        "a": "500 g",
+        "n": "gekochte, geschälte Kartoffeln"
+      },
+      {
+        "a": "ca. 150 g",
+        "n": "Mehl"
+      },
+      {
+        "a": "2",
+        "n": "Eier"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Muskatnuss"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "frisch geriebener Muskatnuss"
+      },
+      {
+        "a": "10",
+        "n": "reife Tomaten"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "1 Bund",
+        "n": "Basilikum"
+      },
+      {
+        "a": "150 g",
+        "n": "Ricotta"
+      }
+    ],
+    "steps": [
+      "Die gekochten Kartoffeln auf der Kartoffelreibe reiben oder alternativ durch eine Kartoffelpresse drücken. Mit Mehl und Eiern vermengen, bis ein geschmeidiger, fast trockener Teig entsteht.",
+      "Wenn nötig, noch Mehl dazugeben. Mit Salz, Pfeffer und frisch geriebenem Muskatnuss würzen.",
+      "Aus dem Teig Rollen mit einem Durchmesser von ca. 1,5 cm formen. Die Rollen in 1 cm breite Stücke schneiden.",
+      "Die Stücke mit den Händen zu kleinen Kugeln drehen und einseitig mit einer Gabel eindrücken.",
+      "Die Gnocchi in kochendes Salzwasser geben und kochen, bis sie an der Oberfläche schwimmen. Mit einer Schaumkelle herausnehmen und abtropfen lassen.",
+      "Für die Sauce die Tomaten vierteln, entkernen und in kleine Würfel schneiden. Olivenöl in einer Pfanne erhitzen und die Tomaten darin bei mittlerer Hitze zerfallen lassen. Mit Salz und Pfeffer abschmecken.",
+      "Die Gnocchi zu der Tomatensauce geben und erwärmen. Kurz vor dem Servieren Basilikum in Streifen schneiden, die Basilikumstreifen dazugeben und den Ricotta unterheben."
+    ]
+  },
+  {
+    "id": "spaghetti-pilz-kuchen-mit-tomatensauce",
+    "title": "Spaghetti-Pilz-Kuchen mit Tomatensauce",
+    "category": "Hauptgericht",
+    "tags": [
+      "Pasta",
+      "Backofen",
+      "Sauce"
+    ],
+    "time": 30,
+    "wait": 10,
+    "portions": 7,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Kochbuch (Foto)",
+    "notes": "Pilze können vom Vortag sein. Tomatensauce nach Bedarf mit etwas Wasser verdünnen.",
+    "ingredients": [
+      {
+        "a": "500 g",
+        "n": "gemischte Pilze (z. B. Austernpilze, Shiitake, Champignons)"
+      },
+      {
+        "a": "1 EL",
+        "n": "Öl"
+      },
+      {
+        "a": "1 kg",
+        "n": "gekochte Spaghetti (vom Vortag)"
+      },
+      {
+        "a": "250 g",
+        "n": "Sahne"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz, Pfeffer, Muskatnuss"
+      },
+      {
+        "a": "10",
+        "n": "Eier"
+      },
+      {
+        "a": "1 Dose (40 g)",
+        "n": "Tomatenmark"
+      },
+      {
+        "a": "1 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "2 Dosen (insgesamt 400 g)",
+        "n": "gewürfelte Tomaten"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz, Pfeffer, Zucker"
+      },
+      {
+        "a": "je 1 Hand voll",
+        "n": "frische Kräuter (z. B. Petersilie, Schnittlauch, Basilikum)"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Dosentomaten, aufkochen"
+      }
+    ],
+    "steps": [
+      "Pilze putzen und klein schneiden. Öl in einer großen, hochwandigen Pfanne erhitzen, die Pilze darin unter Rühren 2 bis 3 Minuten braten.",
+      "Die Nudeln dazugeben und 1 weitere Minute mit der Sahne verquirlen, eine Schüssel geben und mit der Sahne verquirlen, mit Salz, Pfeffer und frisch geriebener Muskatnuss würzen und in die Pfanne geben.",
+      "Die Pfanne bei 180 °C (Umluft 160 °C, Gas Stufe 3) in den Backofen stellen, bis die Eier gestockt sind (ca. 10 Minuten).",
+      "Für die Tomatensauce: Tomatenmark in einer Pfanne im Olivenöl anschwitzen, Dosentomaten dazugeben, aufkochen lassen und mit Salz, Pfeffer und etwas Zucker abschmecken.",
+      "Die Kräuter waschen und klein hacken, am Schluss zur Sauce dazugeben. Nach Bedarf die Sauce mit etwas Wasser verdünnen.",
+      "Den Spaghetti-Pilz-Kuchen mit der Tomatensauce servieren."
+    ]
+  },
+  {
+    "id": "spaghetti-mit-kartoffeln-und-sonnengetrockneten-to",
+    "title": "Spaghetti mit Kartoffeln und sonnengetrockneten Tomaten",
+    "category": "Hauptgericht",
+    "tags": [
+      "One-Pot",
+      "Pasta"
+    ],
+    "time": 30,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Kochbuch",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "300 g",
+        "n": "Kartoffeln"
+      },
+      {
+        "a": "400 g",
+        "n": "Spaghetti"
+      },
+      {
+        "a": "",
+        "n": "Salz"
+      },
+      {
+        "a": "80 g",
+        "n": "getrocknete Tomaten"
+      },
+      {
+        "a": "1 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "2 EL",
+        "n": "Butter"
+      },
+      {
+        "a": "150 ml",
+        "n": "Instantbrühe"
+      },
+      {
+        "a": "40 g",
+        "n": "Butter"
+      },
+      {
+        "a": "2 EL",
+        "n": "gehackte Kräuter (z.B. Petersilie, Schnittlauch)"
+      },
+      {
+        "a": "",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "1",
+        "n": "Knoblauchzehe"
+      },
+      {
+        "a": "",
+        "n": "Thymian"
+      }
+    ],
+    "steps": [
+      "Kartoffeln waschen und schälen, in 1 cm große Würfel schneiden, ca. 2 Minuten in kochendem Salzwasser garen und mit einem Schöpflöffel aus dem Wasser nehmen. Danach die Spaghetti im Kochwasser al dente kochen.",
+      "In der Zwischenzeit die Tomaten in feine Streifen schneiden. Das Olivenöl in einer Pfanne erhitzen und die Kartoffelwürfel kurz anbraten. Brühe dazugeben, aufkochen und 5 Minuten kochen lassen. Dann die Tomatenstreifen zugeben, Butter und gehackte Kräuter einrühren.",
+      "Die Sauce mit Salz, Pfeffer und etwas gehacktem Knoblauch abschmecken. Die Spaghetti abgießen, gut abtropfen lassen, in der Sauce durchschwenken und anrichten."
+    ]
+  },
+  {
+    "id": "spanisches-omelett",
+    "title": "Spanisches Omelett",
+    "category": "Hauptgericht",
+    "tags": [
+      "One-Pot",
+      "Pfanne",
+      "Eier",
+      "Mediterran"
+    ],
+    "time": 20,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "1",
+        "n": "rote Paprikaschote"
+      },
+      {
+        "a": "1",
+        "n": "rote Zwiebel"
+      },
+      {
+        "a": "2",
+        "n": "Tomaten"
+      },
+      {
+        "a": "50 g",
+        "n": "grüne Oliven, ohne Stein"
+      },
+      {
+        "a": "2 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "1-2",
+        "n": "Anchovis"
+      },
+      {
+        "a": "3-4",
+        "n": "Eier"
+      }
+    ],
+    "steps": [
+      "Paprika vierteln, entkernen und würfeln.",
+      "Zwiebel schälen und würfeln.",
+      "Tomaten vierteln, entkernen und in Stücke schneiden.",
+      "Oliven in Scheiben schneiden und Anchovis fein hacken.",
+      "Das Olivenöl in einer beschichteten Pfanne erhitzen. Paprika- und Zwiebelwürfel darin bei mittlerer Hitze 3 bis 4 Minuten anschwitzen.",
+      "Die Hälfte der Tomaten dazugeben und weitere 1 bis 2 Minuten anschwitzen.",
+      "Die verquirlten Eier zum Gemüse geben und bei mittlerer Hitze stocken lassen.",
+      "Mit Oliven und Anchovis bestreuen, mit einem Spatel zusammenklappen und vor dem Servieren mit den restlichen Tomatenstückchen garnieren."
+    ]
+  },
+  {
+    "id": "wassermelonensalat",
+    "title": "Wassermelonensalat",
+    "category": "Salat",
+    "tags": [
+      "Salat",
+      "Spargel",
+      "Meeresfrüchte"
+    ],
+    "time": 20,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch",
+    "notes": "",
+    "ingredients": [
+      {
+        "a": "10 Stück (à ca. 30 g)",
+        "n": "Scampi, ohne Kopf und Schale"
+      },
+      {
+        "a": "1-2 TL",
+        "n": "Paprikapulver, edelsüß"
+      },
+      {
+        "a": "1",
+        "n": "unbehandelte Orange, Saft und fein abgeriebene Schale"
+      },
+      {
+        "a": "200 g",
+        "n": "weißer Spargel"
+      },
+      {
+        "a": "2 EL",
+        "n": "Zitronensaft"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Zucker"
+      },
+      {
+        "a": "3 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "400 g",
+        "n": "Wassermelone, ohne Schale und Kerne"
+      },
+      {
+        "a": "200 g",
+        "n": "Hüttenkäse"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "frische Zitronenmelisse zum Garnieren"
+      }
+    ],
+    "steps": [
+      "Die Scampi kalt abspülen, trocknen und mit Paprikapulver, Orangensaft und -abrieb marinieren.",
+      "Spargel schälen und holzige Enden abschneiden. Den Spargel mit dem Sparschäler längs in Scheiben hobeln.",
+      "In eine Schüssel geben und mit Zitronensaft, Salz, Pfeffer, Zucker und 2 Esslöffeln Olivenöl mischen.",
+      "Melone würfeln und mit dem Spargel mischen.",
+      "Die Scampi im restlichen heißen Öl in einer Pfanne von jeder Seite 30 bis 40 Sekunden braten und auf den Salat geben.",
+      "Hüttenkäse auf dem Salat verteilen und mit den Blättern der Zitronenmelisse garnieren."
+    ]
   }
 ]
