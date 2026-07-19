@@ -3704,5 +3704,342 @@
       "Die Scampi im restlichen heißen Öl in einer Pfanne von jeder Seite 30 bis 40 Sekunden braten und auf den Salat geben.",
       "Hüttenkäse auf dem Salat verteilen und mit den Blättern der Zitronenmelisse garnieren."
     ]
+  },
+  {
+    "id": "garnelen-mit-tomaten-ziegenkaese-tarte",
+    "title": "Garnelen mit Tomaten-Ziegenkäse-Tarte",
+    "category": "Hauptgericht",
+    "tags": [
+      "Backofen",
+      "Blätterteig",
+      "Tarte",
+      "Meeresfrüchte"
+    ],
+    "time": 30,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch",
+    "notes": "Man kann den Ziegenkäse natürlich auch durch einen anderen Käse ersetzen. Statt frischer kann man auch gefrorene Kräuter nehmen.",
+    "ingredients": [
+      {
+        "a": "4 Scheiben (à ca. 15x15 cm)",
+        "n": "Tiefkühl-Blätterteig"
+      },
+      {
+        "a": "4-6 mittelgroße",
+        "n": "Tomaten"
+      },
+      {
+        "a": "ca. 200 g",
+        "n": "Ziegenfrischkäse"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Zucker"
+      },
+      {
+        "a": "12 halbierte, entdarmte",
+        "n": "Garnelen"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "1 TL",
+        "n": "Cayennepfeffer"
+      },
+      {
+        "a": "1 TL",
+        "n": "Paprikapulver"
+      },
+      {
+        "a": "1 TL",
+        "n": "gemahlener Koriander"
+      },
+      {
+        "a": "1 TL",
+        "n": "gemahlener Ingwer"
+      },
+      {
+        "a": "Saft von 1",
+        "n": "Zitrone"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "frische Kräuter (z. B. Basilikum, Majoran)"
+      }
+    ],
+    "steps": [
+      "Jede Blätterteigscheibe mithilfe eines Tellers rund ausstechen.",
+      "Die Tomaten waschen und wie den Ziegenkäse in Scheiben schneiden.",
+      "Tomaten und Käse auf dem Blätterteig dachziegelartig verteilen, dabei ca. 1 cm zum Rand frei lassen.",
+      "Mit Salz, Pfeffer und etwas Zucker würzen.",
+      "Ca. 15 Minuten bei 200 °C (Umluft 180 °C, Gas Stufe 3-4) im vorgeheizten Backofen backen.",
+      "In der Zwischenzeit die Garnelen in etwas Olivenöl braten und mit der Gewürzmischung (Cayennepfeffer, Paprikapulver, Koriander, Ingwer) würzen.",
+      "Mit dem Zitronensaft abschmecken.",
+      "Die Garnelen und gezupften Kräuter auf den Tartes verteilen und servieren."
+    ]
+  },
+  {
+    "id": "gefuelltes-ciabatta-vom-grill-mit-provolone",
+    "title": "Gefülltes Ciabatta vom Grill mit Provolone",
+    "category": "Hauptgericht",
+    "tags": [
+      "Grill",
+      "Brot",
+      "Käse",
+      "Sandwich"
+    ],
+    "time": 30,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Kochbuch S. 101",
+    "notes": "Das Ciabatta-Brot kann man auch auf einem elektrischen Sandwichgrill zubereiten. Die Folie lässt man dann getrost weg.",
+    "ingredients": [
+      {
+        "a": "1",
+        "n": "rote Paprikaschote, entkernt und geviertelt"
+      },
+      {
+        "a": "1",
+        "n": "rote Zwiebel, in Scheiben geschnitten"
+      },
+      {
+        "a": "1",
+        "n": "Aubergine, in Scheiben geschnitten"
+      },
+      {
+        "a": "4 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "200 g",
+        "n": "Provolone in Scheiben (italienischer Käse, ersatzweise mittelatter Gouda)"
+      },
+      {
+        "a": "1 Bund",
+        "n": "Basilikum"
+      },
+      {
+        "a": "1",
+        "n": "Zitrone, Saft davon"
+      },
+      {
+        "a": "1",
+        "n": "Ciabatta-Brot"
+      }
+    ],
+    "steps": [
+      "Paprikaviertel, Zwiebel- und Auberginenscheiben im Öl wenden, salzen und pfeffern und über Holzkohle von jeder Seite einige Minuten grillen.",
+      "Anschließend das Gemüse mit dem Käse, abgezupftem Basilikum und Zitronensaft vermengen, mit Salz und Pfeffer würzen.",
+      "Das Brot längs halbieren und aushöhlen.",
+      "Das Gemüse in den beiden Hälften verteilen und anschließend das Ciabatta wieder zusammenklappen.",
+      "Nun das Brot mit Alufolie umwickeln und 5 bis 7 Minuten auf dem Grill backen.",
+      "Anschließend auswickeln, in Stücke schneiden und servieren."
+    ]
+  },
+  {
+    "id": "krautfleckerl-nach-matrosenart",
+    "title": "Krautfleckerl nach Matrosenart",
+    "category": "Hauptgericht",
+    "tags": [
+      "Pasta",
+      "Nudelteig"
+    ],
+    "time": 45,
+    "wait": 30,
+    "portions": 4,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch (Matrosenart)",
+    "notes": "Keine Ahnung, wie man Krautfleckerl eigentlich richtig macht. Das hier ist jedenfalls die norddeutsche Version. Natürlich muss man die Nudeln nicht selber machen – es eignen sich auch fertige Produkte.",
+    "ingredients": [
+      {
+        "a": "200 g",
+        "n": "Mehl oder Hartweizengrieß"
+      },
+      {
+        "a": "2",
+        "n": "Eier"
+      },
+      {
+        "a": "1 EL",
+        "n": "Olivenöl"
+      },
+      {
+        "a": "1 Prise",
+        "n": "Salz"
+      }
+    ],
+    "steps": [
+      "Mehl in eine Schüssel geben, mit Eiern, 1 Esslöffel Olivenöl und 1 Prise Salz zu einem glatten Teig kneten.",
+      "30 Minuten in Klarsichtfolie gewickelt ruhen lassen.",
+      "Anschließend auf der bemehlten Arbeitsfläche mit einer Nudelmaschine bis zur Stufe 2 ausrollen und mit dem Teigrad in Stücke schneiden.",
+      "In sprudelndem Salzwasser 2 bis 3 Minuten kochen, abgießen und abschrecken, mit etwas Olivenöl vermischt zur Seite stellen."
+    ]
+  },
+  {
+    "id": "brokkoligratin-schweizer-art",
+    "title": "Brokkoligratin Schweizer Art",
+    "category": "Hauptgericht",
+    "tags": [
+      "Auflauf",
+      "Backofen",
+      "Käse",
+      "Gratin"
+    ],
+    "time": 40,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch Schweizer Art, Gericht 21",
+    "notes": "Bitte keinen Gouda verwenden! Raclettekäse ist teurer, verleiht dem Gratin aber seinen unwiderstehlichen Wohlgeschmack. Die Auflaufform muss man nachher nicht mehr spülen, so sauber wird sie ausgekratzt! Dazu passen am besten (viele) Pellkartoffeln.",
+    "ingredients": [
+      {
+        "a": "1 kg",
+        "n": "Brokkoli"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "2 EL",
+        "n": "Butter"
+      },
+      {
+        "a": "2 EL",
+        "n": "Mehl"
+      },
+      {
+        "a": "100 g",
+        "n": "Raclettekäse"
+      },
+      {
+        "a": "1 Becher",
+        "n": "Crème fraîche oder Schmand"
+      },
+      {
+        "a": "1",
+        "n": "Ei"
+      },
+      {
+        "a": "4 Scheiben",
+        "n": "gekochter Schinken"
+      },
+      {
+        "a": "2 EL",
+        "n": "frisch geriebener Parmesan"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Butterflöckchen zum Belegen"
+      }
+    ],
+    "steps": [
+      "Brokkoli putzen, Strunk schälen, längs vierteln.",
+      "1/2 Liter Salzwasser in einem weiten Topf zum Kochen bringen, Brokkoli darin 8 Minuten garen, herausheben. Kochwasser aufheben. Backofen auf 220 °C vorheizen.",
+      "In einem neuen Topf Butter schmelzen, das Mehl einrühren und bei niedriger Hitze nach und nach das Gemüsekochwasser einrühren. Raclettekäse würfeln (die Rinde kann man mitessen), zur Mehlschwitze geben und schmelzen lassen.",
+      "Crème fraîche oder Schmand und Ei verquirlen, die Sauce vom Herd nehmen und die Ei-Creme unterrühren.",
+      "Schinkenscheiben um die Brokkolistücke wickeln. In eine flache Auflaufform legen, mit der Sauce übergießen, mit Parmesan bestreuen und mit Butterflöckchen belegen.",
+      "Im vorgeheizten Backofen 20 Minuten überbacken."
+    ]
+  },
+  {
+    "id": "blumenkohlauflauf-mit-leberkaese",
+    "title": "Blumenkohlauflauf mit Leberkäse",
+    "category": "Hauptgericht",
+    "tags": [
+      "Auflauf",
+      "Backofen",
+      "Käse"
+    ],
+    "time": 65,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": null,
+    "source": "Rezeptbuch Seite 23",
+    "notes": "Dazu passt frisches Baguette. Nach Belieben mit gehackter Petersilie bestreuen und garnieren.",
+    "ingredients": [
+      {
+        "a": "1 (ca. 1 kg)",
+        "n": "Blumenkohl"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "300 g",
+        "n": "Leberkäse"
+      },
+      {
+        "a": "1-2 EL",
+        "n": "Öl"
+      },
+      {
+        "a": "4",
+        "n": "Eier"
+      },
+      {
+        "a": "400 ml",
+        "n": "Milch"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "frisch geriebene Muskatnuss"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Fett für die Form"
+      },
+      {
+        "a": "2 Scheiben (à ca. 30 g)",
+        "n": "Weißbrot"
+      },
+      {
+        "a": "200 g",
+        "n": "Emmentaler"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "gehackte Petersilie zum Bestreuen und Garnieren"
+      }
+    ],
+    "steps": [
+      "Blumenkohl putzen und in Röschen teilen. Den dicken Strunk schälen und in Stifte oder Würfel schneiden. Die Stücke in kochendem Salzwasser zugedeckt 10–12 Minuten garen. Anschließend abgießen und abtropfen lassen.",
+      "Den Backofen auf 200 °C vorheizen. Leberkäse in Würfel schneiden. Öl in einer beschichteten Pfanne erhitzen, Leberkäse darin unter Wenden anbraten.",
+      "Die Eier mit der Milch verquirlen und mit Salz, frisch gemahlenem Pfeffer und Muskat würzen.",
+      "Blumenkohlröschen und Leberkäsewürfel in einer gefetteten Auflaufform verteilen. Die Eiermilch darübergießen und den Auflauf im gut vorgeheizten Backofen ca. 45 Minuten backen.",
+      "Inzwischen die Weißbrotscheiben entrinden und fein zerbröseln. Den Käse fein reiben und mit den Bröseln mischen. Die Mischung ca. 20 Minuten vor Ende der Garzeit gleichmäßig über den Auflauf streuen und goldbraun überbacken.",
+      "Den fertigen Auflauf nach Belieben mit gehackter Petersilie bestreuen und servieren. Dazu passt frisches Baguette."
+    ]
   }
 ]
