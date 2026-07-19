@@ -2689,7 +2689,7 @@
     "kcal": null,
     "veg": "vegetarisch",
     "source": "Kochbuch S. 39",
-    "notes": "mit Foto",
+    "notes": "",
     "ingredients": [
       {
         "a": "4 EL",
@@ -2729,7 +2729,8 @@
       "Spinat putzen, waschen und trockenschleudern.",
       "Tomaten quer halbieren. Die Schnittflächen in den Zucker drücken. Restliches Öl in einer Pfanne erhitzen und die Tomaten mit den Schnittflächen nach unten in die Pfanne geben. So lange braten, bis die Tomaten hellbraun karamellisieren.",
       "Spinat mit der Ziegenkäsesauce und den Tomaten auf Teller geben und mit reichlich grobem schwarzem Pfeffer bestreut servieren."
-    ]
+    ],
+    "image": "img/spinatsalat-mit-gebratenen-tomaten.jpg"
   },
   {
     "id": "raeucherlachs-pizza",
