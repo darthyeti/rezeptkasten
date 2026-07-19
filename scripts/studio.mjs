@@ -233,6 +233,7 @@ const PAGE = `<!doctype html>
   <div class="drop" id="drop">📷 Rezeptfotos hierher ziehen oder klicken<br>
     <span style="font-size:13px">(mehrere gleichzeitig möglich)</span></div>
   <input type="file" id="file" accept="image/*" multiple hidden>
+  <input type="file" id="photofile" accept="image/*" hidden>
   <div class="card" id="editpanel">
     <h3>Vorhandenes Rezept bearbeiten</h3>
     <div class="row" style="margin-top:0">
@@ -355,7 +356,7 @@ function downscale(f, cb){
     c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
     cb(c.toDataURL('image/jpeg', 0.8).split(',')[1]);
   };
-  img.onerror = function(){ URL.revokeObjectURL(url); alert('Bild konnte nicht gelesen werden.'); };
+  img.onerror = function(){ URL.revokeObjectURL(url); alert('Bild konnte nicht gelesen werden (' + (f.type || 'unbekanntes Format') + '). Bitte als JPEG oder PNG versuchen.'); };
   img.src = url;
 }
 
@@ -367,22 +368,25 @@ function updatePhotoRow(idx){
   bindPhotoButtons(row);
 }
 
+/* Festes (verstecktes) Datei-Feld statt eines dynamisch erzeugten:
+   in Safari feuert das change-Event auf losen Inputs sonst oft nicht. */
+var photoTarget = -1;
+el('photofile').onchange = function(){
+  var f = el('photofile').files[0], idx = photoTarget;
+  el('photofile').value = '';
+  if(!f || idx < 0 || !drafts[idx]) return;
+  downscale(f, function(b64){
+    drafts[idx].photo = b64;
+    drafts[idx].photoRemoved = false;
+    updatePhotoRow(idx);
+  });
+};
+
 function bindPhotoButtons(scope){
   Array.prototype.forEach.call(scope.querySelectorAll('[data-photo]'), function(b){
     b.onclick = function(){
-      var idx = Number(b.dataset.photo);
-      var inp = document.createElement('input');
-      inp.type = 'file'; inp.accept = 'image/*';
-      inp.onchange = function(){
-        var f = inp.files[0];
-        if(!f || f.type.indexOf('image/') !== 0) return;
-        downscale(f, function(b64){
-          drafts[idx].photo = b64;
-          drafts[idx].photoRemoved = false;
-          updatePhotoRow(idx);
-        });
-      };
-      inp.click();
+      photoTarget = Number(b.dataset.photo);
+      el('photofile').click();
     };
   });
   Array.prototype.forEach.call(scope.querySelectorAll('[data-photorm]'), function(b){
