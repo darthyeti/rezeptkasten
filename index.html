@@ -49,6 +49,8 @@
     text-align:left;transition:transform .12s ease, box-shadow .12s ease}
   .card:hover,.card:focus-visible{transform:translateY(-2px);box-shadow:0 6px 18px rgba(34,48,42,.12);outline:none}
   .card:focus-visible{box-shadow:0 0 0 3px var(--gold)}
+  .card .thumb{width:100%;height:130px;object-fit:cover;border-radius:10px;margin-bottom:10px;display:block}
+  .detail-img{width:100%;max-height:240px;object-fit:cover;border-radius:12px;margin-top:12px;display:block}
   .cat{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
   .card h3{font-family:'Fraunces',serif;font-size:19px;font-weight:700;margin:4px 0 8px;line-height:1.25}
   .meta{font-size:13px;color:var(--dim);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
@@ -233,6 +235,7 @@ function renderRecipes(m){
       ? `<div class="empty">Nichts gefunden. Entferne eine Zutat oder einen Filter.</div>`
       : `<div class="grid">${list.map(({r, m}) => `
           <button class="card" data-open="${esc(r.id)}">
+            ${r.image ? `<img class="thumb" src="${esc(r.image)}" alt="" loading="lazy" onerror="this.remove()">` : ""}
             <div class="cat">${esc(r.category)}</div>
             <h3>${esc(r.title)}</h3>
             <div class="meta">
@@ -285,6 +288,7 @@ function openDetail(id){
       ${r.veg ? `<span class="badge">${esc(r.veg)}</span>` : ""}
       ${(r.tags || []).map(t => `<span class="tagbadge">${esc(t)}</span>`).join("")}
     </div>
+    ${r.image ? `<img class="detail-img" src="${esc(r.image)}" alt="${esc(r.title)}" onerror="this.remove()">` : ""}
     <h4>Zutaten</h4>
     <ul class="ing">${r.ingredients.map(i => `
       <li class="${tokens.some(t => norm(i.n).includes(t)) ? "hit" : ""}">

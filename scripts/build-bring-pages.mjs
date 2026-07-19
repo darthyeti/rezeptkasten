@@ -25,11 +25,12 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 
 for (const r of recipes) {
   const pageUrl = base ? `${base}r/${r.id}/` : undefined;
+  const imgUrl = base ? `${base}${r.image || "img/recipe.png"}` : undefined;
   const ld = {
     "@context": "http://schema.org",
     "@type": "Recipe",
     name: r.title,
-    ...(pageUrl ? { url: pageUrl, image: `${base}img/recipe.png` } : {}),
+    ...(pageUrl ? { url: pageUrl, image: imgUrl } : {}),
     author: { "@type": "Person", name: "Rezeptkasten" },
     description: `${r.title} – ${r.category}, ${r.portions} Portionen.`,
     recipeYield: `${r.portions} Portionen`,
@@ -50,7 +51,7 @@ ${pageUrl ? `<link rel="canonical" href="${esc(pageUrl)}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="${esc(r.title)}">
 <meta property="og:url" content="${esc(pageUrl)}">
-<meta property="og:image" content="${esc(base)}img/recipe.png">` : ""}
+<meta property="og:image" content="${esc(imgUrl)}">` : ""}
 <script type="application/ld+json">
 ${JSON.stringify(ld, null, 2)}
 </script>

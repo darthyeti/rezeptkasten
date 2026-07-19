@@ -111,24 +111,44 @@ async function saveAndPush(incoming, deletes, baseUrl) {
   const ids = new Set(catalog.map((r) => r.id));
   const added = [], updated = [], removed = [];
 
-  // 1) Löschungen
+  // 1) Löschungen (inkl. zugehörigem Gericht-Foto)
   for (const id of (deletes || [])) {
     const idx = catalog.findIndex((r) => r.id === id);
-    if (idx > -1) { removed.push(catalog[idx].title); catalog.splice(idx, 1); ids.delete(id); }
+    if (idx > -1) {
+      removed.push(catalog[idx].title);
+      if (catalog[idx].image) { try { rmSync(join(ROOT, catalog[idx].image)); } catch {} }
+      catalog.splice(idx, 1); ids.delete(id);
+    }
   }
 
   // 2) Hinzufügen / Aktualisieren
+  //    photoData = neues (bereits verkleinertes) Foto als Base64-JPEG,
+  //    removeImage = vorhandenes Foto entfernen. Beides kommt nie zusammen.
   for (const r of incoming) {
-    const { id: incomingId, ...data } = r;
+    const { id: incomingId, photoData, removeImage, ...data } = r;
     if (Array.isArray(data.tags) && data.tags.length === 0) delete data.tags;
     const idx = incomingId ? catalog.findIndex((x) => x.id === incomingId) : -1;
+    let id;
     if (idx > -1) {
-      catalog[idx] = { id: incomingId, ...data }; // bestehende id behalten -> Links bleiben gültig
-      updated.push(data.title);
+      id = incomingId; // bestehende id behalten -> Links bleiben gültig
     } else {
-      let id = slug(data.title), n = 2;
+      id = slug(data.title);
+      let n = 2;
       while (ids.has(id)) id = slug(data.title) + "-" + n++;
       ids.add(id);
+    }
+    if (photoData) {
+      mkdirSync(join(ROOT, "img"), { recursive: true });
+      writeFileSync(join(ROOT, "img", id + ".jpg"), Buffer.from(photoData, "base64"));
+      data.image = "img/" + id + ".jpg";
+    } else if (removeImage) {
+      delete data.image;
+      if (idx > -1 && catalog[idx].image) { try { rmSync(join(ROOT, catalog[idx].image)); } catch {} }
+    }
+    if (idx > -1) {
+      catalog[idx] = { id, ...data };
+      updated.push(data.title);
+    } else {
       catalog.push({ id, ...data });
       added.push(data.title);
     }
@@ -197,6 +217,7 @@ const PAGE = `<!doctype html>
   pre{background:var(--ink);color:#cfe3d4;border-radius:12px;padding:14px;font-size:12.5px;
     white-space:pre-wrap;word-break:break-word}
   .hint{font-size:13px;color:var(--dim);line-height:1.6}
+  .photo-thumb{width:72px;height:72px;object-fit:cover;border-radius:9px;border:1px solid var(--line)}
   .pushbar{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);padding:12px 20px}
   .pushbar .inner{display:flex;gap:10px;align-items:center;justify-content:space-between}
 </style>
@@ -310,6 +331,70 @@ function handleFiles(list){
 function ingText(r){ return r.ingredients.map(function(i){ return (i.a||'') + ' | ' + i.n; }).join('\\n'); }
 function stepText(r){ return (r.steps||[]).join('\\n'); }
 
+/* ---- Gericht-Foto (optional, Downscale ist Pflicht) ---- */
+function photoRowHtml(d, i){
+  var src = d.photo ? 'data:image/jpeg;base64,' + d.photo
+    : (d.edit && d.recipe.image && !d.photoRemoved ? '/' + esc(d.recipe.image) : '');
+  return (src ? '<img class="photo-thumb" src="' + src + '" alt="">' : '') +
+    '<button class="btn" type="button" data-photo="' + i + '">' + (src ? 'Foto ersetzen' : 'Foto wählen') + '</button>' +
+    (src ? '<button class="btn ghost" type="button" data-photorm="' + i + '">Foto entfernen</button>' : '') +
+    '<span class="hint">wird automatisch verkleinert</span>';
+}
+
+/* Verkleinert das Foto clientseitig (max 800 px Kante, JPEG),
+   damit das Repo nicht mit Original-Handyfotos vollläuft. */
+function downscale(f, cb){
+  var url = URL.createObjectURL(f);
+  var img = new Image();
+  img.onload = function(){
+    URL.revokeObjectURL(url);
+    var max = 800, s = Math.min(1, max / Math.max(img.width, img.height));
+    var c = document.createElement('canvas');
+    c.width = Math.max(1, Math.round(img.width * s));
+    c.height = Math.max(1, Math.round(img.height * s));
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    cb(c.toDataURL('image/jpeg', 0.8).split(',')[1]);
+  };
+  img.onerror = function(){ URL.revokeObjectURL(url); alert('Bild konnte nicht gelesen werden.'); };
+  img.src = url;
+}
+
+/* Nur die Foto-Zeile neu zeichnen, damit Eingaben in den übrigen Feldern erhalten bleiben */
+function updatePhotoRow(idx){
+  var row = el('photorow-' + idx);
+  if(!row) return;
+  row.innerHTML = photoRowHtml(drafts[idx], idx);
+  bindPhotoButtons(row);
+}
+
+function bindPhotoButtons(scope){
+  Array.prototype.forEach.call(scope.querySelectorAll('[data-photo]'), function(b){
+    b.onclick = function(){
+      var idx = Number(b.dataset.photo);
+      var inp = document.createElement('input');
+      inp.type = 'file'; inp.accept = 'image/*';
+      inp.onchange = function(){
+        var f = inp.files[0];
+        if(!f || f.type.indexOf('image/') !== 0) return;
+        downscale(f, function(b64){
+          drafts[idx].photo = b64;
+          drafts[idx].photoRemoved = false;
+          updatePhotoRow(idx);
+        });
+      };
+      inp.click();
+    };
+  });
+  Array.prototype.forEach.call(scope.querySelectorAll('[data-photorm]'), function(b){
+    b.onclick = function(){
+      var idx = Number(b.dataset.photorm);
+      drafts[idx].photo = null;
+      drafts[idx].photoRemoved = true;
+      updatePhotoRow(idx);
+    };
+  });
+}
+
 function render(){
   el('cards').innerHTML = drafts.map(function(d, i){
     if(d.status==='lädt') return '<div class="card"><span class="status">⏳ ' + esc(d.name) + ' wird gelesen …</span></div>';
@@ -351,6 +436,8 @@ function render(){
       '<label>Zubereitung (ein Schritt pro Zeile)</label>' +
       '<textarea data-f="steps">' + esc(stepText(r)) + '</textarea>' +
       '<label>Notizen</label><input data-f="notes" value="' + esc(r.notes||'') + '">' +
+      '<label>Foto vom Gericht (optional)</label>' +
+      '<div class="row" style="margin-top:0" id="photorow-' + i + '">' + photoRowHtml(d, i) + '</div>' +
       '<div class="row"><button class="btn ghost" data-rm="' + i + '">Verwerfen</button>' +
         (d.edit ? '<button class="btn ghost err" data-del="' + i + '">Aus Sammlung löschen</button>' : '') +
       '</div>' +
@@ -369,6 +456,7 @@ function render(){
   Array.prototype.forEach.call(document.querySelectorAll('[data-undel]'), function(b){
     b.onclick = function(){ drafts[Number(b.dataset.undel)].status = 'ok'; render(); };
   });
+  bindPhotoButtons(el('cards'));
 
   var ready = drafts.filter(function(d){ return d.status==='ok' || d.status==='todelete'; }).length;
   el('pushbar').hidden = ready === 0;
@@ -401,6 +489,9 @@ function collect(){
       steps: get('steps').split('\\n').map(function(l){ return l.trim(); }).filter(Boolean),
     };
     if(d.edit && d.id) rec.id = d.id;
+    if(d.photo) rec.photoData = d.photo;
+    else if(d.photoRemoved && d.edit) rec.removeImage = true;
+    else if(d.edit && d.recipe.image) rec.image = d.recipe.image;
     return rec;
   }).filter(Boolean);
 }
@@ -437,6 +528,19 @@ const server = createServer(async (req, res) => {
   };
   try {
     if (req.method === "GET" && req.url === "/") return send(200, PAGE, "text/html");
+
+    // Gericht-Fotos für die Vorschau im Bearbeiten-Modus ausliefern
+    if (req.method === "GET" && req.url.startsWith("/img/")) {
+      const name = req.url.slice(5).split("?")[0];
+      if (!/^[\w.-]+$/.test(name) || name.includes("..")) return send(404, { error: "not found" });
+      try {
+        const buf = readFileSync(join(ROOT, "img", name));
+        res.writeHead(200, { "Content-Type": name.endsWith(".png") ? "image/png" : "image/jpeg" });
+        return res.end(buf);
+      } catch {
+        return send(404, { error: "not found" });
+      }
+    }
 
     if (req.method === "GET" && req.url === "/api/status") {
       const cfg = loadConfig();
