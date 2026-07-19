@@ -4041,5 +4041,315 @@
       "Inzwischen die Weißbrotscheiben entrinden und fein zerbröseln. Den Käse fein reiben und mit den Bröseln mischen. Die Mischung ca. 20 Minuten vor Ende der Garzeit gleichmäßig über den Auflauf streuen und goldbraun überbacken.",
       "Den fertigen Auflauf nach Belieben mit gehackter Petersilie bestreuen und servieren. Dazu passt frisches Baguette."
     ]
+  },
+  {
+    "id": "nuss-sahne-haehnchen",
+    "title": "Nuss-Sahne-Hähnchen",
+    "category": "Hauptgericht",
+    "tags": [
+      "Backofen",
+      "Hähnchen",
+      "Auflauf",
+      "Nuss",
+      "Sahne"
+    ],
+    "time": 15,
+    "wait": 45,
+    "portions": 2,
+    "kcal": null,
+    "veg": null,
+    "source": "Elternalarm, Seite 30",
+    "notes": "Im Supermarkt gibt es auch gehackte Walnüsse zu kaufen, die sind aber bedeutend teurer als ganze. Am besten sind natürlich die aus Omas Garten. Die Gewürze gibt es am billigsten im Asienladen. Hat man die erst, ist das Nuss-Sahne-Hähnchen ein schnelles, billiges und leckeres Essen. Besonders beim Ofen, aber auch in der Mikrowelle bitte darauf achten, dass die Auflaufform hoch genug ist, sonst kocht die Sahne über!",
+    "ingredients": [
+      {
+        "a": "2 Stück",
+        "n": "nicht zu kleine Hähnchenbrustfilets"
+      },
+      {
+        "a": "1 kleine",
+        "n": "rote Zwiebel"
+      },
+      {
+        "a": "6-7",
+        "n": "Walnusskerne"
+      },
+      {
+        "a": "1 TL",
+        "n": "Garam Masala"
+      },
+      {
+        "a": "1 TL",
+        "n": "Paprikapulver, rosenscharf"
+      },
+      {
+        "a": "1 TL",
+        "n": "Kräuter der Provence"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Salz"
+      },
+      {
+        "a": "nach Bedarf",
+        "n": "Pfeffer"
+      },
+      {
+        "a": "1 1/2 Becher",
+        "n": "Sahne"
+      },
+      {
+        "a": "1 Hand voll",
+        "n": "gehackte Mandeln"
+      },
+      {
+        "a": "1 Hand voll",
+        "n": "Rosinen"
+      },
+      {
+        "a": "1-3",
+        "n": "Lorbeerblätter (je nach Größe)"
+      }
+    ],
+    "steps": [
+      "Hähnchenbrustfilets waschen und trockentupfen. Zwiebel schälen und klein schneiden. Walnüsse hacken. Backofen auf 200 °C vorheizen.",
+      "Garam Masala, Paprika, Kräuter der Provence, Salz und Pfeffer mit der Sahne verrühren.",
+      "Das Fleisch in eine Auflaufform mit hohem Rand legen. Zwiebel, Nüsse, Mandeln, Rosinen und die Lorbeerblätter darüber verteilen. Mit der gewürzten Sahne übergießen.",
+      "Im vorgeheizten Backofen 30–45 Minuten garen (oder für ca. 20 Minuten bei 600 Watt in der Mikrowelle). Dazu passen als Beilage Nudeln."
+    ]
+  },
+  {
+    "id": "kartoffel-spinat-auflauf-mit-curry",
+    "title": "Kartoffel-Spinat-Auflauf mit Curry",
+    "category": "Hauptgericht",
+    "tags": [
+      "Auflauf",
+      "Backofen",
+      "Käse",
+      "Curry"
+    ],
+    "time": 40,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Kochbuch Rezept 24",
+    "notes": "In das Salzwasser für die Kartoffeln kann man zur Verfeinerung etwas Gemüsebrühe geben. Dadurch erhalten die Kartoffeln einen etwas intensiveren und frischen Geschmack. Laut Einkaufsliste nur 100g Schafskäse statt 200g.",
+    "ingredients": [
+      {
+        "a": "700 g",
+        "n": "Kartoffeln"
+      },
+      {
+        "a": "Salz",
+        "n": ""
+      },
+      {
+        "a": "400 g",
+        "n": "Blattspinat (TK)"
+      },
+      {
+        "a": "1 Tüte",
+        "n": "gesalzene Cashewkerne"
+      },
+      {
+        "a": "100 g",
+        "n": "Schafskäse"
+      },
+      {
+        "a": "250 ml",
+        "n": "Rama Cremefine zum Kochen (oder Sahne)"
+      },
+      {
+        "a": "1-2 TL",
+        "n": "Currypulver"
+      },
+      {
+        "a": "Pfeffer",
+        "n": ""
+      }
+    ],
+    "steps": [
+      "Kartoffeln gründlich waschen, vierteln und mit Schale in Salzwasser 15 Minuten kochen. Die Kartoffeln müssen nicht vollständig gar werden, da sie sonst im Backofen zu weich werden.",
+      "Den Backofen auf 200 °C vorheizen.",
+      "Den Blattspinat in einem Topf bei geringer Hitze auftauen lassen.",
+      "Cashewnüsse waschen und abtropfen lassen.",
+      "Den Schafskäse in kleine Würfel schneiden.",
+      "Die Cremefine mit ordentlich Currypulver verrühren, bis sie eine schöne gelbe Farbe erhält.",
+      "Kartoffeln abgießen und in eine Auflaufform geben. Den aufgetauten Spinat hinzufügen, die Cashewnüsse und den Schafskäse darüber verteilen.",
+      "Mit etwas Salz und Pfeffer würzen und dann die Currysauce über das Ganze gießen.",
+      "Die Auflaufform in den vorgeheizten Backofen stellen und ca. 25 Minuten backen – fertig."
+    ]
+  },
+  {
+    "id": "kaese-lauch-suppe",
+    "title": "Käse-Lauch-Suppe",
+    "category": "Suppe",
+    "tags": [
+      "One-Pot",
+      "Suppe",
+      "Eintopf",
+      "Partysnack"
+    ],
+    "time": 30,
+    "wait": 10,
+    "portions": 4,
+    "kcal": null,
+    "veg": null,
+    "source": "Kochbuch Seite 43",
+    "notes": "Die Suppe ist ein berühmter Partysnack, der regelrecht süchtig machen kann. Dazu die Zutaten einfach multiplizieren (z.B. dreifache Menge). Wichtig ist die Qualität des Schmelzkäses. Keinen billigen nehmen! Funktioniert auch mit Frischkäse (1 natur, 1 Kräuter). Dazu gibt's warmes Baguette mit Kräuterbutter.",
+    "ingredients": [
+      {
+        "a": "1",
+        "n": "Zwiebel"
+      },
+      {
+        "a": "2 Stangen",
+        "n": "Lauch"
+      },
+      {
+        "a": "etwas",
+        "n": "Öl zum Braten"
+      },
+      {
+        "a": "250 g",
+        "n": "Gehacktes halb und halb"
+      },
+      {
+        "a": "1 l",
+        "n": "Brühe (Instant)"
+      },
+      {
+        "a": "1 Becher",
+        "n": "Sahne-Schmelzkäse (Milkana)"
+      },
+      {
+        "a": "1 Becher",
+        "n": "Kräuter-Schmelzkäse (Milkana)"
+      },
+      {
+        "a": "etwas",
+        "n": "Sahne"
+      },
+      {
+        "a": "etwas",
+        "n": "Pfeffer"
+      }
+    ],
+    "steps": [
+      "Zwiebel schälen und würfeln. Lauch putzen (von Wurzelansatz und dunklem Grün befreien), von der Mitte der Stange zum Ende hin längs durchschneiden, gründlich waschen und in Ringe schneiden.",
+      "Öl in einem Topf erhitzen, das Hackfleisch zusammen mit der Zwiebel darin anbraten. Dabei zerdrücken, bis es kleine Krümel bildet. Wenn es braun ist, Lauch zugeben und kurz mit anschwitzen. Mit Brühe ablöschen.",
+      "Schmelzkäse in der Suppe auflösen. Noch ca. 10 Minuten köcheln lassen, bis der Lauch gar ist. Mit Sahne verfeinern und mit Pfeffer würzen."
+    ]
+  },
+  {
+    "id": "lauwarmer-lauchsalat",
+    "title": "Lauwarmer Lauchsalat",
+    "category": "Salat",
+    "tags": [
+      "Salat",
+      "Bowl"
+    ],
+    "time": 25,
+    "wait": 0,
+    "portions": 2,
+    "kcal": null,
+    "veg": "vegetarisch",
+    "source": "Kochbuch S. 27",
+    "notes": "Statt Mandeln auch Walnüsse verwenden – laut Tipp sehr gut. Walnüsse auch frisch gerieben oder Meerrettich verwenden.",
+    "ingredients": [
+      {
+        "a": "2 Stangen",
+        "n": "Lauch"
+      },
+      {
+        "a": "80 g",
+        "n": "Mandelblättchen"
+      },
+      {
+        "a": "6 EL",
+        "n": "Öl"
+      },
+      {
+        "a": "4 EL",
+        "n": "Himbeeressig (oder ein anderer Fruchtessig)"
+      },
+      {
+        "a": "2 EL",
+        "n": "saure Sahne"
+      },
+      {
+        "a": "1 EL",
+        "n": "Meerrettich (Glas)"
+      },
+      {
+        "a": "100 g",
+        "n": "Rosinen"
+      },
+      {
+        "a": "",
+        "n": "Salz, Pfeffer"
+      }
+    ],
+    "steps": [
+      "Die Lauchstangen putzen und waschen. In heißem Salzwasser 6 Minuten leicht garen, aber nicht kochen. Die inneren Ringe der Lauchstangen sollen noch roh sein. Die Mandelblättchen in einer Pfanne leicht trocken anrösten.",
+      "Aus Öl, Essig, saurer Sahne und Meerrettich ein Dressing anrühren.",
+      "Die Lauchstangen aus dem Topf nehmen, etwas abkühlen lassen und in Ringe schneiden. Anschließend die Rosinen darübergeben und die Mandeln unterheben und das Meerrettich-Dressing darübergeben und mit Salz und Pfeffer abschmecken. Lauwarm servieren."
+    ]
+  },
+  {
+    "id": "suesskartoffeln-in-nuss-steinpilz-marinade",
+    "title": "Süßkartoffeln in Nuss-Steinpilz-Marinade",
+    "category": "Sonstiges",
+    "tags": [
+      "Grill",
+      "Alufolie",
+      "Pilze"
+    ],
+    "time": 35,
+    "wait": 0,
+    "portions": 4,
+    "kcal": null,
+    "veg": "vegan",
+    "source": "Kochbuch",
+    "notes": "Variante: Süßkartoffeln schmecken auch sehr gut mit einer Marinade aus Olivenöl, Zitronen- oder Limettensaft und -schale, (frischem) Thymian sowie einer guten Prise Salz.",
+    "ingredients": [
+      {
+        "a": "2–4",
+        "n": "Süßkartoffeln (insg. ca. 800g)"
+      },
+      {
+        "a": "100g",
+        "n": "Walnusskerne"
+      },
+      {
+        "a": "2 gehäufte EL",
+        "n": "getrocknete Steinpilze"
+      },
+      {
+        "a": "8 EL",
+        "n": "Rapsöl"
+      },
+      {
+        "a": "",
+        "n": "Salz"
+      },
+      {
+        "a": "",
+        "n": "Pfeffer (frisch gemahlen)"
+      },
+      {
+        "a": "4 Zweige",
+        "n": "Rosmarin"
+      },
+      {
+        "a": "4 Stücke",
+        "n": "Alufolie 30cm x 30cm"
+      }
+    ],
+    "steps": [
+      "Süßkartoffeln schälen und quer in schmale Spalten schneiden. Nusskerne fein hacken, Steinpilze im Mörser zerreiben.",
+      "Steinpilze und Nusskerne mit dem Öl mischen. Paste mit Salz und frisch gemahlenem Pfeffer würzen.",
+      "Die Süßkartoffelscheiben fächerartig auf die Alufolie legen. Die Nuss-Steinpilz-Marinade darübergeben. Obenauf jeweils einen Rosmarinzweig legen. Die Alufolie schließen, dabei ein Päckchen oder 'Bonbon' formen. Etwa 20 Minuten bei geschlossenem Deckel auf mittlerer indirekter Hitze garen."
+    ]
   }
 ]
