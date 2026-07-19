@@ -218,6 +218,13 @@ const PAGE = `<!doctype html>
     white-space:pre-wrap;word-break:break-word}
   .hint{font-size:13px;color:var(--dim);line-height:1.6}
   .photo-thumb{width:72px;height:72px;object-fit:cover;border-radius:9px;border:1px solid var(--line)}
+  .rlist{max-height:240px;overflow:auto;border:1px solid var(--line);border-radius:9px;margin-top:10px;background:#fff}
+  .rlist button{display:flex;justify-content:space-between;gap:10px;width:100%;border:none;background:none;
+    padding:8px 12px;font-size:14px;font-family:inherit;color:var(--ink);text-align:left;cursor:pointer;
+    border-bottom:1px solid var(--line)}
+  .rlist button:last-child{border-bottom:none}
+  .rlist button:hover{background:var(--bg)}
+  .rlist .cat2{color:var(--dim);font-size:12px;white-space:nowrap}
   .pushbar{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);padding:12px 20px}
   .pushbar .inner{display:flex;gap:10px;align-items:center;justify-content:space-between}
 </style>
@@ -237,10 +244,13 @@ const PAGE = `<!doctype html>
   <div class="card" id="editpanel">
     <h3>Vorhandenes Rezept bearbeiten</h3>
     <div class="row" style="margin-top:0">
-      <select id="existing" style="flex:1;min-width:160px"></select>
-      <button class="btn" id="loadbtn">Bearbeiten</button>
+      <input id="rsearch" placeholder="Rezept suchen …" style="flex:1;min-width:160px">
+      <label style="display:flex;align-items:center;gap:7px;font-size:14px;cursor:pointer">
+        <input type="checkbox" id="nofoto" style="width:auto"> nur ohne Foto</label>
     </div>
-    <span class="hint">Lädt das Rezept ins Formular. Änderungen (auch Löschen) werden erst beim Pushen übernommen. Die Adresse des Rezepts bleibt gleich.</span>
+    <div class="rlist" id="rlist"></div>
+    <span class="hint" id="rcount" style="display:block;margin-top:6px"></span>
+    <span class="hint">Klick lädt das Rezept ins Formular. Änderungen (auch Löschen) werden erst beim Pushen übernommen. Die Adresse des Rezepts bleibt gleich. 📷 = hat schon ein Foto.</span>
   </div>
   <div id="cards"></div>
   <pre id="log" hidden></pre>
@@ -288,16 +298,35 @@ var existingRecipes = [];
 function loadExisting(){
   fetch('/api/recipes').then(function(r){ return r.json(); }).then(function(list){
     existingRecipes = list || [];
-    el('existing').innerHTML = '<option value="">— Rezept wählen —</option>' +
-      existingRecipes.map(function(r){
-        return '<option value="' + esc(r.id) + '">' + esc(r.title) + '</option>'; }).join('');
+    renderRecipeList();
   });
 }
+
+function renderRecipeList(){
+  var q = el('rsearch').value.trim().toLowerCase();
+  var onlyNoFoto = el('nofoto').checked;
+  var list = existingRecipes.slice()
+    .sort(function(a,b){ return a.title.localeCompare(b.title, 'de'); })
+    .filter(function(r){
+      return (!q || r.title.toLowerCase().indexOf(q) > -1) && (!onlyNoFoto || !r.image);
+    });
+  el('rlist').innerHTML = list.length
+    ? list.map(function(r){
+        return '<button type="button" data-load="' + esc(r.id) + '">' +
+          '<span>' + esc(r.title) + (r.image ? ' 📷' : '') + '</span>' +
+          '<span class="cat2">' + esc(r.category) + '</span></button>';
+      }).join('')
+    : '<div class="hint" style="padding:10px 12px">Kein Treffer.</div>';
+  el('rcount').textContent = list.length + ' von ' + existingRecipes.length + ' Rezepten';
+  Array.prototype.forEach.call(el('rlist').querySelectorAll('[data-load]'), function(b){
+    b.onclick = function(){ loadRecipe(b.dataset.load); };
+  });
+}
+el('rsearch').oninput = renderRecipeList;
+el('nofoto').onchange = renderRecipeList;
 loadExisting();
 
-el('loadbtn').onclick = function(){
-  var id = el('existing').value;
-  if(!id) return;
+function loadRecipe(id){
   var open = drafts.some(function(d){ return d.id===id && d.status!=='entfernt'; });
   if(open){ alert('Dieses Rezept ist schon zum Bearbeiten geöffnet.'); return; }
   var rec = existingRecipes.filter(function(r){ return r.id===id; })[0];
@@ -305,7 +334,7 @@ el('loadbtn').onclick = function(){
   drafts.push({ status:'ok', recipe: rec, id: id, edit: true, name: 'bearbeiten' });
   render();
   window.scrollTo(0, document.body.scrollHeight);
-};
+}
 
 function handleFiles(list){
   Array.prototype.forEach.call(list, function(f){
